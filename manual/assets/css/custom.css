@@ -1,0 +1,28 @@
+/* 左側のサイドバー（header）を非表示にする */
+.wrapper > header {
+  display: none !important;
+}
+
+/* メインコンテンツエリアを全幅・中央配置にする */
+.wrapper > section {
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+}
+
+/* ページ全体のレイアウトを調整 */
+.wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* フッターも中央配置 */
+.wrapper > footer {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
