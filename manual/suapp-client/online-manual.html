@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="online-manual.css" media="screen">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>オンラインマニュアル</title>
+</head>
+
+<body>
+  <main class="wrapper">
+    <div class="hero-banner">
+      <div class="hero-banner-clouds" aria-hidden="true">
+        <img src="../assets/UI_images/cloud.png" class="cloud c1" alt="">
+        <img src="../assets/UI_images/cloud.png" class="cloud c2" alt="">
+        <img src="../assets/UI_images/cloud.png" class="cloud c3" alt="">
+        <img src="../assets/UI_images/cloud.png" class="cloud c4" alt="">
+        <img src="../assets/UI_images/cloud.png" class="cloud c5" alt="">
+        <img src="../assets/UI_images/cloud.png" class="cloud c6" alt="">
+      </div>
+      <div class="hero-banner-inner">
+        <img class="hero-banner-logo" src="../assets/UI_images/titile-image.png" alt="SPEAK STAR">
+        <div class="hero-banner-title">
+          使い方マニュアル
+        </div>
+      </div>
+    </div>
+    <div class="navigation-container">
+
+      <!-- カテゴリー -->
+      <ul class="navigation-category">
+
+        <li>
+          <a href="#sec1-panel" class="navigation-category-item">
+            <img class="navigation-category-icon" src="../assets/character/cat.png" alt="ログイン">
+            <span class="navigation-category-label has-br-sm">
+              ログイン
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#sec2-panel" class="navigation-category-item">
+            <img class="navigation-category-icon" src="../assets/character/frog.png" alt="メインメニュー">
+            <span class="navigation-category-label has-br-sm">
+              メイン<br class="br-sm">メニュー
+            </span> </a>
+        </li>
+
+        <li>
+          <a href="#sec3-panel" class="navigation-category-item">
+            <img class="navigation-category-icon" src="../assets/character/rabbit.png" alt="AI先生との会話">
+            <span class="navigation-category-label has-br-sm">
+              AI先生<br class="br-sm">との会話
+            </span> </a>
+        </li>
+
+        <li>
+          <a href="#sec4-panel" class="navigation-category-item">
+            <img class="navigation-category-icon" src="../assets/character/lion.png" alt="プレゼン練習">
+            <span class="navigation-category-label has-br-sm">
+              プレゼン<br class="br-sm">練習
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#sec5-panel" class="navigation-category-item">
+            <img class="navigation-category-icon" src="../assets/character/bear.png" alt="オプション">
+            <span class="navigation-category-label">オプション</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 下層タブ -->
+    <div class="sub-navigation-container" id="subnav">
+      <!-- タイトル画面：3つ -->
+      <ul class="sub-navigation-category" data-for="sec1-panel">
+        <li><a class="sub-navigation-item is-active" data-target="#sec1-panel" data-index="0">1. 初期パスワード</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="1">2. パスワード変更</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="2">3. 変更後のパスワード</a></li>
+      </ul>
+
+      <!-- AI先生：3つ -->
+      <ul class="sub-navigation-category" data-for="sec3-panel">
+        <li><a class="sub-navigation-item is-active" data-target="#sec3-panel" data-index="0">1. テーマ選択</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec3-panel" data-index="1">2. AI先生とのお話</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec3-panel" data-index="2">3. キーワード</a></li>
+      </ul>
+
+      <!-- プレゼン：4つ（最初は非表示） -->
+      <ul class="sub-navigation-category" data-for="sec4-panel" hidden>
+        <li><a class="sub-navigation-item is-active" data-target="#sec4-panel" data-index="0">1. テーマ選択</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="1">2. データ選択</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="2">3. トレーニング</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="3">4. フィードバック</a></li>
+      </ul>
+    </div>
+
+
+    <div class="content">
+      <!-- ===== 1. タイトル画面 ===== -->
+      <section class="chapter" id="sec1-panel">
+        <div class="cards-slider" id="slider-sec1">
+          <div class="cards-track">
+            <!-- ===== 1.1 初期パスワードでログイン ===== -->
+            <section class="card" id="sec1-1">
+              <h2 class="title">1.初期パスワードでログイン</h2>
+
+              <!-- 導入文 -->
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
+                <div class="card-intro-text">先生から教えてもらう「初期パスワード」でログインする時の説明だよ。</div>
+              </div>
+
+              <!-- 画像＋説明リスト -->
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/title-login-screen.png" alt="タイトル画面とログインダイアログ">
+                </div>
+                <ol class="circle-num">
+                  <li><b>アカウント入力欄：</b>自分のアカウント名を入力しよう</li>
+                  <li><b>パスワード入力欄：</b>先生から教えてもらった初期パスワードを入力しよう</li>
+                  <li><b>OKボタン：</b>ログインが成功すると、自動的にパスワード変更画面へ進むよ</li>
+                </ol>
+              </div>
+
+              <!-- 注意ボックス（共通スタイル） -->
+              <div class="note">
+                <div class="note-header" id="notice-sec1-title">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>入力欄にスペースが入っているとログイン出来ないよ</li>
+                    <li>アカウントの大文字・小文字は間違えないようにしよう</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===== 1.2 パスワード変更 ===== -->
+            <section class="card" id="sec1-2">
+              <h2 class="title">2.パスワード変更</h2>
+
+              <!-- 導入文 -->
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
+                <div class="card-intro-text">君だけが知っているパスワードに変更する画面だよ。</div>
+              </div>
+
+              <!-- 画像＋説明リスト -->
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/title-login-screen.png" alt="パスワード変更画面">
+                </div>
+                <ol class="circle-num">
+                  <li><b>新しいパスワード入力欄：</b>自分で決めた新しいパスワードを入力しよう</li>
+                  <li><b>新しいパスワード再入力欄：</b>確認のためもう一度同じパスワードを入力しよう</li>
+                  <li><b>パスワード変更ボタン：</b>新しいパスワードに変更できるよ</li>
+                </ol>
+              </div>
+
+              <!-- 注意ボックス（共通スタイル） -->
+              <div class="note">
+                <div class="note-header" id="notice-sec1-password">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>パスワードは半角数字のみ（4～8文字）で設定しよう</li>
+                    <li>新しいパスワードは忘れないようにしよう</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===== 1.3 変更したパスワードでログイン ===== -->
+            <section class="card" id="sec1-3">
+              <h2 class="title">3.変更したパスワードでログイン</h2>
+
+              <!-- 導入文 -->
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
+                <div class="card-intro-text">君が「変更したパスワード」でログインする時の説明だよ。</div>
+              </div>
+
+              <!-- 画像＋説明リスト -->
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/title-login-screen.png" alt="タイトル画面とログインダイアログ">
+                </div>
+                <ol class="circle-num">
+                  <li><b>アカウント入力欄：</b>自分のアカウント名を入力しよう</li>
+                  <li><b>パスワード入力欄：</b>変更後のパスワードを入力しよう</li>
+                  <li><b>OKボタン：</b>ログインが成功すると、自動的にメインメニューへ進むよ</li>
+                </ol>
+              </div>
+
+              <!-- 注意ボックス（共通スタイル） -->
+              <div class="note">
+                <div class="note-header" id="notice-sec1-normal">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>入力欄にスペースが入っているとログイン出来ないよ</li>
+                    <li>アカウントの大文字・小文字は間違えないようにしよう</li>
+                    <li>パスワードを5回以上間違えると、アカウントが一時的に使えなくなってしまうよ。少し待ってから、もう一度挑戦しよう</li>
+                    <li>パスワードを忘れた時は先生に相談しよう</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- ===== 2.　メインメニュー ===== -->
+      <section class="chapter" id="sec2-panel">
+        <section class="card">
+          <h2 id="sec2-panel" class="title">メインメニュー</h2>
+          <div class="card-intro">
+            <img class="intro-char" src="../assets/character/frog.png" alt="">
+            <div class="card-intro-text">学習したい内容を選ぶ画面だよ。</div>
+          </div>
+          <div class="figure-legend">
+            <!-- 説明画像 -->
+            <div class="hero">
+              <img src="../assets/manual_screen/main-menu_screen.png" alt="メインメニューの画面" />
+            </div>
+
+
+            <!-- 各項目の説明 -->
+            <ol class="circle-num">
+              <li><b>テーマについて話す：</b>AI先生とお話しながら色んなテーマについて深く考えるよ（初めて使う時はここから始めよう）</li>
+              <li><b>プレゼントレーニング：</b>AI先生とお話しした内容をもとにプレゼンの練習ができるよ</li>
+              <li><b>オプションボタン：</b>色んな情報が確認できるよ。アプリを終わる時はここからログアウトしよう</li>
+            </ol>
+
+          </div>
+
+          <!-- 注意書き -->
+          <div class="note" role="note">
+            <div class="note-header">注意！</div>
+            <div class="note-body">
+              <ul class="note-list">
+                <li>プレゼントレーニングは、テーマについて話した後に行おう。</li>
+                <li>みんなで使う端末の場合は、使い終わったらオプションからログアウトしよう。</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+      </section>
+
+
+      <!-- ===== 3 AI先生との会話 ===== -->
+
+      <section class="chapter" id="sec3-panel">
+        <div class="cards-slider" id="slider-sec3">
+          <div class="cards-track">
+            <!-- ===== 3.1 AI先生との会話 ===== -->
+            <section class="card" id="sec3-1">
+              <h2 id="" class="title">1.テーマ選択</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">
+                  AI先生とお話したいテーマを選ぶ画面だよ。タブをタップするとテーマコレクションが切り替わるよ。お話したいテーマコレクションが決まったら、テーマを選ぼう。テーマをクリアすると新しいテーマが選べるようになるよ。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/theme-select_screen.png" alt="テーマ選択の画面" />
+                </div>
+                <ol class="circle-num">
+                  <li><b>鉛筆：</b>お話が途中のテーマの目印</li>
+                  <li><b>星：</b>君がもらった思考力ポイント</li>
+                  <li><b>ゴミ箱：</b>会話内容を消したい時にタップしよう</li>
+                </ol>
+              </div>
+
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>ゴミ箱をタップしてデータを削除すると、会話内容は元に戻せないよ</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- ===== 3.2 AI先生とのお話 ===== -->
+
+            <section class="card" id="sec3-2">
+              <h2 class="title">2.AI先生とのお話の説明</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">
+                  チャットや声でAI先生とテーマについてお話しよう。君のメッセージには★1〜3の評価がつくよ。
+                  メッセージをタップするとAI先生のアドバイスが見れるから、上手く活かしながらお話してみよう。
+                  思考力が十分溜まったら会話を終了して、キーワードボタンからお話した内容を振り返ろう。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/chat_screen.png" alt="AI先生とのお話画面イメージ。メッセージに星評価、下部に入力欄と各種ボタンが並びます。" />
+                </div>
+                <ol class="circle-num">
+                  <li><b>戻るボタン：</b>テーマ選択画面に戻るよ。お話した内容は保存されるから、またお話したい時は続きや新しいテーマを確認しよう</li>
+                  <li><b>思考力ゲージ：</b>君がAI先生と上手にお話できると、どんどん溜まるよ</li>
+                  <li>
+                    <b>会話終了ボタン：</b>思考力ゲージが<b>25ポイント以上</b>になったらタップしよう。キーワード画面に進んで、お話した内容を使ったプレゼンに進むことができる（<b>100回</b>までお話できるよ）
+                  </li>
+                  <li><b>文字入力欄：</b>チャットでお話したい時はここをタップしてメッセージを入力しよう</li>
+                  <li><b>紙飛行機：</b>AI先生にメッセージを送る時のボタンをタップしよう</li>
+                  <li><b>マイクボタン：</b>声を使ってお話したい時はこのボタンをタップしてお話しよう</li>
+                </ol>
+              </div>
+
+
+
+              <!-- 注意（sec1と同構造へ統一） -->
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>お話は<b>100回以内</b>に終わらせよう。それ以上だと内容をまとめられないよ</li>
+                    <li>やり直したい時は、テーマ選択画面の<b>ゴミ箱</b>をタップして会話内容を消してね</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- コツ-->
+              <div class="tip-wrapper">
+                <img class="tip-char" src="../assets/character/cat.png" alt="">
+                <button class="tip-button" type="button" aria-expanded="false" aria-controls="tips-3-2">
+                  お話しするコツはここをクリック！
+                </button>
+              </div>
+
+              <div class="tips-panel" id="tips-3-2" hidden>
+                <section class="tip" role="note" aria-labelledby="tip-title-3-2">
+                  <h3 id="tip-title-3-2">上手にお話しするコツ</h3>
+                  <ul>
+                    <li>一言だけでなく、自分の体験や考えをたくさん話そう</li>
+                    <li>「自分だったらどう思うかな？」「ほかの考え方は？」と考えた理由も一緒に話そう</li>
+                    <li>話の順番を考えて、分かりやすく話そう</li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+
+
+            <!-- ===== 3.3 キーワード ===== -->
+
+            <section class="card" id="sec3-3">
+              <h2 class="title">3.キーワード画面の説明</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">
+                  ここでは君がお話した内容を振り返れるよ。大切なポイントをまとめて、プレゼンに向けて準備しよう。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/keywords_screen.png" alt="キーワード画面" />
+                </div>
+                <ol class="circle-num">
+                  <li><b>会話内容ボタン：</b>会話内容をもう一度確認したい時はタップしてみよう</li>
+                  <li><b>プレゼンボタン：</b>お話する準備ができたらタップしてみよう。プレゼンデータ選択画面が表示されるよ
+                  </li>
+                </ol>
+              </div>
+
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>キーワードはお話した内容によって変わるよ。大切だと思う事は会話中にしっかり伝えよう</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <section class="chapter" id="sec4-panel">
+
+        <!-- ===== 4. プレゼントレーニング ===== -->
+        <div class="cards-slider" id="slider-sec4">
+          <div class="cards-track">
+            <!-- ===== 411. プレゼントレーニング ===== -->
+            <section class="card" id="sec4-1">
+              <h2 id="sec4-panel" class="title">1.プレゼンしたいテーマ選択</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/lion.png" alt="">
+                <div class="card-intro-text">
+                  プレゼンしたいテーマを選ぶ画面だよ。タブをタップするとテーマコレクションが切り替わり、AI先生とのお話でクリアしたテーマだけ選べるよ。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/presentation-themeselect_screen.png" alt="プレゼントレーニング用のテーマ選択画面" />
+                </div>
+              </div>
+            </section>
+
+
+            <!-- ===== 4.2 プレゼンデータ選択 ===== -->
+            <section class="card" id="sec4-2">
+              <h2 id="sec3-2-title" class="title">2.プレゼンデータ選択</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/lion.png" alt="">
+                <div class="card-intro-text">プレゼンの記録場所を選んだり、過去のプレゼンを聞き返す画面だよ。</div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/presentation-dataselect_screen.png" alt="プレゼンデータ選択画面" />
+                </div>
+
+                <ol class="circle-num">
+                  <li><b>データ作成ボタン：</b>タップしてプレゼンデータを作成しよう</li>
+                  <li><b>再生ボタン：</b>君がプレゼンした時の音声が聞けるよ</li>
+                  <li><b>フィードバックボタン：</b>プレゼンの評価を確認できるよ</li>
+                  <li><b>ゴミ箱：</b>プレゼンデータを消したい時にタップしよう</li>
+                </ol>
+              </div>
+
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>ゴミ箱をタップしてデータを削除すると、プレゼンデータは元に戻せないよ</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- ===== 4.3 プレゼントレーニング ===== -->
+
+
+            <section class="card" id="sec4-3">
+              <h2 id="sec3-3-title" class="title">3.プレゼントレーニング</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/lion.png" alt="">
+                <div class="card-intro-text">
+                  AI先生とお話しした内容についてプレゼン練習をしよう。時間を設定して、その時間内でプレゼンをしてみよう。
+                  終わったら自動でフィードバック画面に進むよ。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/presentation-training_screen.png" alt="プレゼントレーニング画面" />
+                </div>
+                <ol class="circle-num">
+                  <li><b>キーワード：</b>クリアしたテーマのキーワードが表示されるよ。プレゼンの参考にしよう</li>
+                  <li><b>時間設定：</b><b>60 / 120 / 180秒</b>から選べるよ</li>
+                  <li><b>時間ゲージ：</b>プレゼンが進むほど残り時間が減っていくよ</li>
+                  <li><b>スタートボタン：</b>タップするとプレゼンの計測が始まるよ</li>
+                  <li><b>終了ボタン：</b>設定した時間に近づくと、スタートボタンが終了ボタンに変わるよ</li>
+                </ol>
+              </div>
+
+
+
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>話した声が<b>50文字以下</b>だと保存されないよ</li>
+                    <li>設定した時間が終わると、しばらくすると自動で終了するよ</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- コツ-->
+              <div class="tip-wrapper">
+                <div class="tip-char"><img src="../assets/character/cat.png" alt=""></div>
+                <button class="tip-button" type="button" aria-expanded="false" aria-controls="tips-4-3">
+                  プレゼンのコツはここをクリック！
+                </button>
+
+                <div class="tips-panel" id="tips-4-3" hidden>
+                  <section class="tip" role="note" aria-labelledby="tip-title-4-3">
+                    <h3 id="tip-title-4-3">プレゼンのコツ</h3>
+
+                    <p><b>テーマ（テーマについて話す）：</b></p>
+                    <ul>
+                      <li>お話しで集めたキーワードを使いながら、テーマについて話そう</li>
+                    </ul>
+
+                    <p><b>独創性（自分の考えを語る）：</b></p>
+                    <ul>
+                      <li>「〜だと思う」「〜と考えた」など、自分の考えをはっきり言おう</li>
+                      <li>自分の体験や意見にもとづいて話そう</li>
+                    </ul>
+
+                    <p><b>構成（聞く人が分かるように話す）：</b></p>
+                    <ul>
+                      <li>結論 → 理由 → 具体例 の順で話そう</li>
+                      <li>話す順番を決めてから、メモを使って伝えてみよう</li>
+                    </ul>
+
+                    <p><b>根拠（自分の考えの理由を示す）：</b></p>
+                    <ul>
+                      <li>自分の考えには理由や具体例を添えよう</li>
+                      <li>「〜だと言える理由は〜だから」の形で伝えよう</li>
+                    </ul>
+
+                    <p><b>情報量（たくさんの内容を語る）：</b></p>
+                    <ul>
+                      <li>一言だけでなく、詳しく話そう</li>
+                      <li>聞き手が想像しやすい具体例を添えよう</li>
+                    </ul>
+                  </section>
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- ===== 4.4 プレゼンフィードバック ===== -->
+            <section class="card" id="sec4-4">
+              <h2 id="sec3-4-title" class="title">4.プレゼンフィードバック</h2>
+
+              <div class="card-intro">
+                <img class="intro-char" src="../assets/character/lion.png" alt="">
+                <div class="card-intro-text">
+                  君のプレゼン評価が表示される画面だよ。改善点を把握して、次回のプレゼンに活かそう。
+                </div>
+              </div>
+
+              <div class="figure-legend">
+                <div class="hero">
+                  <img src="../assets/manual_screen/presentation-feedback_screen.png" alt="プレゼンフィードバック画面" />
+                </div>
+              </div>
+
+              <div class="note" role="note">
+                <div class="note-header">注意！</div>
+                <div class="note-body">
+                  <ul class="note-list">
+                    <li>コメント量は話した内容や時間によって変わるよ</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+
+      <section class="chapter" id="sec5-panel" aria-labelledby="sec5-title">
+        <section class="card">
+          <h2 id="sec5-panel" class="title">オプション</h2>
+
+          <div class="card-intro">
+            <img class="intro-char" src="../assets/character/bear.png" alt="">
+            <div class="card-intro-text">基本情報を確認したり、ログアウトができるよ。</div>
+          </div>
+
+          <div class="figure-legend">
+            <div class="hero">
+              <img src="../assets/manual_screen/setting_screen.png" alt="オプション画面" />
+            </div>
+            <ol class="circle-num">
+              <li><b>タイトルに戻る：</b>タイトル画面に戻るよ</li>
+              <li><b>ログアウト：</b>終わる時はここをタップしよう</li>
+            </ol>
+          </div>
+        </section>
+      </section>
+  </main>
+
+  <!-- Tips 用モーダル（共通） -->
+  <div id="tips-modal" class="modal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="tips-modal-title">
+      <button class="modal__close" type="button" aria-label="閉じる">×</button>
+      <div class="modal__body" id="tips-modal-body" tabindex="-1"></div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      // ===== util =====
+      const $ = (s, r = document) => r.querySelector(s);
+      const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+      // スクロール箱（カード群）
+      const scrollBox = $('.content') || document.scrollingElement || document.documentElement;
+      const resetScroll = () => { if (scrollBox) scrollBox.scrollTop = 0; };
+
+      // 章
+      const panels = $$('.chapter');
+
+      // メインナビの選択表示
+      function setActiveNav(panelId) {
+        $$('.navigation-category-item').forEach(a => {
+          const href = a.getAttribute('href') || '';
+          const id = href.startsWith('#') ? href.slice(1) : href;
+          a.classList.toggle('is-active', id === panelId);
+        });
+      }
+
+      // サブナビの表示切替
+      // 章に対応するサブナビを表示（表示する時は必ず先頭をアクティブにする）
+      // さらに：その章にサブタブが無ければ body に no-subnav を付与
+      function showSubnavFor(panelId) {
+        const subnavBox = document.querySelector('.sub-navigation-container');
+        let found = false;
+
+        document.querySelectorAll('.sub-navigation-category').forEach(ul => {
+          const show = (ul.dataset.for === panelId);
+          ul.hidden = !show;
+          if (show) {
+            found = true;
+            const items = Array.from(ul.querySelectorAll('.sub-navigation-item'));
+            items.forEach(x => x.classList.remove('is-active'));
+            if (items[0]) items[0].classList.add('is-active');
+          }
+        });
+
+        // サブタブが無い章なら subnav を折りたたむ
+        document.body.classList.toggle('no-subnav', !found);
+      }
+
+
+      // ===== Slider: transform で横スライド。高さは“現在スライド”に合わせる =====
+      class Slider {
+        constructor(root) {
+          this.root = root;
+          if (!root) return;
+          this.track = root.querySelector('.cards-track');
+          this.slides = this.track ? Array.from(this.track.children) : [];
+          this.index = 0;
+
+          this.updateHeight = this.updateHeight.bind(this);
+          this.goTo = this.goTo.bind(this);
+
+          // 現在スライドのサイズだけ監視
+          this.ro = new ResizeObserver(this.updateHeight);
+          this.observeCurrent = () => {
+            this.ro.disconnect();
+            if (this.slides[this.index]) this.ro.observe(this.slides[this.index]);
+          };
+
+          // 画像/フォント/リサイズ後にも高さ確定
+          if (this.track) {
+            this.track.addEventListener('transitionend', e => {
+              if (e.propertyName === 'transform') this.updateHeight();
+            });
+          }
+          this.slides.forEach(slide => $$('img', slide).forEach(img => {
+            if (!img.complete) img.addEventListener('load', this.updateHeight, { once: true });
+          }));
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(this.updateHeight);
+          window.addEventListener('resize', this.updateHeight);
+
+          // 初期化
+          this.observeCurrent();
+          requestAnimationFrame(() => requestAnimationFrame(this.updateHeight));
+        }
+
+        updateHeight() {
+          const s = this.slides[this.index];
+          if (!s) return;
+          // レイアウト確定後に読む
+          requestAnimationFrame(() => {
+            this.root.style.height = s.offsetHeight + 'px';
+          });
+        }
+
+        goTo(i) {
+          if (!this.track) return;
+          const next = Math.max(0, Math.min(i, this.slides.length - 1));
+          if (next === this.index) { this.updateHeight(); return; }
+          this.index = next;
+          this.observeCurrent();
+          this.track.style.transform = `translateX(${-100 * this.index}%)`;
+          requestAnimationFrame(() => requestAnimationFrame(this.updateHeight));
+        }
+
+        reset() { this.goTo(0); }
+      }
+
+      // スライダー
+      const slider1 = new Slider($('#slider-sec1'));
+      const slider3 = new Slider($('#slider-sec3'));
+      const slider4 = new Slider($('#slider-sec4'));
+
+      // ===== メインタブ切替 =====
+      function activate(hash) {
+        resetScroll();
+        const raw = hash ? $(hash) : null;
+        const panel = (raw && raw.closest('.chapter')) || $('#sec1-panel') || panels[0];
+        panels.forEach(p => p.classList.toggle('is-active', p === panel));
+        setActiveNav(panel.id);
+        showSubnavFor(panel.id);
+
+        if (panel.id === 'sec1-panel' && slider1) slider1.reset();
+        if (panel.id === 'sec3-panel' && slider3) slider3.reset();
+        if (panel.id === 'sec4-panel' && slider4) slider4.reset();
+
+        // 表示直後に高さを確定
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          if (panel.id === 'sec1-panel' && slider1) slider1.updateHeight();
+          if (panel.id === 'sec3-panel' && slider3) slider3.updateHeight();
+          if (panel.id === 'sec4-panel' && slider4) slider4.updateHeight();
+        }));
+      }
+      window.addEventListener('hashchange', () => activate(location.hash));
+      activate(location.hash);
+      $$('.navigation-category-item').forEach(a => a.addEventListener('click', resetScroll));
+
+      // ===== サブタブ =====
+      $$('.sub-navigation-category').forEach(ul => {
+        ul.addEventListener('click', (e) => {
+          const a = e.target.closest('.sub-navigation-item');
+          if (!a) return;
+          e.preventDefault();
+
+          const idx = Number(a.dataset.index || 0);
+          const target = a.dataset.target;
+
+          $$('.sub-navigation-item', ul).forEach(x => x.classList.remove('is-active'));
+          a.classList.add('is-active');
+
+          resetScroll();
+
+          if (target === '#sec1-panel' && slider1) slider1.goTo(idx);
+          if (target === '#sec3-panel' && slider3) slider3.goTo(idx);
+          if (target === '#sec4-panel' && slider4) slider4.goTo(idx);
+        });
+      });
+
+      // ===== TIP モーダル（そのまま） =====
+      (function tipsModal() {
+        let modal = $('#tips-modal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'tips-modal';
+          modal.className = 'modal';
+          modal.setAttribute('aria-hidden', 'true');
+          modal.innerHTML = `
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="コツ">
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+          <div class="modal__body" tabindex="-1"></div>
+        </div>`;
+          document.body.appendChild(modal);
+        }
+        const bodyEl = modal.querySelector('.modal__body');
+        const closeBtn = modal.querySelector('.modal__close');
+        let lastFocus = null;
+
+        function openFrom(panelId) {
+          const src = document.getElementById(panelId);
+          if (!src) return;
+          const tpl = src.querySelector('.tip') ? src.querySelector('.tip') : src;
+          bodyEl.innerHTML = '';
+          bodyEl.appendChild(tpl.cloneNode(true));
+
+          lastFocus = document.activeElement;
+          document.body.classList.add('modal-open');
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+          setTimeout(() => bodyEl.focus(), 0);
+        }
+        function closeModal() {
+          modal.classList.remove('is-open');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('modal-open');
+          bodyEl.innerHTML = '';
+          if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+        }
+
+        document.addEventListener('click', (e) => {
+          const btn = e.target.closest('.tip-button, .tips-cta, [data-modal-target]');
+          if (!btn) return;
+          const panelId = btn.getAttribute('aria-controls') || btn.dataset.modalTarget;
+          if (panelId) openFrom(panelId);
+        });
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => {
+          if (modal.classList.contains('is-open') && e.key === 'Escape') closeModal();
+        });
+
+        // focus trap
+        modal.addEventListener('keydown', (e) => {
+          if (e.key !== 'Tab' || !modal.classList.contains('is-open')) return;
+          const f = modal.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])');
+          const list = Array.from(f).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+          if (!list.length) return;
+          const first = list[0], last = list[list.length - 1];
+          if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+          else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+        });
+      })();
+
+    })();
+  </script>
+
+
+
+
+
+</body>
+
+</html>

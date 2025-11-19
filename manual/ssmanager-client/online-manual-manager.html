@@ -1,0 +1,1264 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="online-manual-manager.css" media="screen">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>管理画面オンラインマニュアル</title>
+</head>
+
+<body>
+  <main class="manual-content"></main>
+  <section class="banner">
+    <div class="banner-container">
+      <h1 class="banner-title">
+        SPEAK STAR 管理画面マニュアル
+      </h1>
+
+      <div class="banner-meta">
+        <p class="last-updated">最終更新：2025年○月○日</p>
+        <p class="app-version">対象アプリバージョン：SPEAK STAR v0.0.0</p>
+      </div>
+    </div>
+
+
+    <div class="section-menu">
+      <ul>
+        <li class="has-sub"><a href="#intro">はじめに</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="intro" data-anchor="what-is">管理画面面とは</a></li>
+            <li><a href="#" class="submenu-link" data-section="intro" data-anchor="overview">権限について</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="#login" data-label-short="ログイン">ログイン・認証</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-title">ログイン手順</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-mainmenu">パスワード管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-theme">初回ログイン時の設定</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#manager-function">学校管理者機能</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-login">ダッシュボード</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-chat">クラス管理サマリー</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-presentation">教師・生徒アカウント管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-app">テーマ管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-app">データダウンロード</a></li>
+
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#teacher-function">教師機能</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-function-system">クラス・生徒情報管理</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#troubleshooting"  data-label-short="トラブル">トラブルシューティング</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-login">ログイン関連</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-account">アカウント管理</a>
+            </li>
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-data">データ表示</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-system">システムエラー</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+
+  <div class="category-container">
+    <!--1. はじめに-->
+    <section id="intro" class="content-section">
+      <h2 class="category-title">1.はじめに</h2>
+
+      <section class="intro-section" id="what-is">
+        <h3 class="section-subtitle">1.1 管理画面とは？</h3>
+        <p class="what-is-content">
+          SPEAK STAR管理画面は、SPEAK STARアプリケーションの運用・管理を行うためのインターネット上の管理システムです。
+          生徒の学習状況を把握し、アカウント管理やテーマ設定などを行うことで、効果的な学習環境を提供することを支援します。
+        </p>
+      </section>
+
+
+      <section class="intro-section" id="overview">
+        <h3 class="section-subtitle">1.2 権限について</h3>
+
+        <p class="section-lead">
+          SPEAK STAR管理画面では、権限に応じて以下の2種類の機能にアクセスできます：
+        </p>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-category">
+              <span class="role-badge role-admin">学校管理者</span>
+              <h4 class="step-title">学校単位の管理</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>自校の情報管理</li>
+                <li>教師・生徒アカウントの管理</li>
+                <li>クラス情報の管理</li>
+                <li>AIクレジット使用状況の確認</li>
+                <li>テーマ設定の確認 </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="role-badge role-teacher">教師</span>
+              <h4 class="step-title">クラス・生徒の管理</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>担当クラスの生徒管理</li>
+                <li>生徒の学習状況確認</li>
+                <li>リアルタイムモニタリング</li>
+                <li>パスワードリセット</li>
+                <li>学習データのリセット</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </section>
+  </div>
+
+
+
+  <div class="category-container">
+    <!--2. 機能リファレンス-->
+    <section id="login" class="content-section">
+      <h2 class="category-title">2. ログイン・認証</h2>
+
+      <!-- 2.1 タイトル画面 -->
+      <section id="ref-title" class="ref-section">
+        <h3 class="section-subtitle">2.1 ログイン手順</h3>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">管理画面にアクセス</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/title.png" alt="起動画面">
+              <p>ブラウザで管理画面のURLにアクセスします</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">ログイン情報の入力</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/login.png" alt="ログイン画面">
+              <p>メールアドレスとパスワードを入力します。権限に応じて適切なログイン画面が表示されます。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">「ログイン」ボタンをクリックして認証を実行します。</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/main_menu.png" alt="メインメニュー">
+              <p>学習内容を選択する画面です。まずは「会話でテーマを掘り下げる」を選択します。</p>
+            </div>
+          </li>
+      </section>
+
+      <div class="note">
+        <div class="note-header">注意！</div>
+        <ul class="note-list">
+          <li>メールアドレスの正確性: 大文字・小文字は区別されます</li>
+          <li>パスワードの管理: 他の人に教えないよう注意してください</li>
+          <li>共有端末の利用: 使用後は必ずログアウトしてください</li>
+
+        </ul>
+      </div>
+
+
+    </section>
+
+    <!-- 2.2 メインメニュー -->
+    <section id="ref-mainmenu" class="ref-section">
+      <h3 class="section-subtitle">2.2 パスワード管理</h3>
+      <div class="flow-title">パスワード要件</div>
+
+      <div class="figure-legend">
+        <ol class="circle-num">
+          <li>8文字以上</li>
+          <li>大文字・小文字を含む</li>
+          <li>数字を含む</li>
+          <li>特殊文字を1つ以上含む</li>
+        </ol>
+      </div>
+
+      <section id="ref-title" class="ref-section">
+        <h3 class="section-subtitle">パスワードリセット手順</h3>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">管理画面にアクセス</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/title.png" alt="パスワードリセットリンク"> -->
+              <p>ブラウザで管理画面のURLにアクセスします</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">ログイン情報の入力</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/login.png" alt="パスワードリセット画面">
+              <p>メールアドレスとパスワードを入力します。権限に応じて適切なログイン画面が表示されます。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">「ログイン」ボタンをクリックして認証を実行します。</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/main_menu.png" alt="パスワード変更画面">
+              <p>学習内容を選択する画面です。まずは「会話でテーマを掘り下げる」を選択します。</p>
+            </div>
+          </li>
+      </section>
+
+
+      <div class="faq-header">FAQ</div>
+      <details class="ts-item">
+        <summary>
+          <span class="ts-badge ts-badge--q">Q</span>
+          <span class="ts-q"> パスワードを忘れました</span>
+        </summary>
+        <div class="ts-a">
+          <span class="ts-badge ts-badge--a">A</span>
+          <div>ログイン画面の「パスワードをお忘れですか？」からリセット手続きを行ってください。リセットリンクがメールに送信されます。</div>
+        </div>
+      </details>
+      <details class="ts-item">
+        <summary>
+          <span class="ts-badge ts-badge--q">Q</span>
+          <span class="ts-q">アカウントが作成されていません</span>
+        </summary>
+        <div class="ts-a">
+          <span class="ts-badge ts-badge--a">A</span>
+          <div>学校管理者に連絡して、アカウント作成を依頼してください。</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- 2.3 初回ログイン時の設定 -->
+    <section id="ref-theme" class="ref-section">
+      <h3 class="section-subtitle">2.3 初回ログイン時の設定</h3>
+      <p class="section-lead-ref">初回ログイン時は、以下の手順でパスワードを設定します：</p>
+      <section id="ref-title" class="ref-section">
+        <h3 class="section-subtitle">ログイン手順</h3>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">初期パスワードでのログイン</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/title.png" alt="起動画面"> -->
+              <p>発行された初期パスワードでログインします</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">パスワード変更画面への自動遷移</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/login.png" alt="初回ログイン時のパスワード変更画面">
+              <p>初回ログイン時は自動的にパスワード変更画面に遷移します</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">新しいパスワードの設定</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/main_menu.png" alt="メインメニュー"> -->
+              <ul>
+                <li>現在のパスワード（初期パスワード）を入力</li>
+                <li>新しいパスワードを2回入力</li>
+                <li>パスワード要件を満たしていることを確認</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 4 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">4</div>
+              <div class="flow-title">設定完了</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/main_menu.png" alt="ログイン後のダッシュボード画面">
+              <p>パスワード変更が完了すると、ダッシュボード画面に自動遷移します</p>
+            </div>
+          </li>
+      </section>
+
+    </section>
+  </div>
+
+
+
+  <div class="category-container">
+    <!--3. 学校管理者機能-->
+    <section id="manager-function" class="content-section ts-wrap">
+      <h2 class="category-title">3. 学校管理者機能</h2>
+
+      <!-- 3.1 -->
+      <section class="intro-section" id="dashboard">
+        <h3 class="section-subtitle">3.1 ダッシュボード</h3>
+        <p class="what-is-content">
+          学校管理者ダッシュボードでは、自校の状況を確認できます。
+        </p>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="学校管理者ダッシュボード"></div>
+        <section class="intro-section" id="overview">
+          <h3 class="section-subtitle">主要機能</h3>
+
+          <p class="section-lead">
+            SPEAK STARの学習は以下の4ステップで構成されています。
+          </p>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">学校情報表示</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学校名、学校コード、所在地、連絡先、説明を表示</li>
+                  <li>変更不可の読み取り専用表示</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">学校全体サマリー</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>シート使用状況、AIクレジット使用量、サービス期間を表示</li>
+                  <li>使用量と上限の関係を視覚的に確認</li>
+                </ul>
+              </div>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="AIクレジット使用状況"></div>
+            </li>
+
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">統計情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>クラス数、教師数、生徒数（有効）などの数値情報</li>
+                  <li>表示される生徒数は有効状態の生徒のみをカウント</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">グラフ表示エリア</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>統計情報を視覚的に表示</li>
+                  <li>データの傾向を分かりやすく確認</li>
+                </ul>
+              </div>
+            </li>
+            <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="統計情報グラフ"></div>
+          </ol>
+
+          <div class="note">
+            <div class="note-header">注意！</div>
+            <ul class="note-list">
+              <li>AIクレジット使用量: 上限に近づいている場合はシステム管理者に連絡してください</li>
+              <li>データ更新: 統計情報は定期的に自動更新されますが、手動更新も可能です</li>
+            </ul>
+          </div>
+
+          <div class="faq-header">FAQ</div>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">AIクレジット使用量が上限に近づいています</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>システム管理者に連絡して、追加クレジットの配布を依頼してください。</div>
+            </div>
+          </details>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">統計情報が更新されません</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>ページを再読み込みするか、手動更新ボタンを押してください。それでも更新されない場合は、システム管理者に連絡してください。</div>
+            </div>
+          </details>
+
+        </section>
+      </section>
+
+
+      <!-- 3.2 -->
+      <section class="ts-section" id="ts-chat">
+        <h3 class="section-subtitle">3.2 クラス管理サマリー</h3>
+        <p class="what-is-content">
+          各学年・クラスごとの生徒数とAIクレジット使用量などの概要情報を確認できます。
+        </p>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クラス管理サマリー画面"></div>
+        <section class="intro-section" id="overview">
+          <h3 class="section-subtitle">主要機能</h3>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">クラス一覧表示</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学年別、クラス別の一覧表示</li>
+                  <li>各クラスの生徒数、AIクレジット使用量を表示</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">統計情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学年ごとの生徒数合計</li>
+                  <li>クラスごとのAIクレジット使用状況</li>
+                  <li>使用率の視覚的表示</li>
+
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt=""></div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">フィルター機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学年別での絞り込み</li>
+                  <li>クラス別での絞り込み
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+        </section>
+      </section>
+
+      <!-- 3.3 -->
+      <section class="ts-section" id="ts-presentation">
+        <h3 class="section-subtitle">3.3 教師・生徒アカウント管理</h3>
+        <p>
+          自校の教師・生徒アカウントの管理を行います。
+        </p>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="アカウント管理画面"></div>
+        <section class="intro-section" id="overview">
+          <h3 class="section-subtitle">主要機能</h3>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">アカウント一覧表示</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>教師・生徒のアカウント一覧を表示</li>
+                  <li>アカウント種別、名前、メール、クラス、学年、状態を表示</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title"> アカウント操作</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>新規登録、編集、削除機能</li>
+                  <li>パスワードリセット機能</li>
+                  <li>アカウント状態の変更（有効/無効）</li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="新規アカウント作成画面"></div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">一括登録機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>一括登録用ポップアップ画面</li>
+                  <li>指定フォーマットのファイルで複数アカウントを一括登録</li>
+                  <li>既存の生徒IDとの重複チェックを実施</li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="一括登録ポップアップ画面"></div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み・検索機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>アカウント種別、クラス、学年、状態での絞り込み</li>
+                  <li>名前、メール、生徒IDでの検索</li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="パスワードリセット確認ダイアログ"></div>
+              </div>
+            </li>
+          </ol>
+
+          <div class="note">
+            <div class="note-header">注意！</div>
+            <ul class="note-list">
+              <li>生徒ID: 同一学校内で重複しないよう注意してください</li>
+              <li>アカウント削除: 削除されたアカウントは復元できません</li>
+              <li>状態変更: 無効にしたアカウントはログインできなくなります</li>
+            </ul>
+          </div>
+
+          <div class="faq-header">FAQ</div>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">生徒IDが重複エラーになります</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>同一学校内で同じ生徒IDが使用されています。異なる生徒IDを入力してください。</div>
+            </div>
+          </details>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">アカウントの状態を変更したい場合は？</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>アカウント一覧の状態列で「有効」「無効」を切り替えることができます。</div>
+            </div>
+          </details>
+
+
+        </section>
+      </section>
+
+      <!-- 3.4 -->
+      <section class="ts-section" id="ts-app">
+        <h3 class="section-subtitle">3.4 テーマ確認</h3>
+        <p>学習テーマの確認を行います</p>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ一覧画面"></div>
+        <section class="intro-section" id="overview">
+          <h3 class="section-subtitle">主要機能</h3>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title"> テーマ一覧表示</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学年別のテーマ一覧を表示</li>
+                  <li>テーマ名、説明、学年を確認</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title"> テーマ詳細確認</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>各テーマの詳細情報を確認</li>
+                  <li>テーマの内容と学習目標を把握</li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ詳細画面"></div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">閲覧専用</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>テーマの追加・編集・削除は不可</li>
+                  <li>システム管理者による設定のみ</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <div class="faq-header">FAQ</div>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">テーマを追加・変更したい場合は？</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>テーマの追加・変更はシステム管理者に依頼してください。学校管理者では変更できません。</div>
+            </div>
+          </details>
+          <details class="ts-item">
+            <summary>
+              <span class="ts-badge ts-badge--q">Q</span>
+              <span class="ts-q">学年ごとに異なるテーマが表示されません</span>
+            </summary>
+            <div class="ts-a">
+              <span class="ts-badge ts-badge--a">A</span>
+              <div>システム管理者に連絡して、学年別のテーマ設定を確認してください。</div>
+            </div>
+          </details>
+
+
+        </section>
+        <!-- 3.5 -->
+        <section class="ts-section" id="ts-app">
+          <h3 class="section-subtitle">3.5 データダウンロード</h3>
+          <p>学校管理者は、生徒の学習データをダウンロードして分析や記録保存を行うことができます。</p>
+          <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="データダウンロード画面"></div>
+          <section class="intro-section" id="overview">
+            <h3 class="section-subtitle">主要機能</h3>
+
+            <ol class="steps">
+              <li class="step">
+                <div class="step-category">
+                  <span class="step-badge"></span>
+                  <h4 class="step-title"> フィルター・検索機能</h4>
+                </div>
+                <div class="step-desc">
+                  <ul>
+                    <li>学校、学年、クラスのドロップダウンで対象生徒を絞り込み</li>
+                    <li>テキスト入力による名前や生徒IDでの検索</li>
+                    <li>リアルタイムでテーブルを自動更新</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="step">
+                <div class="step-category">
+                  <span class="step-badge"></span>
+                  <h4 class="step-title"> 生徒データ一覧表示</h4>
+                </div>
+                <div class="step-desc">
+                  <ul>
+                    <li>チェックボックス付きテーブルで生徒一覧を表示</li>
+                    <li>学校、学年、クラス、出席番号、名前、よみ、user_id、対話回数、プレゼン回数、AIクレジット、最終ログインを表示</li>
+                    <li>1ページあたり50件の表示、ページネーション機能</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="step">
+                <div class="step-category">
+                  <span class="step-badge"></span>
+                  <h4 class="step-title"> 一括ダウンロード機能</h4>
+                </div>
+                <div class="step-desc">
+                  <ul>
+                    <li>対象データ: テキストデータのみ（対話ログ、対話要約、プレゼンテキストデータ）</li>
+                    <li>制限事項: 音声データは含まれません（容量の大きい音声データは一括ダウンロードの対象外）</li>
+                    <li>使用方法: 対象生徒にチェックを入れ、「一括ダウンロード」ボタンをクリック</li>
+                  </ul>
+                  <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="一括ダウンロードオプション"></div>
+                </div>
+              </li>
+
+              <li class="step">
+                <div class="step-category">
+                  <span class="step-badge"></span>
+                  <h4 class="step-title">個別ダウンロード機能</h4>
+                </div>
+                <div class="step-desc">
+                  <ul>
+                    <li>対象データ: 音声データを含む完全なデータ</li>
+                    <li>含まれるデータ: 対話ログ、対話要約、プレゼンテキストデータ、音声データ、プレゼンフィードバック</li>
+                    <li>使用方法: 各行の「個別DL」ボタンをクリック</li>
+                  </ul>
+                  <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="個別ダウンローボタン"></div>
+                </div>
+              </li>
+            </ol>
+
+            <div class="faq-header">FAQ</div>
+            <details class="ts-item">
+              <summary>
+                <span class="ts-badge ts-badge--q">Q</span>
+                <span class="ts-q">音声データをダウンロードしたい場合は？</span>
+              </summary>
+              <div class="ts-a">
+                <span class="ts-badge ts-badge--a">A</span>
+                <div>一括ダウンロードでは音声データは含まれません。音声データが必要な場合は、各行の「個別DL」ボタンを使用して個別ダウンロードを行ってください。</div>
+              </div>
+            </details>
+            <details class="ts-item">
+              <summary>
+                <span class="ts-badge ts-badge--q">Q</span>
+                <span class="ts-q">一括ダウンロードと個別ダウンロードの違いは？</span>
+              </summary>
+              <div class="ts-a">
+                <span class="ts-badge ts-badge--a">A</span>
+                <div>**一括ダウンロード**: テキストデータのみ（軽量、高速） <br>- **個別ダウンロード**: 音声データを含む完全なデータ（容量大、時間がかかる場合あり）</div>
+              </div>
+            </details>
+
+            <details class="ts-item">
+              <summary>
+                <span class="ts-badge ts-badge--q">Q</span>
+                <span class="ts-q">ダウンロードしたデータの保存期間は？</span>
+              </summary>
+              <div class="ts-a">
+                <span class="ts-badge ts-badge--a">A</span>
+                <div>ダウンロードURLは期限付きで生成されます。ダウンロード後は適切に保存・管理してください。</div>
+              </div>
+            </details>
+
+
+          </section>
+        </section>
+  </div>
+
+  <div class="category-container">
+    <!-- 4. 教師機能-->
+    <section id="teacher-function" class="content-section teacher-function-wrap">
+      <h2 class="category-title">4. 教師機能</h2>
+      <p class="what-is-content">
+        教師は、担当クラスの生徒管理と学習状況の確認を行います。
+      </p>
+      <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="教師ダッシュボード"></div>
+      <h3 id="teacher-function-system" class="section-subtitle">クラス・生徒情報管理</h3>
+      <p>教師は、担当クラスの生徒情報を管理し、学習状況を確認できます。</p>
+      <section class="intro-section" id="overview">
+        <h3 class="section-subtitle">主要機能</h3>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title"> クラス一覧表示</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>担当クラスの一覧を表示</li>
+                <li>クラス名、学年、生徒数を確認</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クラス一覧画面"></div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title"> 生徒一覧表示</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>担当クラスの生徒一覧を表示</li>
+                <li>生徒名、出席番号、学習状況を確認</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒一覧画面"></div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">学習状況確認</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>各生徒の学習進捗を確認</li>
+                <li>チャット回数、プレゼンテーション回数を表示</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">パスワード管理</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>生徒のパスワードリセット機能</li>
+                <li>パスワード状態の確認（初期パスワード/変更済み）</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒パスワードリセット画面"></div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">生徒詳細確認</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>個別の生徒の学習状況を詳細に確認</li>
+                <li>対話情報、プレゼン情報の表示</li>
+                <li>音声再生、フィードバックコメント等の詳細情報</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒詳細画面"></div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">テーマ確認</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>担当クラスに割り当てられているテーマコレクションとテーマの一覧確認</li>
+                <li>学年ごとのテーマ割り当て状況</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="教師用テーマ一覧画面"></div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">クリア情報リセット</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>選択した生徒の学習データを一括リセット</li>
+                <li>会話履歴、プレゼンテーション履歴、ひろふかポイント、テーマの進捗状況</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クリア情報リセット確認ダイアログ"></div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title"> 生徒モニタリング</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>授業中に生徒の状況をリアルタイムでモニタリング</li>
+                <li>生徒の状態表示（アクティブ、アイドル、オフライン）</li>
+                <li>リアルタイムでの対話内容確認</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒モニタリング"></div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>パスワードリセット: リセット後は新しい初期パスワードでログインし、必ずパスワードを変更してください</li>
+            <li>印刷機能: 初期パスワードアカウントのみ選択可能なオプションがあります</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">テーマを追加・変更したい場合は？</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>テーマの追加・変更はシステム管理者に依頼してください。学校管理者では変更できません。</div>
+          </div>
+        </details>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">学年ごとに異なるテーマが表示されません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>システム管理者に連絡して、学年別のテーマ設定を確認してください。</div>
+          </div>
+        </details>
+      </section>
+
+  </div>
+
+  <!--5.トラブルシューティング-->
+  <div class="category-container">
+    <section id="troubleshooting" class="content-section ts-wrap">
+      <h2 class="category-title">5. トラブルシューティング</h2>
+      <!-- 5.1 -->
+      <section class="ts-section" id="ts-login">
+        <h3 class="section-subtitle">5.1 ログイン・認証に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">ログインができません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+
+              <ol>
+                <li>
+                  <strong>ログイン情報の確認</strong>
+                  <ul>
+                    <li>メールアドレスとパスワードが正しく入力されているか</li>
+                    <li>大文字・小文字も区別されます</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>パスワードの確認</strong>
+                  <ul>
+                    <li>パスワードを忘れた場合は「パスワードをお忘れですか？」からリセット</li>
+                    <li>リセットリンクがメールに送信されます</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>アカウントの状態確認</strong>
+                  <ul>
+                    <li>アカウントが有効になっているか</li>
+                    <li>管理者に確認を依頼</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 5.2 -->
+      <section class="ts-section" id="ts-account">
+        <h3 class="section-subtitle">5.2 アカウント管理に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">一括登録でエラーが発生します</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+
+              <ol>
+                <li>
+                  <strong>ファイル形式</strong>
+                  <ul>
+                    <li>正しい形式で保存されているか</li>
+                    <li>文字化けが発生していないか</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>必須項目</strong>
+                  <ul>
+                    <li>アカウント種別、名前、学年（生徒の場合）、クラス（生徒の場合）</li>
+                    <li>出席番号（生徒の場合）が入力されているか</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>データ形式</strong>
+                  <ul>
+                    <li>メールアドレス：正しい形式か</li>
+                    <li>生徒ID：半角英数字で、既存IDと重複していないか</li>
+                    <li>学年：数値（1〜6）で入力されているか</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+        </details>
+      </section>
+
+      <!-- 5.3 -->
+      <section class="ts-section" id="ts-data">
+        <h3 class="section-subtitle">5.3 データ表示・更新に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">プレゼンしたいお題が表示されていない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+
+              <ol>
+                <li>
+                  <strong>ブラウザの確認</strong>
+                  <ul>
+                    <li>推奨・対応ブラウザを使用しているか</li>
+                    <li>キャッシュをクリアして再読み込みを行ったか</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>権限の確認</strong>
+                  <ul>
+                    <li>適切な権限（教師・管理者など）でログインしているか</li>
+                    <li>必要に応じて管理者に権限設定の確認を依頼する</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>システムエラーの可能性</strong>
+                  <ul>
+                    <li>一時的なシステム障害の可能性がある</li>
+                    <li>時間をおいて再度アクセスしても解消しない場合は、管理者へ問い合わせる</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 5.4 -->
+      <section class="ts-section" id="ts-system">
+        <h3 class="section-subtitle">5.4 システムエラーに関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">エラーメッセージが表示されます</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">エラーの種類に応じて、次の点を確認してください：</p>
+
+              <ol>
+                <li>
+                  <strong>認証エラー</strong>
+                  <ul>
+                    <li>メールアドレス・パスワードが正しく入力されているか</li>
+                    <li>セッションの有効期限が切れていないか（再ログインを試す）</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>権限エラー</strong>
+                  <ul>
+                    <li>アクセス権限がない機能にアクセスしていないか</li>
+                    <li>必要な権限が付与されているか、管理者に確認を依頼する</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>システムエラー</strong>
+                  <ul>
+                    <li>一時的なシステム障害の可能性がある</li>
+                    <li>時間をおいて再試行し、それでも解決しない場合はサポート窓口に連絡する</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>ネットワークエラー</strong>
+                  <ul>
+                    <li>インターネット接続が安定しているか</li>
+                    <li>学校内ネットワークやプロキシ設定などに問題がないか確認する</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+    </section>
+  </div>
+  </main>
+
+
+  <script>
+    // ===== 共通ユーティリティ =====
+    const sections = Array.from(document.querySelectorAll('.content-section'));
+    const containers = Array.from(document.querySelectorAll('.category-container'));
+    const mainLinks = Array.from(document.querySelectorAll('.section-menu > ul > li > a[href^="#"]'));
+    const subLinks = Array.from(document.querySelectorAll('.submenu-link'));
+
+    function getHeaderOffset() {
+      const b = document.querySelector('.banner');
+      return b ? b.offsetHeight : 0; // バナー全体の高さ
+    }
+
+    function showSection(id) {
+      // セクション本体の表示/非表示
+      sections.forEach(sec => sec.classList.toggle('is-active', sec.id === id));
+      // 親コンテナも表示/非表示（残り高さ対策）
+      containers.forEach(c => c.style.display = c.contains(document.getElementById(id)) ? 'block' : 'none');
+    }
+
+    function setActiveTab(id) {
+      mainLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`));
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToAnchor(el) {
+      const y = el.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    // メインタブ切替（ページ最上部へ）
+    function activateById(id, opts = { scroll: true }) {
+      showSection(id);
+      setActiveTab(id);
+      history.replaceState(null, '', `#${id}`);
+      if (opts.scroll) scrollToTop();
+    }
+
+    // ====== イベント ======
+
+    // メインメニュークリック：タブ切替＋最上部へ
+    mainLinks.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        activateById(id, { scroll: true });
+      });
+    });
+
+    // サブメニュークリック：該当セクションを表示 → 小見出しへスクロール
+    subLinks.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = a.dataset.section; // 例: 'intro'
+        const anchorId = a.dataset.anchor;  // 例: 'what-is'
+        activateById(sectionId, { scroll: false }); // まずタブ表示だけ
+        requestAnimationFrame(() => {
+          const target = document.getElementById(anchorId);
+          if (target) scrollToAnchor(target);
+        });
+      });
+    });
+
+    // 初期表示（ハッシュ優先、なければ最初のセクション）
+    const initial = (location.hash || '').slice(1) || (sections[0] && sections[0].id);
+    if (initial) activateById(initial, { scroll: false });
+
+    // 外部からのハッシュ変更対策（メインタブのみ対応）
+    window.addEventListener('hashchange', () => {
+      const id = (location.hash || '').slice(1);
+      if (id && sections.some(s => s.id === id)) {
+        activateById(id, { scroll: false });
+      }
+    });
+
+    // リサイズ時：小見出し位置の再計算が必要な場合は都度header分を再取得
+    // （ここではスクロールは行わず、手動で再実行したいとき用のフックだけ残す）
+    window.addEventListener('resize', () => { /* no-op */ });
+    // ===== タッチ幅では「タップで開閉」 =====
+    const touchMQ = window.matchMedia('(max-width: 1024px)');
+
+    function setMenuMode() {
+      document.body.classList.toggle('touchmenu', touchMQ.matches);
+      // 開いているメニューを閉じる
+      document.querySelectorAll('.section-menu .has-sub').forEach(li => li.classList.remove('is-open'));
+    }
+    touchMQ.addEventListener('change', setMenuMode);
+    setMenuMode();
+
+    // 親タブのクリックで開閉（タッチ時のみ）
+    // ※ 1回目タップ → 開く、2回目タップ → 既存の処理で遷移（またはサブ項目を選択）
+    document.querySelectorAll('.section-menu .has-sub > a').forEach(a => {
+      a.setAttribute('aria-haspopup', 'menu');
+      a.setAttribute('aria-expanded', 'false');
+
+      a.addEventListener('click', (e) => {
+        if (!document.body.classList.contains('touchmenu')) return; // PCは従来通り
+        const li = a.parentElement;
+
+        // まだ開いていなければ開くだけ（遷移させない）
+        if (!li.classList.contains('is-open')) {
+          e.preventDefault();
+          // 他を閉じる
+          document.querySelectorAll('.section-menu .has-sub').forEach(el => {
+            if (el !== li) { el.classList.remove('is-open'); el.querySelector('a').setAttribute('aria-expanded', 'false'); }
+          });
+          li.classList.add('is-open');
+          a.setAttribute('aria-expanded', 'true');
+        }
+        // 既に開いている状態で再タップ → 既存のハンドラが動き、メインタブ遷移可能
+      });
+    });
+
+    // メニュー外をタップしたら閉じる
+    document.addEventListener('click', (e) => {
+      if (!document.body.classList.contains('touchmenu')) return;
+      if (!e.target.closest('.section-menu')) {
+        document.querySelectorAll('.section-menu .has-sub').forEach(li => {
+          li.classList.remove('is-open');
+          const a = li.querySelector('a');
+          if (a) a.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+  </script>
+
+
+
+</body>

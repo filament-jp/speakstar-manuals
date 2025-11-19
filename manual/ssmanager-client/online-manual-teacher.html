@@ -1,0 +1,1007 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="online-manual-teacher.css" media="screen">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>教師用オンラインマニュアル</title>
+</head>
+
+<body>
+  <main class="manual-content"></main>
+  <section class="banner">
+    <div class="banner-container">
+      <h1 class="banner-title">
+        SPEAK STAR 教師用マニュアル
+      </h1>
+
+      <div class="banner-meta">
+        <p class="last-updated">最終更新：2025年○月○日</p>
+        <p class="app-version">対象アプリバージョン：SPEAK STAR v0.0.0</p>
+      </div>
+    </div>
+
+
+    <div class="section-menu">
+      <ul>
+        <li class="has-sub"><a href="#intro">はじめに</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="intro" data-anchor="what-is">SPEAK STARとは</a></li>
+            <li><a href="#" class="submenu-link" data-section="intro" data-anchor="overview">学習の全体像</a></li>
+            <li><a href="#" class="submenu-link" data-section="intro" data-anchor="quickflow">アプリの流れ</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="#reference">機能リファレンス</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-title">タイトル画面</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-mainmenu">メインメニュー</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-theme">テーマ選択</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-chat">チャット</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-keyword">キーワード</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presetheme">プレゼンお題</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presedata">データ選択</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-prestraining">トレーニング</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-feedback">フィードバック</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-settings">設定</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#troubleshoot">困ったときには</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-login">ログイン関連</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-chat">チャット関連</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-presentation">プレゼン関連</a>
+            </li>
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-app">アプリ動作</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#spec">技術仕様</a>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link" data-section="spec" data-anchor="spec-system">システム要件</a></li>
+            <li><a href="#" class="submenu-link" data-section="spec" data-anchor="spec-security">セキュリティ要件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <div class="category-container">
+    <!--1. はじめに-->
+    <section id="intro" class="content-section">
+      <h2 class="category-title">1.はじめに</h2>
+
+      <section class="intro-section" id="what-is">
+        <h3 class="section-subtitle">1.1 SPEAK STARとは？</h3>
+        <p class="what-is-content">
+          SPEAK STAR (スピーク・スター)は、アルバ・エデュが全国7万人に伝えてきた 「考える」メソッドをもとに、生成AIを活用して、 子どもの思考力と自己表現力を育む学習支援ツールです。
+          生成AIの先生との対話を通じて 思考の幅を広げ、考えを深め、 ストーリー作りに必要な要素を選ぶプロセスを支援します。
+          また、プレゼンテーションのトレーニング機能を備え、生成AIが内容や表現力を解析して 具体的なフィードバックを提供します。
+          授業や家庭学習に活用できる、子どもの成長を支える革新的なアプリです。
+        </p>
+      </section>
+
+
+      <section class="intro-section" id="overview">
+        <h3 class="section-subtitle">1.2 学習の全体像</h3>
+
+        <p class="section-lead">
+          SPEAK STARの学習は以下の4ステップで構成されています。
+        </p>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">対話で思考を深める</h4>
+            </div>
+            <div class="step-desc">
+              決められたテーマについて、自分の体験や考えをAI先生に対話として伝えて思考を深めます。
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">キーワードで内容を整理する</h4>
+            </div>
+            <div class="step-desc">
+              対話終了後、キーワードが自動的に抽出されるため、テーマに関する自分の考えを整理できます。
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">プレゼンで考えを伝える</h4>
+            </div>
+            <div class="step-desc">
+              整理された考えをもとに、順序立ててプレゼン発表を行うことで、自分の考えを論理的に伝えることができます。
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">フィードバックでプレゼンを改善する</h4>
+            </div>
+            <div class="step-desc">
+              AIがプレゼンの構成・話し方・表現力などを分析し、具体的なアドバイスを提供します。改善点は記録され次回に活かせます。
+            </div>
+          </li>
+        </ol>
+
+
+      </section>
+
+
+      <section class="intro-section" id="quickflow">
+        <h3 class="section-subtitle">1.3 まずはここから！アプリの流れを解説</h3>
+
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">SPEAK STARを起動</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/title.png" alt="起動画面">
+              <p>起動時の画面です。画面上部中央に、ログイン用ウィンドウが表示されます。</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">ログインする</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/login.png" alt="ログイン画面">
+              <p>アカウント名とパスワードを入力し、OKボタンを押すとユーザー認証を行います。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">メインメニューで学習内容を選ぶ</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/main_menu.png" alt="メインメニュー">
+              <p>学習内容を選択する画面です。まずは「会話でテーマを掘り下げる」を選択します。</p>
+            </div>
+          </li>
+
+          <!-- 4 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">4</div>
+              <div class="flow-title">お題を選択</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/chat_theme.png" alt="テーマ選択画面">
+              <p>AI先生と対話したいお題を選択します。</p>
+            </div>
+          </li>
+
+          <!-- 5 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">5</div>
+              <div class="flow-title">AI先生と対話</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/chat.png" alt="チャット画面">
+              <p>選択したお題についてAI先生とチャット形式で対話し、思考を深めます（音声入力も可能）。</p>
+            </div>
+          </li>
+
+          <!-- 6 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">6</div>
+              <div class="flow-title">会話を終了</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/chat.png" alt="会話終了">
+              <p>画面上部の進捗ゲージが十分溜まったら会話を終了し、画面下部に表示されるキーワードボタンを押します。</p>
+            </div>
+          </li>
+
+          <!-- 7 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">7</div>
+              <div class="flow-title">キーワードで内容確認</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/chat_keyword.png" alt="キーワード画面">
+              <p>対話内容から抽出されたキーワードを確認し、自分の考えを整理してプレゼンの柱を決めます。</p>
+            </div>
+          </li>
+
+          <!-- 8 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">8</div>
+              <div class="flow-title">プレゼンお題選択</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/presentation_theme.png" alt="プレゼンお題選択画面">
+              <p>先ほど対話したお題を選択します（対話を完了したお題のみ表示）。</p>
+            </div>
+          </li>
+
+          <!-- 9 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">9</div>
+              <div class="flow-title">プレゼンデータ作成</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/presentation_data.png" alt="プレゼンデータ選択">
+              <p>「データ新規作成」をタップして新しいプレゼンデータを作成します。</p>
+            </div>
+          </li>
+
+          <!-- 10 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">10</div>
+              <div class="flow-title">プレゼントレーニング</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/presentation_training.png" alt="プレゼントレーニング">
+              <p>任意の時間を設定し、スタートボタンを押すとプレゼンの練習が始まります。時間経過や読み上げ状況に応じた指標も表示されます。</p>
+            </div>
+          </li>
+
+          <!-- 11 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">11</div>
+              <div class="flow-title">フィードバック確認</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/presentation_feedback.png" alt="フィードバック画面">
+              <p>プレゼン終了後、自動で評価画面に遷移します。5軸の評価やアドバイスを確認し、次回に活かします。</p>
+            </div>
+          </li>
+
+        </ol>
+        <div class="flow-summary">
+          <p>以上がアプリの簡単な流れになります。</p>
+        </div>
+      </section>
+  </div>
+
+
+
+  <div class="category-container">
+    <!--2. 機能リファレンス-->
+    <section id="reference" class="content-section">
+      <h2 class="category-title">2. 機能リファレンス</h2>
+
+      <!-- 2.1 タイトル画面 -->
+      <section id="ref-title" class="ref-section">
+        <h3 class="section-subtitle">2.1 タイトル画面</h3>
+        <p class="section-lead-ref">アプリへのログインを行う画面です。</p>
+
+        <div class="figure-legend figure-legend--double">
+          <div class="hero">
+            <img src="img/manual_images/title.png" alt="タイトル画面">
+            <img src="img/manual_screen/title-login-screen.png" alt="ログインダイアログ">
+          </div>
+          <ol class="circle-num">
+            <li><b>アカウント名入力欄：</b> アカウント名をここに入力します。</li>
+            <li><b>パスワード入力欄：</b> パスワードをここに入力します。</li>
+            <li><b>OKボタン：</b> 入力内容でログインします。</li>
+          </ol>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>パスワードの入力について: 大文字・小文字は区別されます</li>
+            <li>パスワードの管理について: 児童生徒が他の人に教えないよう注意してください</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">ログインができない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>ユーザー名とパスワードが正しく入力されているか確認してください。大文字・小文字を区別されます。</div>
+          </div>
+        </details>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アカウントが作成されていません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>管理者に連絡して、アカウント作成を依頼してください。</div>
+          </div>
+        </details>
+
+
+      </section>
+
+      <!-- 2.2 メインメニュー -->
+      <section id="ref-mainmenu" class="ref-section">
+        <h3 class="section-subtitle">2.2 メインメニュー</h3>
+        <p class="section-lead-ref">学習内容を選択する画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/main-menu_screen.png" alt="メインメニュー画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>会話でテーマを掘り下げるボタン：</b> AI先生と対話を行う場合はこちらを選択してください</li>
+            <li><b>プレゼントレーニングボタン：</b> プレゼン練習を行う場合はこちらを選択してください</li>
+            <li><b>設定ボタン：</b> 基本情報の確認やログアウトを行う場合はこちらを押してください</li>
+
+          </ol>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「会話でテーマを掘り下げる」と「プレゼントレーニング」のどちらから始めればいいですか？</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>初回は「会話でテーマを掘り下げる」から始めてください。「プレゼントレーニング」は会話でテーマを掘り下げた後に行う事が出来ます。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 2.3 テーマ選択画面 -->
+      <section id="ref-theme" class="ref-section">
+        <h3 class="section-subtitle">2.3 テーマ選択画面</h3>
+        <p class="section-lead-ref">AI先生と話したいお題を選ぶ画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/theme-select_screen.png" alt="テーマ選択画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>鉛筆：</b> 会話が中断されているお題の印です</li>
+            <li><b>星：</b> この会話で獲得した思考力ポイントです</li>
+            <li><b>ゴミ箱ボタン：</b> 押すと「会話内容を削除するかどうかの確認」を表示します</li>
+          </ol>
+        </div>
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>会話内容削除について: 会話内容を削除すると会話履歴だけでなく、そのお題のプレゼン音声やデータも一緒に削除され、元に戻すことはできません。</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">新しいお題が表示されません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>前提条件となるお題をクリアするようにしてください。</div>
+          </div>
+        </details>
+
+      </section>
+
+      <!-- 2.4 チャット画面 -->
+      <section id="ref-chat" class="ref-section">
+        <h3 class="section-subtitle">2.4 チャット画面</h3>
+        <p class="section-lead-ref">AI先生とお題について対話を行う画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/chat_screen.png" alt="チャット画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>戻るボタン:</b> テーマ選択画面に戻れます（会話中の内容は保存されます）</li>
+            <li><b>思考力ゲージ:</b> 溜まった思考力を表しており、送信したメッセージの評価が高いほど大きく上昇します（最大50ポイント）</li>
+            <li><b>会話終了：</b> 会話を終了できます</li>
+            <li><b>文字入力欄:</b> 欄内を押すとキーボードが表示され、テキストでメッセージ入力ができます</li>
+            <li><b>紙飛行機ボタン:</b> メッセージを送信したい時はこちらを押してください</li>
+            <li><b>マイクボタン:</b> タップするとボタンの色が変化し、音声認識を始めます。マイクに向かって話すことで文字入力欄に自動的に文字起こしされます。OFFにしたい時はもう一度ボタンを押してください</li>
+          </ol>
+        </div>
+
+        <div class="ref-block">
+          <div class="ref-figure">
+            <img src="img/manual_images/chat_evaluation.png" alt="メッセージ評価ウィンドウ">
+          </div>
+          <div class="ref-content">
+            <h4 class="ref-subheading">メッセージ評価システム</h4>
+            <ul class="ref-point-list">
+              <li>生徒のメッセージには★0〜3の評価が付きます。</li>
+              <li>メッセージをタップするとAI先生のアドバイスが表示されます。</li>
+            </ul>
+
+            <h4 class="ref-subheading">評価基準とポイント</h4>
+            <ul class="ref-point-list">
+              <li><b>★3：</b> 体験＋理由＋具体例を含む回答 → 思考力ゲージ：5ポイント</li>
+              <li><b>★2：</b> 体験＋理由を含む回答 → 思考力ゲージ：3ポイント</li>
+              <li><b>★1：</b> 簡単な回答 → 思考力ゲージ：1ポイント</li>
+              <li><b>★0：</b> テーマから逸脱した回答 → 思考力ゲージ：0ポイント</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ref-block">
+          <div class="ref-figure">
+            <img src="img/manual_images/chat_end.png" alt="会話終了後の画面">
+          </div>
+          <div class="ref-desc">
+            <p>会話が終了すると、画面下部に「キーワードボタン」と「プレゼンボタン」が表示されます。
+              まずはキーワードボタンを押して、会話内容を整理しましょう。</p>
+          </div>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>メッセージの送信回数制限について: 1つのお題に対して、メッセージを送信できるのは最大100回までです。それを超えると会話のキーワード抽出ができなくなります</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">思考力ゲージが中々溜まりません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下のコツを伝えてください
+              ・一言だけでなく、体験や考えを詳しく話す
+              ・「なぜそう思ったか」理由も一緒に話す
+              ・話の順番を考えて分かりやすく話す。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">会話を終了するタイミングは？</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>思考力ゲージが25ポイント以上溜まったら終了して問題ありません。ただし、100回を超えて会話はしないようにしてください。</div>
+          </div>
+        </details>
+
+      </section>
+
+      <!-- 2.5 キーワード画面 -->
+      <section id="ref-keyword" class="ref-section">
+        <h3 class="section-subtitle">2.5 キーワード画面</h3>
+        <p class="section-lead-ref">会話内容から抽出されたキーワードを確認・整理する画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/keywords_screen.png" alt="キーワード画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>会話内容ボタン: </b> チャット画面を表示できます</li>
+            <li><b>プレゼンボタン: ：</b> プレゼントレーニングに進む際はこちらをタップしてください</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 2.6 プレゼンお題選択画面 -->
+      <section id="ref-presetheme" class="ref-section">
+        <h3 class="section-subtitle">2.6 プレゼンお題選択画面</h3>
+        <p class="section-lead-ref">プレゼン練習を行いたいお題を選択する画面です。</p>
+
+        <div class="figure-legend--center">
+          <div class="hero">
+            <img src="img/manual_screen/presentation-themeselect_screen.png" alt="プレゼンお題選択画面">
+          </div>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>表示されるお題について: 対話パートで会話を終了しているお題のみ表示されます</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">プレゼンしたいお題が表示されていません</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>そのお題に対応するAI先生との会話を完了させる必要があります。「会話でテーマを掘り下げる」から対応するお題の会話を行ってください。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 2.7 プレゼンデータ選択画面 -->
+      <section id="ref-presedata" class="ref-section">
+        <h3 class="section-subtitle">2.7 プレゼンデータ選択画面</h3>
+        <p class="section-lead-ref">新規作成や、過去のプレゼンデータの確認・管理を行う画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/presentation-dataselect_screen.png" alt="プレゼンデータ選択画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>再生ボタン：</b> プレゼン音声を再生できます</li>
+            <li><b>フィードバックボタン：</b> プレゼンの評価を確認できます</li>
+            <li><b>ゴミ箱ボタン：</b> プレゼンデータを削除できます</li>
+            <li><b>データ作成ボタン: </b> タップして新しいプレゼンデータを作成できます</li>
+          </ol>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>プレゼンデータの削除について: データは削除すると元に戻すことはできません。</li>
+            <li>保存できるデータ数について: ひとつのお題に対して保存できるデータは3つまでです。新たにデータを作成したい場合は、既存のプレゼンデータを削除する必要があります。</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- 2.8 プレゼントレーニング画面 -->
+      <section id="ref-prestraining" class="ref-section">
+        <h3 class="section-subtitle">2.8 プレゼントレーニング画面</h3>
+        <p class="section-lead-ref">設定した時間内でプレゼンを行い、表現力を鍛える画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/presentation-training_screen.png" alt="プレゼントレーニング画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>経過時間ゲージ：</b> 経過時間が表示されます（設定した時間に近づくと色が変化します）</li>
+            <li><b>時間設定ボタン：</b> 60/120/180秒を選択できます。</li>
+            <li><b>キーワード：</b> : AI先生との会話から抽出されたキーワードが表示されます</li>
+            <li><b>スタートボタン：</b> プレゼンを開始する際はこちらを押してください。音声記録が始まります</li>
+            <li><b>終了ボタン：</b> 設定した時間に近づくと、スタートボタンが終了ボタンに切り替わります。押すと自動的にプレゼンフィードバック画面に遷移します</li>
+          </ol>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>データの記録について: 話した内容が50文字以下だとデータが保存されないため、十分な内容を話すようにしてください</li>
+            <li>自動終了について: 設定した時間が過ぎてからしばらくすると自動で記録が終了します</li>
+          </ul>
+        </div>
+        
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">時間設定はどう選べばいいですか？</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>初回は60秒から始め、慣れてきたら120秒、180秒と段階的に延長することをお勧めします。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 2.9 プレゼンフィードバック画面 -->
+      <section id="ref-feedback" class="ref-section">
+        <h3 class="section-subtitle">2.9 プレゼンフィードバック画面</h3>
+        <p class="section-lead-ref">プレゼンの評価・アドバイスが確認できる画面です。</p>
+
+        <div class="ref-block">
+          <div class="ref-figure">
+            <img src="img/manual_screen/presentation-feedback_screen.png" alt="プレゼンフィードバック画面">
+          </div>
+          <div class="ref-content">
+            <h4 class="ref-subheading">評価の5軸：</h4>
+            <ul class="ref-point-list">
+              <li>テーマ: お題について適切に話しているか</li>
+              <li>独創性: 自分の考えや体験を話しているか</li>
+              <li>構成力: 聞き手を引き込む話し方をしているか</li>
+              <li>根拠: 自分の考えに理由や具体例を添えているか</li>
+              <li>情報量: 十分な内容を話しているか</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.10 設定画面 -->
+      <section id="ref-settings" class="ref-section">
+        <h3 class="section-subtitle">2.10 設定画面</h3>
+        <p class="section-lead-ref">アプリの基本情報確認とログアウトを行う画面です。</p>
+
+        <div class="figure-legend">
+          <div class="hero">
+            <img src="img/manual_screen/setting_screen.png" alt="設定画面">
+          </div>
+          <ol class="circle-num">
+            <li><b>タイトルに戻る：</b> タイトル画面へ戻ります。</li>
+            <li><b>ログアウト：</b> 利用後は必ず実行（共用端末は特に必須）。</li>
+          </ol>
+        </div>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>セキュリティ確保のため、共用端末では毎回ログアウトを徹底してください。</li>
+          </ul>
+        </div>
+      </section>
+
+
+  </div>
+  <div class="category-container">
+    <!--3. 困ったときには-->
+    <section id="troubleshoot" class="content-section ts-wrap">
+      <h2 class="category-title">3. 困ったときには（トラブルシューティング）</h2>
+
+      <!-- 3.1 -->
+      <section class="ts-section" id="ts-login">
+        <h3 class="section-subtitle">3.1 アカウント・ログインに関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">ログインができない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>ユーザー名とパスワードが正しく入力されているか確認してください。大文字・小文字を区別されます。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">パスワードを忘れた</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>パスワードリセット手続きを行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アカウントが作成されていない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>管理者に連絡して、アカウント作成を依頼してください。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 3.2 -->
+      <section class="ts-section" id="ts-chat">
+        <h3 class="section-subtitle">3.2 対話（チャット）に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">新しいお題が表示されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>前提条件となるお題をクリアするようにしてください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">会話を間違えて削除した</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>削除した会話内容は元に戻せません。必要な場合もう一度会話を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">メッセージ送信回数の制限である30回を超えてしまった</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>テーマ選択画面でその会話データを削除し、もう一度会話を行ってください。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 3.3 -->
+      <section class="ts-section" id="ts-presentation">
+        <h3 class="section-subtitle">3.3 プレゼンに関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">プレゼンしたいお題が表示されていない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>そのお題に対応するAI先生との会話を完了させる必要があります。<br>「会話でテーマを掘り下げる」から対応するお題の会話を行ってください。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 3.4 -->
+      <section class="ts-section" id="ts-app">
+        <h3 class="ts-h3">3.4 アプリの動作・エラーに関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">音声が正しく認識されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>
+              以下を確認してください・マイクボタンを押しているか（チャット画面の場合）／ マイクの接続は問題ないか ／ マイクが認識できる音量、話し方か
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">ネットワークエラーが発生する</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>ネットワーク接続が出来ているか確認してください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">動作が重い</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>頻繁に発生する場合は端末の再起動を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アプリが突然終了する</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>他のアプリを開いている場合は終了するか、端末の再起動を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">データが保存されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>端末のストレージ容量を確認してください。</div>
+          </div>
+        </details>
+      </section>
+    </section>
+  </div>
+
+  <div class="category-container">
+    <!-- 4. 技術仕様・システム要件 -->
+    <section id="spec" class="content-section spec-wrap">
+      <h2 class="category-title">4. 技術仕様・システム要件</h2>
+
+      <h3 id="spec-system" class="section-subtitle">4.1 システム要件</h3>
+
+      <dl class="spec-block">
+        <dt>対応ブラウザ：</dt>
+        <dd>
+          <div>Chrome ○○以上</div>
+          <div>Safari ○○以上</div>
+          <div>Firefox ○○以上</div>
+          <div>Edge ○○以上</div>
+        </dd>
+
+        <dt>OS要件：</dt>
+        <dd>
+          <div>Windows ○○以上</div>
+          <div>macOS ○○以上</div>
+          <div>iOS ○○以上</div>
+          <div>Android ○○以上</div>
+        </dd>
+
+        <dt>ネットワーク要件：</dt>
+        <dd>
+          <div>安定したインターネット接続（推奨：○Mbps以上）</div>
+          <div>HTTPS接続が必要</div>
+        </dd>
+      </dl>
+
+      <h3 id="spec-security" class="section-subtitle">4.2 セキュリティ要件</h3>
+      <dl class="spec-block">
+        <dt>データ保護：</dt>
+        <dd>
+          <div>通信はHTTPSで暗号化</div>
+          <div>音声データの保管について</div>
+          <div>個人情報の扱いについて</div>
+        </dd>
+
+        <dt>アクセス制御：</dt>
+        <dd>
+          <div>セッションタイムアウト：○分</div>
+          <div>パスワードポリシー：○文字以上、英数字混合</div>
+          <div>個人情報の扱いについて</div>
+        </dd>
+      </dl>
+    </section>
+
+  </div>
+
+  <!--5. お問い合わせ-->
+  <!-- <section id="support">
+    <h2>フィードバック・お問い合わせ</h2>
+    <p>不明点やご要望は <a href="mailto:support@speakstar.com">support@speakstar.com</a> まで。</p>
+  </section> -->
+
+  </main>
+
+
+  <script>
+    // ===== 共通ユーティリティ =====
+    const sections = Array.from(document.querySelectorAll('.content-section'));
+    const containers = Array.from(document.querySelectorAll('.category-container'));
+    const mainLinks = Array.from(document.querySelectorAll('.section-menu > ul > li > a[href^="#"]'));
+    const subLinks = Array.from(document.querySelectorAll('.submenu-link'));
+
+    function getHeaderOffset() {
+      const b = document.querySelector('.banner');
+      return b ? b.offsetHeight : 0; // バナー全体の高さ
+    }
+
+    function showSection(id) {
+      // セクション本体の表示/非表示
+      sections.forEach(sec => sec.classList.toggle('is-active', sec.id === id));
+      // 親コンテナも表示/非表示（残り高さ対策）
+      containers.forEach(c => c.style.display = c.contains(document.getElementById(id)) ? 'block' : 'none');
+    }
+
+    function setActiveTab(id) {
+      mainLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`));
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToAnchor(el) {
+      const y = el.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    // メインタブ切替（ページ最上部へ）
+    function activateById(id, opts = { scroll: true }) {
+      showSection(id);
+      setActiveTab(id);
+      history.replaceState(null, '', `#${id}`);
+      if (opts.scroll) scrollToTop();
+    }
+
+    // ====== イベント ======
+
+    // メインメニュークリック：タブ切替＋最上部へ
+    mainLinks.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        activateById(id, { scroll: true });
+      });
+    });
+
+    // サブメニュークリック：該当セクションを表示 → 小見出しへスクロール
+    subLinks.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = a.dataset.section; // 例: 'intro'
+        const anchorId = a.dataset.anchor;  // 例: 'what-is'
+        activateById(sectionId, { scroll: false }); // まずタブ表示だけ
+        requestAnimationFrame(() => {
+          const target = document.getElementById(anchorId);
+          if (target) scrollToAnchor(target);
+        });
+      });
+    });
+
+    // 初期表示（ハッシュ優先、なければ最初のセクション）
+    const initial = (location.hash || '').slice(1) || (sections[0] && sections[0].id);
+    if (initial) activateById(initial, { scroll: false });
+
+    // 外部からのハッシュ変更対策（メインタブのみ対応）
+    window.addEventListener('hashchange', () => {
+      const id = (location.hash || '').slice(1);
+      if (id && sections.some(s => s.id === id)) {
+        activateById(id, { scroll: false });
+      }
+    });
+
+    // リサイズ時：小見出し位置の再計算が必要な場合は都度header分を再取得
+    // （ここではスクロールは行わず、手動で再実行したいとき用のフックだけ残す）
+    window.addEventListener('resize', () => { /* no-op */ });
+    // ===== タッチ幅では「タップで開閉」 =====
+    const touchMQ = window.matchMedia('(max-width: 1024px)');
+
+    function setMenuMode() {
+      document.body.classList.toggle('touchmenu', touchMQ.matches);
+      // 開いているメニューを閉じる
+      document.querySelectorAll('.section-menu .has-sub').forEach(li => li.classList.remove('is-open'));
+    }
+    touchMQ.addEventListener('change', setMenuMode);
+    setMenuMode();
+
+    // 親タブのクリックで開閉（タッチ時のみ）
+    // ※ 1回目タップ → 開く、2回目タップ → 既存の処理で遷移（またはサブ項目を選択）
+    document.querySelectorAll('.section-menu .has-sub > a').forEach(a => {
+      a.setAttribute('aria-haspopup', 'menu');
+      a.setAttribute('aria-expanded', 'false');
+
+      a.addEventListener('click', (e) => {
+        if (!document.body.classList.contains('touchmenu')) return; // PCは従来通り
+        const li = a.parentElement;
+
+        // まだ開いていなければ開くだけ（遷移させない）
+        if (!li.classList.contains('is-open')) {
+          e.preventDefault();
+          // 他を閉じる
+          document.querySelectorAll('.section-menu .has-sub').forEach(el => {
+            if (el !== li) { el.classList.remove('is-open'); el.querySelector('a').setAttribute('aria-expanded', 'false'); }
+          });
+          li.classList.add('is-open');
+          a.setAttribute('aria-expanded', 'true');
+        }
+        // 既に開いている状態で再タップ → 既存のハンドラが動き、メインタブ遷移可能
+      });
+    });
+
+    // メニュー外をタップしたら閉じる
+    document.addEventListener('click', (e) => {
+      if (!document.body.classList.contains('touchmenu')) return;
+      if (!e.target.closest('.section-menu')) {
+        document.querySelectorAll('.section-menu .has-sub').forEach(li => {
+          li.classList.remove('is-open');
+          const a = li.querySelector('a');
+          if (a) a.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+  </script>
+
+
+
+</body>
