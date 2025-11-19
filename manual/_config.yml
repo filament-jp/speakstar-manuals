@@ -6,6 +6,10 @@ description: SpeakStarアプリケーションの公開用マニュアルドキ�
 # テーマ設定（GitHub Pagesのデフォルトテーマを使用）
 theme: jekyll-theme-minimal
 
+# GitHubリポジトリへのリンクを非表示にする
+repository: ""
+show_downloads: false
+
 # Markdown設定
 markdown: kramdown
 kramdown:
