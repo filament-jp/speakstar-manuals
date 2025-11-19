@@ -1,0 +1,29 @@
+# GitHub Pages用のJekyll設定ファイル
+
+title: SpeakStar マニュアル
+description: SpeakStarアプリケーションの公開用マニュアルドキュメント
+
+# テーマ設定（GitHub Pagesのデフォルトテーマを使用）
+theme: jekyll-theme-minimal
+
+# Markdown設定
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# プラグイン設定
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 除外ファイル
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
