@@ -708,15 +708,52 @@
       // ===== メインタブ切替 =====
       function activate(hash) {
         resetScroll();
-        const raw = hash ? $(hash) : null;
+
+        // ハッシュからパネルIDとサブインデックスを抽出
+        // 例: #sec1-panel-1 → panelId: sec1-panel, subIndex: 1
+        let panelId = null;
+        let subIndex = null;
+
+        if (hash) {
+          const hashValue = hash.startsWith('#') ? hash.slice(1) : hash;
+          const match = hashValue.match(/^(sec\d+-panel)(?:-(\d+))?$/);
+          if (match) {
+            panelId = match[1];
+            subIndex = match[2] !== undefined ? parseInt(match[2], 10) : null;
+          }
+        }
+
+        const raw = panelId ? $(`#${panelId}`) : (hash ? $(hash) : null);
         const panel = (raw && raw.closest('.chapter')) || $('#sec1-panel') || panels[0];
         panels.forEach(p => p.classList.toggle('is-active', p === panel));
         setActiveNav(panel.id);
         showSubnavFor(panel.id);
 
-        if (panel.id === 'sec1-panel' && slider1) slider1.reset();
-        if (panel.id === 'sec3-panel' && slider3) slider3.reset();
-        if (panel.id === 'sec4-panel' && slider4) slider4.reset();
+        // スライダーの処理
+        if (panel.id === 'sec1-panel' && slider1) {
+          if (subIndex !== null) {
+            slider1.goTo(subIndex);
+            updateSubnavActive(panel.id, subIndex);
+          } else {
+            slider1.reset();
+          }
+        }
+        if (panel.id === 'sec3-panel' && slider3) {
+          if (subIndex !== null) {
+            slider3.goTo(subIndex);
+            updateSubnavActive(panel.id, subIndex);
+          } else {
+            slider3.reset();
+          }
+        }
+        if (panel.id === 'sec4-panel' && slider4) {
+          if (subIndex !== null) {
+            slider4.goTo(subIndex);
+            updateSubnavActive(panel.id, subIndex);
+          } else {
+            slider4.reset();
+          }
+        }
 
         // 表示直後に高さを確定
         requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -724,6 +761,18 @@
           if (panel.id === 'sec3-panel' && slider3) slider3.updateHeight();
           if (panel.id === 'sec4-panel' && slider4) slider4.updateHeight();
         }));
+      }
+
+      // サブナビのアクティブ状態を更新
+      function updateSubnavActive(panelId, index) {
+        const subnav = document.querySelector(`.sub-navigation-category[data-for="${panelId}"]`);
+        if (!subnav) return;
+
+        const items = Array.from(subnav.querySelectorAll('.sub-navigation-item'));
+        items.forEach(item => {
+          const itemIndex = parseInt(item.dataset.index || '0', 10);
+          item.classList.toggle('is-active', itemIndex === index);
+        });
       }
       window.addEventListener('hashchange', () => activate(location.hash));
       activate(location.hash);
