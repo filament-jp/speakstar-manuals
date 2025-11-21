@@ -48,14 +48,16 @@
             <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-chat">クラス管理サマリー</a></li>
             <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-presentation">教師・生徒アカウント管理</a></li>
             <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-app">テーマ管理</a></li>
-            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-app">データダウンロード</a></li>
 
           </ul>
         </li>
         <li class="has-sub">
           <a href="#teacher-function">教師機能</a>
           <ul class="submenu">
-            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-function-system">クラス・生徒情報管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-student-monitoring">生徒モニタリング</a></li>
+            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-class-list">クラス一覧</a></li>
+            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-student-management">生徒管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="teacher-function" data-anchor="teacher-theme-settings">テーマ設定確認</a></li>
           </ul>
         </li>
         <li class="has-sub">
@@ -108,7 +110,8 @@
                 <li>教師・生徒アカウントの管理</li>
                 <li>クラス情報の管理</li>
                 <li>AIクレジット使用状況の確認</li>
-                <li>テーマ設定の確認 </li>
+                <li>テーマ設定の確認</li>
+                <li>生徒の学習データリセット</li>
               </ul>
             </div>
           </li>
@@ -124,7 +127,6 @@
                 <li>生徒の学習状況確認</li>
                 <li>リアルタイムモニタリング</li>
                 <li>パスワードリセット</li>
-                <li>学習データのリセット</li>
               </ul>
             </div>
           </li>
@@ -207,6 +209,33 @@
           <li>数字を含む</li>
           <li>特殊文字を1つ以上含む</li>
         </ol>
+      </div>
+
+      <div class="flow-title">パスワード有効期限</div>
+      <div class="figure-legend">
+        <ul>
+          <li><strong>管理者・教師アカウント</strong>: 90日間有効
+            <ul>
+              <li>期限切れ時は自動的にパスワード変更画面に遷移します</li>
+            </ul>
+          </li>
+          <li><strong>生徒アカウント</strong>: 期限なし</li>
+        </ul>
+      </div>
+
+      <div class="flow-title">アカウントロック</div>
+      <div class="figure-legend">
+        <ul>
+          <li><strong>ロック発生条件</strong>: 5回連続でパスワード認証に失敗</li>
+          <li><strong>ロックアウト時間</strong>: 間違えた回数に応じて、ロック時間が段階的に長くなります（最大約15分）</li>
+          <li><strong>解除条件</strong>:
+            <ul>
+              <li>ロックアウト期間経過後の成功ログイン</li>
+              <li>15分間連続でログイン試行なし</li>
+            </ul>
+          </li>
+          <li><strong>対処方法</strong>: エラーメッセージに従い、時間をおいて再度ログインを試みてください</li>
+        </ul>
       </div>
 
       <section id="ref-title" class="ref-section">
@@ -382,6 +411,12 @@
                   <li>シート使用状況、AIクレジット使用量、サービス期間を表示</li>
                   <li>使用量と上限の関係を視覚的に確認</li>
                 </ul>
+                <p><strong>AIクレジット表示</strong></p>
+                <p>AIクレジットは「使用量 / 上限」の形式で表示されます。</p>
+                <ul>
+                  <li>表示例: 30000 / 50000</li>
+                  <li>これは30,000クレジットを使用し、上限が50,000クレジットであることを示します</li>
+                </ul>
               </div>
               <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="AIクレジット使用状況"></div>
             </li>
@@ -418,8 +453,7 @@
             <div class="note-header">注意！</div>
             <ul class="note-list">
               <li>AIクレジット使用量: 上限に近づいている場合はシステム管理者に連絡してください</li>
-              <li>データ更新: 統計情報は定期的に自動更新されますが、手動更新も可能です</li>
-            </ul>
+              </ul>
           </div>
 
           <div class="faq-header">FAQ</div>
@@ -440,7 +474,7 @@
             </summary>
             <div class="ts-a">
               <span class="ts-badge ts-badge--a">A</span>
-              <div>ページを再読み込みするか、手動更新ボタンを押してください。それでも更新されない場合は、システム管理者に連絡してください。</div>
+              <div>ページを再読み込みしてください。それでも更新されない場合は、システム管理者に連絡してください。</div>
             </div>
           </details>
 
@@ -487,19 +521,6 @@
               </div>
             </li>
 
-            <li class="step">
-              <div class="step-category">
-                <span class="step-badge"></span>
-                <h4 class="step-title">フィルター機能</h4>
-              </div>
-              <div class="step-desc">
-                <ul>
-                  <li>学年別での絞り込み</li>
-                  <li>クラス別での絞り込み
-                  </li>
-                </ul>
-              </div>
-            </li>
           </ol>
 
         </section>
@@ -609,7 +630,7 @@
 
       <!-- 3.4 -->
       <section class="ts-section" id="ts-app">
-        <h3 class="section-subtitle">3.4 テーマ確認</h3>
+        <h3 class="section-subtitle">3.4 テーマ設定確認</h3>
         <p>学習テーマの確認を行います</p>
         <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ一覧画面"></div>
         <section class="intro-section" id="overview">
@@ -625,6 +646,8 @@
                 <ul>
                   <li>学年別のテーマ一覧を表示</li>
                   <li>テーマ名、説明、学年を確認</li>
+                  <li>1ページあたり50件のテーマを表示</li>
+                  <li>ページネーション機能あり</li>
                 </ul>
               </div>
             </li>
@@ -680,109 +703,6 @@
 
 
         </section>
-        <!-- 3.5 -->
-        <section class="ts-section" id="ts-app">
-          <h3 class="section-subtitle">3.5 データダウンロード</h3>
-          <p>学校管理者は、生徒の学習データをダウンロードして分析や記録保存を行うことができます。</p>
-          <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="データダウンロード画面"></div>
-          <section class="intro-section" id="overview">
-            <h3 class="section-subtitle">主要機能</h3>
-
-            <ol class="steps">
-              <li class="step">
-                <div class="step-category">
-                  <span class="step-badge"></span>
-                  <h4 class="step-title"> フィルター・検索機能</h4>
-                </div>
-                <div class="step-desc">
-                  <ul>
-                    <li>学校、学年、クラスのドロップダウンで対象生徒を絞り込み</li>
-                    <li>テキスト入力による名前や生徒IDでの検索</li>
-                    <li>リアルタイムでテーブルを自動更新</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="step">
-                <div class="step-category">
-                  <span class="step-badge"></span>
-                  <h4 class="step-title"> 生徒データ一覧表示</h4>
-                </div>
-                <div class="step-desc">
-                  <ul>
-                    <li>チェックボックス付きテーブルで生徒一覧を表示</li>
-                    <li>学校、学年、クラス、出席番号、名前、よみ、user_id、対話回数、プレゼン回数、AIクレジット、最終ログインを表示</li>
-                    <li>1ページあたり50件の表示、ページネーション機能</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="step">
-                <div class="step-category">
-                  <span class="step-badge"></span>
-                  <h4 class="step-title"> 一括ダウンロード機能</h4>
-                </div>
-                <div class="step-desc">
-                  <ul>
-                    <li>対象データ: テキストデータのみ（対話ログ、対話要約、プレゼンテキストデータ）</li>
-                    <li>制限事項: 音声データは含まれません（容量の大きい音声データは一括ダウンロードの対象外）</li>
-                    <li>使用方法: 対象生徒にチェックを入れ、「一括ダウンロード」ボタンをクリック</li>
-                  </ul>
-                  <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="一括ダウンロードオプション"></div>
-                </div>
-              </li>
-
-              <li class="step">
-                <div class="step-category">
-                  <span class="step-badge"></span>
-                  <h4 class="step-title">個別ダウンロード機能</h4>
-                </div>
-                <div class="step-desc">
-                  <ul>
-                    <li>対象データ: 音声データを含む完全なデータ</li>
-                    <li>含まれるデータ: 対話ログ、対話要約、プレゼンテキストデータ、音声データ、プレゼンフィードバック</li>
-                    <li>使用方法: 各行の「個別DL」ボタンをクリック</li>
-                  </ul>
-                  <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="個別ダウンローボタン"></div>
-                </div>
-              </li>
-            </ol>
-
-            <div class="faq-header">FAQ</div>
-            <details class="ts-item">
-              <summary>
-                <span class="ts-badge ts-badge--q">Q</span>
-                <span class="ts-q">音声データをダウンロードしたい場合は？</span>
-              </summary>
-              <div class="ts-a">
-                <span class="ts-badge ts-badge--a">A</span>
-                <div>一括ダウンロードでは音声データは含まれません。音声データが必要な場合は、各行の「個別DL」ボタンを使用して個別ダウンロードを行ってください。</div>
-              </div>
-            </details>
-            <details class="ts-item">
-              <summary>
-                <span class="ts-badge ts-badge--q">Q</span>
-                <span class="ts-q">一括ダウンロードと個別ダウンロードの違いは？</span>
-              </summary>
-              <div class="ts-a">
-                <span class="ts-badge ts-badge--a">A</span>
-                <div>**一括ダウンロード**: テキストデータのみ（軽量、高速） <br>- **個別ダウンロード**: 音声データを含む完全なデータ（容量大、時間がかかる場合あり）</div>
-              </div>
-            </details>
-
-            <details class="ts-item">
-              <summary>
-                <span class="ts-badge ts-badge--q">Q</span>
-                <span class="ts-q">ダウンロードしたデータの保存期間は？</span>
-              </summary>
-              <div class="ts-a">
-                <span class="ts-badge ts-badge--a">A</span>
-                <div>ダウンロードURLは期限付きで生成されます。ダウンロード後は適切に保存・管理してください。</div>
-              </div>
-            </details>
-
-
-          </section>
-        </section>
   </div>
 
   <div class="category-container">
@@ -792,40 +712,89 @@
       <p class="what-is-content">
         教師は、担当クラスの生徒管理と学習状況の確認を行います。
       </p>
-      <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="教師ダッシュボード"></div>
-      <h3 id="teacher-function-system" class="section-subtitle">クラス・生徒情報管理</h3>
-      <p>教師は、担当クラスの生徒情報を管理し、学習状況を確認できます。</p>
-      <section class="intro-section" id="overview">
-        <h3 class="section-subtitle">主要機能</h3>
 
+      <!-- 4.1 生徒モニタリング -->
+      <section class="ts-section" id="teacher-student-monitoring">
+        <h3 class="section-subtitle">4.1 生徒モニタリング</h3>
+        <p>授業中に生徒の状況をリアルタイムでモニタリングできます。</p>
+        <div class="hero"><img src="/webpage/img/manual_images/student_monitoring.png" alt="生徒モニタリング画面"></div>
+
+        <h4 class="section-subtitle">主要機能</h4>
         <ol class="steps">
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
-              <h4 class="step-title"> クラス一覧表示</h4>
+              <h4 class="step-title">リアルタイム状態表示</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>生徒の状態表示（アクティブ、アイドル、オフライン）</li>
+                <li>リアルタイムでの対話内容確認</li>
+                <li>並び順: 学年（昇順）→ クラス（昇順）→ 出席番号（昇順）</li>
+              </ul>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">表示切替</h4>
+            </div>
+            <div class="step-desc">
+              <ul>
+                <li>カード表示/リスト表示の切り替え</li>
+                <li>表示サイズの変更（小・中・大）</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 4.2 クラス一覧 -->
+      <section class="ts-section" id="teacher-class-list">
+        <h3 class="section-subtitle">4.2 クラス一覧</h3>
+        <p>担当クラスの概要情報を確認できます。</p>
+        <div class="hero"><img src="/webpage/img/manual_images/class_list.png" alt="クラス一覧画面"></div>
+
+        <h4 class="section-subtitle">主要機能</h4>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-category">
+              <span class="step-badge"></span>
+              <h4 class="step-title">クラス一覧表示</h4>
             </div>
             <div class="step-desc">
               <ul>
                 <li>担当クラスの一覧を表示</li>
                 <li>クラス名、学年、生徒数を確認</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クラス一覧画面"></div>
             </div>
           </li>
+        </ol>
+      </section>
+
+      <!-- 4.3 生徒管理 -->
+      <section class="ts-section" id="teacher-student-management">
+        <h3 class="section-subtitle">4.3 生徒管理</h3>
+        <p>担当クラスの生徒情報を管理し、学習状況を確認できます。</p>
+        <div class="hero"><img src="/webpage/img/manual_images/student_list.png" alt="生徒一覧画面"></div>
+
+        <h4 class="section-subtitle">主要機能</h4>
+        <ol class="steps">
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
-              <h4 class="step-title"> 生徒一覧表示</h4>
+              <h4 class="step-title">生徒一覧表示</h4>
             </div>
             <div class="step-desc">
               <ul>
                 <li>担当クラスの生徒一覧を表示</li>
                 <li>生徒名、出席番号、学習状況を確認</li>
+                <li>並び順: 学年（昇順）→ クラス（昇順）→ 出席番号（昇順）</li>
+                <li>生徒名をクリックすると、生徒詳細画面が別タブで開きます</li>
+                <li>複数の生徒を同時に確認可能で、一覧画面に簡単に戻れます</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒一覧画面"></div>
             </div>
           </li>
-
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
@@ -838,7 +807,6 @@
               </ul>
             </div>
           </li>
-
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
@@ -849,10 +817,9 @@
                 <li>生徒のパスワードリセット機能</li>
                 <li>パスワード状態の確認（初期パスワード/変更済み）</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒パスワードリセット画面"></div>
+              <div class="hero"><img src="/webpage/img/manual_images/student_password_reset.png" alt="生徒パスワードリセット画面"></div>
             </div>
           </li>
-
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
@@ -863,50 +830,50 @@
                 <li>個別の生徒の学習状況を詳細に確認</li>
                 <li>対話情報、プレゼン情報の表示</li>
                 <li>音声再生、フィードバックコメント等の詳細情報</li>
+                <li>生徒詳細画面は別タブで開くため、一覧画面に簡単に戻れます</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒詳細画面"></div>
+              <p><strong>対話内容の表示</strong>:</p>
+              <ul>
+                <li>最初のお題メッセージ（会話のきっかけ）は表示されません</li>
+                <li>生徒の実際の発言のみが表示・カウントされます</li>
+              </ul>
+              <div class="hero"><img src="/webpage/img/manual_images/student_detail.png" alt="生徒詳細画面"></div>
             </div>
           </li>
+        </ol>
+      </section>
 
+      <!-- 4.4 テーマ設定確認 -->
+      <section class="ts-section" id="teacher-theme-settings">
+        <h3 class="section-subtitle">4.4 テーマ設定確認</h3>
+        <p>担当クラスに割り当てられているテーマを確認できます。</p>
+        <div class="hero"><img src="/webpage/img/manual_images/teacher_theme_list.png" alt="教師用テーマ一覧画面"></div>
+
+        <h4 class="section-subtitle">主要機能</h4>
+        <ol class="steps">
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
-              <h4 class="step-title">テーマ確認</h4>
+              <h4 class="step-title">テーマ一覧表示</h4>
             </div>
             <div class="step-desc">
               <ul>
                 <li>担当クラスに割り当てられているテーマコレクションとテーマの一覧確認</li>
                 <li>学年ごとのテーマ割り当て状況</li>
+                <li>1ページあたり50件のテーマを表示（ページネーション操作を減らし、一覧性を向上）</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="教師用テーマ一覧画面"></div>
             </div>
           </li>
           <li class="step">
             <div class="step-category">
               <span class="step-badge"></span>
-              <h4 class="step-title">クリア情報リセット</h4>
+              <h4 class="step-title">閲覧専用</h4>
             </div>
             <div class="step-desc">
               <ul>
-                <li>選択した生徒の学習データを一括リセット</li>
-                <li>会話履歴、プレゼンテーション履歴、ひろふかポイント、テーマの進捗状況</li>
+                <li>テーマの追加・編集・削除は不可</li>
+                <li>システム管理者による設定のみ</li>
               </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クリア情報リセット確認ダイアログ"></div>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title"> 生徒モニタリング</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>授業中に生徒の状況をリアルタイムでモニタリング</li>
-                <li>生徒の状態表示（アクティブ、アイドル、オフライン）</li>
-                <li>リアルタイムでの対話内容確認</li>
-              </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="生徒モニタリング"></div>
             </div>
           </li>
         </ol>
@@ -918,28 +885,6 @@
             <li>印刷機能: 初期パスワードアカウントのみ選択可能なオプションがあります</li>
           </ul>
         </div>
-
-        <div class="faq-header">FAQ</div>
-        <details class="ts-item">
-          <summary>
-            <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">テーマを追加・変更したい場合は？</span>
-          </summary>
-          <div class="ts-a">
-            <span class="ts-badge ts-badge--a">A</span>
-            <div>テーマの追加・変更はシステム管理者に依頼してください。学校管理者では変更できません。</div>
-          </div>
-        </details>
-        <details class="ts-item">
-          <summary>
-            <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">学年ごとに異なるテーマが表示されません</span>
-          </summary>
-          <div class="ts-a">
-            <span class="ts-badge ts-badge--a">A</span>
-            <div>システム管理者に連絡して、学年別のテーマ設定を確認してください。</div>
-          </div>
-        </details>
       </section>
 
   </div>
