@@ -28,6 +28,9 @@ body {
     background-color: #fbfbfb;
     color: #484848;
     font-weight: normal;
+    word-break: keep-all;      
+    line-break: strict;  
+    overflow-wrap: anywhere;
 }
 
 /* ヘッダー雲 */
@@ -387,6 +390,7 @@ ol.circle-num {
     background: transparent;
     font-size: 14px;
     font-weight: 800;
+    max-width: 100%;
 }
 
 /* 丸数字 */
@@ -430,7 +434,7 @@ ol.circle-num {
     color: #167cdd;
     font-weight: 900;
     font-size: 14px;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 /* 
