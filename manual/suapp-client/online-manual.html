@@ -34,7 +34,7 @@
 
         <li>
           <a href="#sec1-panel" class="navigation-category-item">
-            <img class="navigation-category-icon" src="../assets/character/cat.png" alt="ログイン">
+            <img class="navigation-category-icon" src="../assets/character/rabbit.png" alt="ログイン">
             <span class="navigation-category-label has-br-sm">
               ログイン
             </span>
@@ -51,7 +51,7 @@
 
         <li>
           <a href="#sec3-panel" class="navigation-category-item">
-            <img class="navigation-category-icon" src="../assets/character/rabbit.png" alt="AI先生との会話">
+            <img class="navigation-category-icon" src="../assets/character/cat.png" alt="AI先生との会話">
             <span class="navigation-category-label has-br-sm">
               AI先生<br class="br-sm">との会話
             </span> </a>
@@ -79,22 +79,22 @@
     <div class="sub-navigation-container" id="subnav">
       <!-- タイトル画面：3つ -->
       <ul class="sub-navigation-category" data-for="sec1-panel">
-        <li><a class="sub-navigation-item is-active" data-target="#sec1-panel" data-index="0">1. 初期パスワード</a></li>
-        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="1">2. パスワード変更</a></li>
-        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="2">3. 変更後のパスワード</a></li>
+        <li><a class="sub-navigation-item is-active" data-target="#sec1-panel" data-index="0">1. はじめてのログイン</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="1">2. パスワードの変更</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec1-panel" data-index="2">3. いつものログイン</a></li>
       </ul>
 
       <!-- AI先生：3つ -->
       <ul class="sub-navigation-category" data-for="sec3-panel">
-        <li><a class="sub-navigation-item is-active" data-target="#sec3-panel" data-index="0">1. 会話テーマ選択</a></li>
+        <li><a class="sub-navigation-item is-active" data-target="#sec3-panel" data-index="0">1. テーマ選択</a></li>
         <li><a class="sub-navigation-item" data-target="#sec3-panel" data-index="1">2. AI先生とのお話</a></li>
-        <li><a class="sub-navigation-item" data-target="#sec3-panel" data-index="2">3. キーワード</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec3-panel" data-index="2">3. キーワード確認</a></li>
       </ul>
 
       <!-- プレゼン：4つ（最初は非表示） -->
       <ul class="sub-navigation-category" data-for="sec4-panel" hidden>
-        <li><a class="sub-navigation-item is-active" data-target="#sec4-panel" data-index="0">1. プレゼンテーマ選択</a></li>
-        <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="1">2. データ選択</a></li>
+        <li><a class="sub-navigation-item is-active" data-target="#sec4-panel" data-index="0">1. テーマ選択</a></li>
+        <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="1">2. データ選択＆確認</a></li>
         <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="2">3. トレーニング</a></li>
         <li><a class="sub-navigation-item" data-target="#sec4-panel" data-index="3">4. フィードバック</a></li>
       </ul>
@@ -108,12 +108,12 @@
           <div class="cards-track">
             <!-- ===== 1.1 初期パスワードでログイン ===== -->
             <section class="card" id="sec1-1">
-              <h2 class="title">1.初期パスワードでログイン</h2>
+              <h2 class="title">1.はじめてのログイン</h2>
 
               <!-- 導入文 -->
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/cat.png" alt="">
-                <div class="card-intro-text">先生から教えてもらう「初期パスワード」でログインする時の説明だよ。</div>
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">最初は先生から教えてもらう「初期パスワード」でログインしよう！</div>
               </div>
 
               <!-- 画像＋説明リスト -->
@@ -135,6 +135,7 @@
                   <ul class="note-list">
                     <li>入力欄にスペースが入らないようにしよう</li>
                     <li>アカウントの大文字・小文字は間違えないようにしよう</li>
+                    <li>アカウントやパスワードを5回以上連続で間違えると、一時的にログイン出来なくなるので、少し待ってから再度入力しよう</li>
                   </ul>
                 </div>
               </div>
@@ -142,21 +143,21 @@
 
             <!-- ===== 1.2 パスワード変更 ===== -->
             <section class="card" id="sec1-2">
-              <h2 class="title">2.パスワード変更</h2>
+              <h2 class="title">2.パスワードの変更</h2>
 
               <!-- 導入文 -->
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/cat.png" alt="">
-                <div class="card-intro-text">君だけが知っているパスワードに変更する画面だよ。</div>
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">君が考えたパスワードに変更する画面だよ！</div>
               </div>
 
               <!-- 画像＋説明リスト -->
               <div class="figure-legend">
                 <div class="hero">
-                  <img src="../assets/manual_screen/title-login-screen.png" alt="パスワード変更画面">
+                  <img src="../assets/manual_screen/password_change.png" alt="パスワード変更画面">
                 </div>
                 <ol class="circle-num">
-                  <li><b>新しいパスワード入力欄：</b>自分で決めた新しいパスワードを入力しよう</li>
+                  <li><b>新しいパスワード入力欄：</b>君が考えた新しいパスワードを入力しよう</li>
                   <li><b>新しいパスワード再入力欄：</b>確認のためもう一度同じパスワードを入力しよう</li>
                   <li><b>パスワード変更ボタン：</b>新しいパスワードに変更できるよ</li>
                 </ol>
@@ -176,12 +177,12 @@
 
             <!-- ===== 1.3 変更したパスワードでログイン ===== -->
             <section class="card" id="sec1-3">
-              <h2 class="title">3.変更したパスワードでログイン</h2>
+              <h2 class="title">3.いつものログイン</h2>
 
               <!-- 導入文 -->
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/cat.png" alt="">
-                <div class="card-intro-text">君が「変更したパスワード」でログインする時の説明だよ。</div>
+                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <div class="card-intro-text">君がパスワードを変更した後にログインする時の説明だよ！</div>
               </div>
 
               <!-- 画像＋説明リスト -->
@@ -191,7 +192,7 @@
                 </div>
                 <ol class="circle-num">
                   <li><b>アカウント入力欄：</b>自分のアカウント名を入力しよう</li>
-                  <li><b>パスワード入力欄：</b>変更後のパスワードを入力しよう</li>
+                  <li><b>パスワード入力欄：</b>君が考えたパスワードを入力しよう</li>
                   <li><b>OKボタン：</b>ログインが成功すると、自動的にメインメニューへ進むよ</li>
                 </ol>
               </div>
@@ -203,7 +204,7 @@
                   <ul class="note-list">
                     <li>入力欄にスペースが入らないようにしよう</li>
                     <li>アカウントの大文字・小文字は間違えないようにしよう</li>
-                    <li>パスワードを5回以上連続で間違えると、一時的にログイン出来なくなるので、少し待ってから再度入力しよう</li>
+                    <li>アカウントやパスワードを5回以上連続で間違えると、一時的にログイン出来なくなるので、少し待ってから再度入力しよう</li>
                     <li>パスワードを忘れた時は先生に相談しよう</li>
                   </ul>
                 </div>
@@ -218,7 +219,7 @@
           <h2 id="sec2-panel" class="title">メインメニュー</h2>
           <div class="card-intro">
             <img class="intro-char" src="../assets/character/frog.png" alt="">
-            <div class="card-intro-text">学習したい内容を選ぶ画面だよ。</div>
+            <div class="card-intro-text">学習したい内容を選ぶ画面じゃ。</div>
           </div>
           <div class="figure-legend">
             <!-- 説明画像 -->
@@ -231,7 +232,7 @@
             <ol class="circle-num">
               <li><b>テーマについて話す：</b>AI先生とお話しながら色んなテーマについて深く考えるよ（最初はここから始めよう）</li>
               <li><b>プレゼントレーニング：</b>AI先生とお話しした内容をもとにプレゼン練習ができるよ</li>
-              <li><b>オプションボタン：</b>ログアウトする時はここを押そう</li>
+              <li><b>オプションボタン：</b>ログアウトはここからしよう</li>
             </ol>
 
           </div>
@@ -242,7 +243,7 @@
             <div class="note-body">
               <ul class="note-list">
                 <li>プレゼントレーニングは、テーマについて話した後に行おう</li>
-                <li>みんなで使う端末の場合は、使い終わったらオプションからログアウトしよう</li>
+                <li>他の人も使う端末の場合は、使い終わったらオプションからログアウトしよう</li>
               </ul>
             </div>
           </div>
@@ -261,9 +262,9 @@
               <h2 id="" class="title">1.会話テーマ選択</h2>
 
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
                 <div class="card-intro-text">
-                  AI先生とお話したいテーマを選ぶ画面だよ。
+                  AI先生とお話したいテーマを選ぶ画面です！
                 </div>
               </div>
 
@@ -273,7 +274,7 @@
                 </div>
                 <ol class="circle-num">
                   <li><b>鉛筆：</b>会話が途中のテーマの目印</li>
-                  <li><b>星：</b>もらった思考力ポイント</li>
+                  <li><b>星：</b>会話中にもらった思考力ポイント</li>
                   <li><b>ゴミ箱ボタン：</b>会話内容を消したい時にタップしよう</li>
                 </ol>
               </div>
@@ -295,10 +296,10 @@
               <h2 class="title">2.AI先生とのお話</h2>
 
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
                 <div class="card-intro-text">
-                  チャットや声でAI先生とテーマについてお話しよう。君のメッセージをタップするとAI先生からのアドバイスが見れるよ。
-                  思考力が十分溜まったら会話を終了して、キーワードボタンからお話した内容を振り返ろう。
+                  チャットや声でAI先生とテーマについてお話しする画面です。<br>
+                  思考力が十分溜まったら会話を終了して、キーワードボタンからお話した内容を振り返りましょう！
                 </div>
               </div>
 
@@ -307,11 +308,12 @@
                   <img src="../assets/manual_screen/chat_screen.png" alt="AI先生とのお話画面イメージ。メッセージに星評価、下部に入力欄と各種ボタンが並びます。" />
                 </div>
                 <ol class="circle-num">
-                  <li><b>戻るボタン：</b>会話中の内容を保存して会話テーマ選択画面に戻るよ</li>
-                  <li><b>思考力ゲージ：</b>AI先生と上手にお話できると、どんどん溜まるよ</li>
+                  <li><b>戻るボタン：</b>会話中の内容を保存してテーマ選択画面に戻るよ</li>
+                  <li><b>思考力ゲージ：</b>AI先生と上手にお話すると、どんどん溜まるよ</li>
                   <li>
                     <b>会話終了ボタン：</b>思考力ゲージが<b>25ポイント以上</b>になったらタップしよう。キーワードボタンが表示されるので、タップして会話内容を整理しよう
                   </li>
+                  <li><b>君のメッセージ：</b>内容をもとにAI先生からの評価（★0～3）が表示されるよ。タップするとアドバイスも確認できるから、参考にしながらお話ししよう</li>
                   <li><b>文字入力欄：</b>チャットでお話したい時はここをタップしてメッセージを入力しよう</li>
                   <li><b>紙飛行機：</b>AI先生にメッセージを送る時のボタンだよ</li>
                   <li><b>マイクボタン：</b>声を使ってお話したい時はこのボタンをタップしてお話しよう</li>
@@ -326,7 +328,7 @@
                 <div class="note-body">
                   <ul class="note-list">
                     <li>メッセージを送れるのは<b>100回まで</b>だよ</li>
-                    <li>お話をやり直したい時は、会話テーマ選択画面の<b>ゴミ箱ボタン</b>から会話内容を削除しよう</li>
+                    <li>お話をやり直したい時は、テーマ選択画面の<b>ゴミ箱ボタン</b>から会話内容を削除しよう</li>
                   </ul>
                 </div>
               </div>
@@ -354,12 +356,12 @@
             <!-- ===== 3.3 キーワード ===== -->
 
             <section class="card" id="sec3-3">
-              <h2 class="title">3.キーワード画面の説明</h2>
+              <h2 class="title">3.キーワード確認</h2>
 
               <div class="card-intro">
-                <img class="intro-char" src="../assets/character/rabbit.png" alt="">
+                <img class="intro-char" src="../assets/character/cat.png" alt="">
                 <div class="card-intro-text">
-                  ここでは君がお話した内容を振り返れるよ。大切なポイントをまとめて、プレゼンに向けて準備しよう。
+                  AI先生とお話した内容を振り返る画面です。<br>大切なポイントを整理して、プレゼンの準備をしましょう！
                 </div>
               </div>
 
@@ -368,8 +370,8 @@
                   <img src="../assets/manual_screen/keywords_screen.png" alt="キーワード画面" />
                 </div>
                 <ol class="circle-num">
-                  <li><b>会話内容ボタン：</b>会話内容をもう一度確認したい時はタップしてみよう</li>
-                  <li><b>プレゼンボタン：</b>お話する準備ができたらタップしてみよう。プレゼンデータ選択画面が表示されるよ
+                  <li><b>会話内容ボタン：</b>会話内容をもう一度確認したい時はタップしよう</li>
+                  <li><b>プレゼンボタン：</b>プレゼンの準備ができたらタップしよう。プレゼンデータ選択画面に移動するよ
                   </li>
                 </ol>
               </div>
@@ -378,7 +380,7 @@
                 <div class="note-header">注意！</div>
                 <div class="note-body">
                   <ul class="note-list">
-                    <li>キーワードはお話した内容によって変わるよ。大切だと思う事は会話中にしっかり伝えよう</li>
+                    <li>キーワードは会話内容によって変わるので、大事なことは会話中にしっかり伝えよう</li>
                   </ul>
                 </div>
               </div>
@@ -397,12 +399,12 @@
           <div class="cards-track">
             <!-- ===== 411. プレゼントレーニング ===== -->
             <section class="card" id="sec4-1">
-              <h2 id="sec4-panel" class="title">1.プレゼンしたいテーマ選択</h2>
+              <h2 id="sec4-panel" class="title">1.プレゼンテーマ選択</h2>
 
               <div class="card-intro">
                 <img class="intro-char" src="../assets/character/lion.png" alt="">
                 <div class="card-intro-text">
-                  プレゼンしたいテーマを選ぶ画面だよ。タブをタップするとテーマコレクションが切り替わり、AI先生とのお話でクリアしたテーマだけ選べるよ。
+                  プレゼンしたいテーマを選ぶ画面だぜ。<br>キーワード確認が完了したテーマだけ選べるぞ！
                 </div>
               </div>
 
@@ -416,11 +418,11 @@
 
             <!-- ===== 4.2 プレゼンデータ選択 ===== -->
             <section class="card" id="sec4-2">
-              <h2 id="sec3-2-title" class="title">2.プレゼンデータ選択</h2>
+              <h2 id="sec3-2-title" class="title">2.プレゼンデータ選択＆確認</h2>
 
               <div class="card-intro">
                 <img class="intro-char" src="../assets/character/lion.png" alt="">
-                <div class="card-intro-text">プレゼンの記録場所を選んだり、過去のプレゼンを聞き返す画面だよ。</div>
+                <div class="card-intro-text">プレゼンデータを記録する場所を選んだり、過去のプレゼンを聞き返す画面だぜ！</div>
               </div>
 
               <div class="figure-legend">
@@ -429,10 +431,10 @@
                 </div>
 
                 <ol class="circle-num">
-                  <li><b>データ作成ボタン：</b>タップしてプレゼンデータを作成しよう</li>
+                  <li><b>フィードバックボタン：</b>プレゼンのアドバイスを確認できるよ</li>
                   <li><b>再生ボタン：</b>君がプレゼンした時の音声が聞けるよ</li>
-                  <li><b>フィードバックボタン：</b>プレゼンの評価を確認できるよ</li>
                   <li><b>ゴミ箱：</b>プレゼンデータを消したい時にタップしよう</li>
+                  <li><b>データ作成ボタン：</b>タップするとプレゼントレーニング画面へ進むよ</li>
                 </ol>
               </div>
 
@@ -440,7 +442,7 @@
                 <div class="note-header">注意！</div>
                 <div class="note-body">
                   <ul class="note-list">
-                    <li>ゴミ箱をタップしてデータを削除すると、プレゼンデータは元に戻せないよ</li>
+                    <li>削除したプレゼンデータは元に戻せないので注意しよう</li>
                   </ul>
                 </div>
               </div>
@@ -456,8 +458,8 @@
               <div class="card-intro">
                 <img class="intro-char" src="../assets/character/lion.png" alt="">
                 <div class="card-intro-text">
-                  AI先生とお話しした内容についてプレゼン練習をしよう。時間を設定して、その時間内でプレゼンをしてみよう。
-                  終わったら自動でフィードバック画面に進むよ。
+                  プレゼン練習をする画面だぞ。準備が出来たらスタートボタンをタップだ！<br>
+                  終わったら自動でフィードバック画面に進むぜ。
                 </div>
               </div>
 
@@ -466,10 +468,10 @@
                   <img src="../assets/manual_screen/presentation-training_screen.png" alt="プレゼントレーニング画面" />
                 </div>
                 <ol class="circle-num">
-                  <li><b>キーワード：</b>クリアしたテーマのキーワードが表示されるよ。プレゼンの参考にしよう</li>
+                  <li><b>時間ゲージ：</b>プレゼン中は時間が表示されるよ。残り時間が少なくなると色が変わるから、目安にしてみてね</li>
                   <li><b>時間設定：</b><b>60 / 120 / 180秒</b>から選べるよ</li>
-                  <li><b>時間ゲージ：</b>プレゼンが進むほど残り時間が減っていくよ</li>
-                  <li><b>スタートボタン：</b>タップするとプレゼンの計測が始まるよ</li>
+                  <li><b>キーワード：</b>クリアしたテーマのキーワードが表示されるよ。プレゼンの参考にしよう</li>
+                  <li><b>スタートボタン：</b>タップするとプレゼンの記録をスタートするよ</li>
                   <li><b>終了ボタン：</b>設定した時間に近づくと、スタートボタンが終了ボタンに変わるよ</li>
                 </ol>
               </div>
@@ -480,8 +482,8 @@
                 <div class="note-header">注意！</div>
                 <div class="note-body">
                   <ul class="note-list">
-                    <li>話した声が<b>50文字以下</b>だと保存されないよ</li>
-                    <li>設定した時間が終わると、しばらくすると自動で終了するよ</li>
+                    <li>話した言葉の文字数が<b>50文字以下</b>だと記録できないよ</li>
+                    <li>設定した時間が過ぎてから、しばらくすると自動で記録が終了するよ</li>
                   </ul>
                 </div>
               </div>
@@ -497,33 +499,29 @@
                   <section class="tip" role="note" aria-labelledby="tip-title-4-3">
                     <h3 id="tip-title-4-3">プレゼンのコツ</h3>
 
-                    <p><b>テーマ（テーマについて話す）：</b></p>
+                    <p><b>①テーマに沿って話す：</b></p>
                     <ul>
-                      <li>お話しで集めたキーワードを使いながら、テーマについて話そう</li>
+                      <li>キーワードを参考に、テーマに沿って話そう</li>
                     </ul>
 
-                    <p><b>独創性（自分の考えを語る）：</b></p>
+                    <p><b>②自分の考えを伝える：</b></p>
                     <ul>
-                      <li>「〜だと思う」「〜と考えた」など、自分の考えをはっきり言おう</li>
-                      <li>自分の体験や意見にもとづいて話そう</li>
+                      <li>「〜だと思います」「〜と考えました」など、自分の考えをはっきり伝えよう</li>
                     </ul>
 
-                    <p><b>構成（聞く人が分かるように話す）：</b></p>
+                    <p><b>③分かりやすい構成を意識する：</b></p>
                     <ul>
-                      <li>結論 → 理由 → 具体例 の順で話そう</li>
-                      <li>話す順番を決めてから、メモを使って伝えてみよう</li>
+                      <li>話の順番を考えて、分かりやすく話そう（結論→理由→具体例の順）</li>
                     </ul>
 
-                    <p><b>根拠（自分の考えの理由を示す）：</b></p>
+                    <p><b>④根拠を添える：</b></p>
                     <ul>
-                      <li>自分の考えには理由や具体例を添えよう</li>
-                      <li>「〜だと言える理由は〜だから」の形で伝えよう</li>
+                      <li>「なぜそう思ったのか」という理由も一緒に話そう</li>
                     </ul>
 
-                    <p><b>情報量（たくさんの内容を語る）：</b></p>
+                    <p><b>⑤たくさんの内容を語る：</b></p>
                     <ul>
                       <li>一言だけでなく、詳しく話そう</li>
-                      <li>聞き手が想像しやすい具体例を添えよう</li>
                     </ul>
                   </section>
                 </div>
@@ -541,22 +539,13 @@
               <div class="card-intro">
                 <img class="intro-char" src="../assets/character/lion.png" alt="">
                 <div class="card-intro-text">
-                  君のプレゼン評価が表示される画面だよ。改善点を把握して、次回のプレゼンに活かそう。
+                  君のプレゼンについてのアドバイスが表示される画面だぞ。<br>しっかりと受け止めて、次回のプレゼン練習に活かそうぜ！
                 </div>
               </div>
 
               <div class="figure-legend">
                 <div class="hero">
                   <img src="../assets/manual_screen/presentation-feedback_screen.png" alt="プレゼンフィードバック画面" />
-                </div>
-              </div>
-
-              <div class="note" role="note">
-                <div class="note-header">注意！</div>
-                <div class="note-body">
-                  <ul class="note-list">
-                    <li>コメント量は話した内容や時間によって変わるよ</li>
-                  </ul>
                 </div>
               </div>
             </section>
@@ -572,7 +561,7 @@
 
           <div class="card-intro">
             <img class="intro-char" src="../assets/character/bear.png" alt="">
-            <div class="card-intro-text">基本情報を確認したり、ログアウトができるよ。</div>
+            <div class="card-intro-text">ログアウトや音声テストができるよ！</div>
           </div>
 
           <div class="figure-legend">
@@ -581,6 +570,7 @@
             </div>
             <ol class="circle-num">
               <li><b>タイトルに戻る：</b>タイトル画面に戻るよ</li>
+              <li><b>マイク環境チェック：</b>音声テストをしたい時はここをタップしよう</li>
               <li><b>ログアウト：</b>終わる時はここをタップしよう</li>
             </ol>
           </div>
