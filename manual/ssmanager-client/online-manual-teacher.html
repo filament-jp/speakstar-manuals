@@ -39,14 +39,15 @@
           <ul class="submenu">
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-title">タイトル画面</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-mainmenu">メインメニュー</a></li>
-            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-theme">テーマ選択</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-theme">会話テーマ選択</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-chat">チャット</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-keyword">キーワード</a></li>
-            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presetheme">プレゼンお題</a></li>
-            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presedata">データ選択</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presetheme">プレゼンテーマ選択</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-presedata">プレゼンデータ選択</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-prestraining">トレーニング</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-feedback">フィードバック</a></li>
             <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-settings">設定</a></li>
+            <li><a href="#" class="submenu-link" data-section="reference" data-anchor="ref-miccheck">マイク環境チェック</a></li>
           </ul>
         </li>
         <li class="has-sub">
@@ -54,16 +55,9 @@
           <ul class="submenu">
             <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-login">ログイン関連</a></li>
             <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-chat">チャット関連</a></li>
-            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-presentation">プレゼン関連</a>
-            </li>
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-presentation">プレゼン関連</a></li>
             <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-app">アプリ動作</a></li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#spec">技術仕様</a>
-          <ul class="submenu">
-            <li><a href="#" class="submenu-link" data-section="spec" data-anchor="spec-system">システム要件</a></li>
-            <li><a href="#" class="submenu-link" data-section="spec" data-anchor="spec-security">セキュリティ要件</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshoot" data-anchor="ts-data">データ管理</a></li>
           </ul>
         </li>
       </ul>
@@ -334,7 +328,7 @@
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>管理者に連絡して、アカウント作成を依頼してください。</div>
+            <div>学校管理者に連絡して、アカウント作成を依頼してください。</div>
           </div>
         </details>
 
@@ -351,7 +345,7 @@
             <img src="img/manual_screen/main-menu_screen.png" alt="メインメニュー画面">
           </div>
           <ol class="circle-num">
-            <li><b>会話でテーマを掘り下げるボタン：</b> AI先生と対話を行う場合はこちらを選択してください</li>
+            <li><b>テーマについて話す：</b> AI先生と対話を行う場合はこちらを選択してください</li>
             <li><b>プレゼントレーニングボタン：</b> プレゼン練習を行う場合はこちらを選択してください</li>
             <li><b>設定ボタン：</b> 基本情報の確認やログアウトを行う場合はこちらを押してください</li>
 
@@ -362,18 +356,18 @@
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">「会話でテーマを掘り下げる」と「プレゼントレーニング」のどちらから始めればいいですか？</span>
+            <span class="ts-q">「テーマについて話す」と「プレゼントレーニング」のどちらから始めればいいですか？</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>初回は「会話でテーマを掘り下げる」から始めてください。「プレゼントレーニング」は会話でテーマを掘り下げた後に行う事が出来ます。</div>
+            <div>初回は「テーマについて話す」から始めてください。「プレゼントレーニング」はテーマについて話した後に行う事が出来ます。</div>
           </div>
         </details>
       </section>
 
       <!-- 2.3 テーマ選択画面 -->
       <section id="ref-theme" class="ref-section">
-        <h3 class="section-subtitle">2.3 テーマ選択画面</h3>
+        <h3 class="section-subtitle">2.3 会話テーマ選択画面</h3>
         <p class="section-lead-ref">AI先生と話したいお題を選ぶ画面です。</p>
 
         <div class="figure-legend">
@@ -510,8 +504,8 @@
 
       <!-- 2.6 プレゼンお題選択画面 -->
       <section id="ref-presetheme" class="ref-section">
-        <h3 class="section-subtitle">2.6 プレゼンお題選択画面</h3>
-        <p class="section-lead-ref">プレゼン練習を行いたいお題を選択する画面です。</p>
+        <h3 class="section-subtitle">2.6 プレゼンテーマ選択画面</h3>
+        <p class="section-lead-ref">プレゼン練習を行いたいテーマを選択する画面です。</p>
 
         <div class="figure-legend--center">
           <div class="hero">
@@ -522,21 +516,9 @@
         <div class="note">
           <div class="note-header">注意！</div>
           <ul class="note-list">
-            <li>表示されるお題について: 対話パートで会話を終了しているお題のみ表示されます</li>
+            <li>表示されるお題について: AI先生との会話パートでキーワード確認まで終えているテーマのみ表示されます</li>
           </ul>
         </div>
-
-        <div class="faq-header">FAQ</div>
-        <details class="ts-item">
-          <summary>
-            <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">プレゼンしたいお題が表示されていません</span>
-          </summary>
-          <div class="ts-a">
-            <span class="ts-badge ts-badge--a">A</span>
-            <div>そのお題に対応するAI先生との会話を完了させる必要があります。「会話でテーマを掘り下げる」から対応するお題の会話を行ってください。</div>
-          </div>
-        </details>
       </section>
 
       <!-- 2.7 プレゼンデータ選択画面 -->
@@ -587,7 +569,7 @@
         <div class="note">
           <div class="note-header">注意！</div>
           <ul class="note-list">
-            <li>データの記録について: 話した内容が50文字以下だとデータが保存されないため、十分な内容を話すようにしてください</li>
+            <li>データの記録について: プレゼンの発話量が50文字以下だとデータが保存されないため、十分な内容を話すようにしてください</li>
             <li>自動終了について: 設定した時間が過ぎてからしばらくすると自動で記録が終了します</li>
           </ul>
         </div>
@@ -650,6 +632,172 @@
         </div>
       </section>
 
+      <!-- 2.11 マイク環境チェック -->
+      <section id="ref-miccheck" class="ref-section">
+        <h3 class="section-subtitle">2.11 マイク環境チェック</h3>
+        <p class="section-lead-ref">生徒の音声入力が上手くいかない時に、マイク環境を診断・解決するためのツールです。</p>
+
+        <h4 class="ref-subheading">こんな時に使います</h4>
+        <ul class="ref-point-list">
+          <li>チャット画面やプレゼントレーニングで音声入力ができない</li>
+          <li>音声認識がうまく動作しない</li>
+          <li>共用端末でマイク設定が変わった可能性がある</li>
+          <li>マイクを接続・変更した後</li>
+          <li>初めて端末を使用する時</li>
+        </ul>
+
+        <h4 class="ref-subheading">アクセス方法</h4>
+        <ol class="ref-point-list">
+          <li>画面右上の<b>設定ボタン</b>（歯車マーク）をクリック</li>
+          <li><b>「マイク環境チェック」</b>ボタンをクリック</li>
+        </ol>
+
+        <h4 class="ref-subheading">画面の構成</h4>
+        <p><b>1. マイク環境チェック（自動診断）</b></p>
+        <p>ページを開くと自動的に以下の8項目をチェックします：</p>
+        <ul class="ref-point-list">
+          <li>デバイスタイプ（PC/タブレット/スマホ）</li>
+          <li>HTTPS接続の確認</li>
+          <li>ブラウザの対応状況</li>
+          <li>音声認識APIのサポート</li>
+          <li>言語設定（日本語）</li>
+          <li>マイク権限の状態</li>
+          <li>マイクデバイスの検出（<b>使用中のマイクは太字で表示</b>）</li>
+          <li>マイクアクセステスト</li>
+        </ul>
+        <p>各項目は ✓（緑色）= 正常、×（赤色）= 問題あり で表示されます。問題がある項目には「解決方法：」が表示されますので、その指示に従ってください。</p>
+
+        <p><b>2. 音声認識動作テスト（10秒間の実動作確認）</b></p>
+        <ul class="ref-point-list">
+          <li>「音声認識をテスト」ボタンをクリックするとテストが始まります</li>
+          <li>マイクに向かって10秒間話してください</li>
+          <li><b>音量メーター</b>が反応することを確認（10本のバーが緑色に変化）</li>
+          <li><b>認識結果ボックス</b>に話した内容が文字で表示されることを確認</li>
+        </ul>
+        <p><b>※注意：</b> 環境チェックがすべて✓になるまで、動作テストは実行できません。</p>
+
+        <h4 class="ref-subheading">活用のポイント</h4>
+        <ul class="ref-point-list">
+          <li><b>第一診断ツールとして活用：</b> 生徒が「音声が入らない」と訴えた時、まずこの機能で状況を確認してください</li>
+          <li><b>使用中のマイクを確認：</b> 複数のマイクが接続されている場合、太字で表示されているデバイスが現在使用中です</li>
+          <li><b>共用端末での定期チェック：</b> 前の生徒がマイク設定を変更している可能性があるため、音声機能を使う前のチェックを推奨します</li>
+          <li><b>Firefoxは非対応：</b> Firefoxでは音声認識APIが使えません。Chrome、Edge、Safariのいずれかを使用してください</li>
+        </ul>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>モバイル・タブレット端末の制限: スマートフォンやタブレットはメモリ制限があり、アプリがバックグラウンドになると録音が停止する場合があります。長時間の録音が必要な場合はデスクトップ端末を推奨してください</li>
+            <li>HTTPS接続必須: マイク機能はHTTPS接続でのみ動作します</li>
+            <li>ブラウザ権限: 初回使用時、ブラウザからマイク権限の許可を求められます。必ず「許可」を選択してください</li>
+          </ul>
+        </div>
+
+        <div class="faq-header">FAQ</div>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「マイクの権限が拒否されています」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>ブラウザのマイク権限設定を確認してください：<br>
+              <b>Chrome/Edgeの場合：</b><br>
+              1. アドレスバー左側の鍵マークまたはカメラアイコンをクリック<br>
+              2. 「マイク」の設定を「許可」に変更<br>
+              3. ページを再読み込み<br><br>
+              <b>Safariの場合：</b><br>
+              1. Safari メニュー → 「設定」→「Webサイト」タブ<br>
+              2. 左側メニューから「マイク」を選択<br>
+              3. 該当サイトを「許可」に設定<br>
+              4. ページを再読み込み
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「マイクが検出されませんでした」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の点を順番に確認してください：<br>
+              1. マイクが端末に正しく接続されているか（USBマイク、ヘッドセット等）<br>
+              2. Windows の場合：設定 → システム → サウンド → 入力 で、マイクが認識されているか確認<br>
+              3. マイクがミュートになっていないか<br>
+              4. 他のアプリケーションがマイクを占有していないか（ビデオ会議アプリ等を終了）<br>
+              5. ブラウザを再起動してみる
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">音量メーターは反応するが、文字が認識されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下を確認してください：<br>
+              1. <b>マイクの位置と音量：</b> マイクを口元に近づけ、はっきりと話してください<br>
+              2. <b>周囲の雑音：</b> 静かな環境で試してください<br>
+              3. <b>言語設定：</b> ブラウザの音声認識設定が日本語になっているか確認<br>
+              &nbsp;&nbsp;&nbsp;Chrome/Edge: 設定 → プライバシーとセキュリティ → サイトの設定 → その他のコンテンツの設定 → 音声認識<br>
+              4. <b>マイク感度：</b> Windows のサウンド設定でマイクの入力音量を上げてみる
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">Firefoxで音声認識が使えない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>Firefoxは音声認識API（Web Speech API）に対応していないため、SPEAK STARの音声機能は使用できません。<br>
+              以下のブラウザをご使用ください：<br>
+              ・Google Chrome（推奨）<br>
+              ・Microsoft Edge（推奨）<br>
+              ・Safari（Mac/iOSの場合）
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">複数のマイクが表示される場合、どれを使えばいいですか？</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div><b>太字で表示されているマイク</b>が現在使用中のデバイスです。<br>
+              使用するマイクを変更したい場合：<br>
+              1. Windows の場合：設定 → システム → サウンド → 入力 → 「入力デバイスを選択」で変更<br>
+              2. 変更後、「マイク環境をチェック」ボタンを押して再診断<br>
+              3. 太字表示が目的のマイクに変わっていることを確認
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">すべてのチェックが✓なのに、実際のチャット/プレゼンで音声入力できない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下を確認してください：<br>
+              1. <b>チャット画面の場合：</b> マイクボタン（画面下部）を押して、ボタンの色が変化していることを確認<br>
+              2. <b>プレゼントレーニングの場合：</b> スタートボタンを押して録音が開始されていることを確認<br>
+              3. ブラウザのタブが複数開いている場合、他のタブでマイクを使用していないか確認<br>
+              4. それでも解決しない場合は、一度ログアウトして再ログインしてみてください
+            </div>
+          </div>
+        </details>
+      </section>
+
 
   </div>
   <div class="category-container">
@@ -668,29 +816,47 @@
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>ユーザー名とパスワードが正しく入力されているか確認してください。大文字・小文字を区別されます。</div>
+            <div>ユーザー名とパスワードが正しく入力されているか確認してください。大文字・小文字が区別されます。</div>
           </div>
         </details>
 
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">パスワードを忘れた</span>
+            <span class="ts-q">生徒のパスワードをリセットしたい</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>パスワードリセット手続きを行ってください。</div>
+            <div>管理画面から以下の手順でリセットできます：<br>
+              1. 「生徒管理」で該当生徒を検索<br>
+              2. 該当生徒の操作列の「パスワードリセット」ボタンをクリック<br>
+              3. 確認ダイアログで「リセットを実行」をクリック<br>
+              4. リセットが成功したら、該当生徒を選択し、「選択したアカウントを印刷」ボタンをクリック<br>
+              5. 印刷プレビューダイアログ内の「印刷実行」をクリックし、印刷画面を開く<br>
+              6. 記載されている初期パスワードを口頭で伝える。または、印刷して生徒に配布<br>
+              ※リセット後、生徒は初回ログイン時に新しいパスワードへの変更が求められます</div>
           </div>
         </details>
 
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">アカウントが作成されていない</span>
+            <span class="ts-q">生徒のアカウントが作成されていない</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>管理者に連絡して、アカウント作成を依頼してください。</div>
+            <div>学校管理者に連絡して、アカウント作成を依頼してください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">生徒のアカウントがロックされてしまった</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>パスワードを連続で間違えるとアカウントが一時的にロックされます。最大15分間のロック後に自動解除されますので、時間をおいてから再度お試しください。</div>
           </div>
         </details>
       </section>
@@ -724,11 +890,39 @@
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">メッセージ送信回数の制限である30回を超えてしまった</span>
+            <span class="ts-q">メッセージ送信回数の制限である100回を超えてしまった</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>テーマ選択画面でその会話データを削除し、もう一度会話を行ってください。</div>
+            <div>必要な場合、テーマ選択画面でその会話データを削除し、もう一度会話を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">会話が開始できない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の点を確認してください：<br>
+              ・AIクレジット上限に達していないか（管理画面から確認可能）<br>
+              ・1つのテーマで100ターンに達していないか（「会話数の上限に達しました」と表示される場合はデータを削除して再開）<br>
+              ・テーマがアンロックされているか（前のグループのテーマをクリアする必要がある場合があります）</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">会話メッセージが送信できない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の点を確認してください：<br>
+              ・入力欄が空でないか（未確定のテキストは送信されません）<br>
+              ・ネットワーク接続が安定しているか<br>
+              ・「セッションが切れました」と表示される場合は再ログインが必要です</div>
           </div>
         </details>
       </section>
@@ -740,11 +934,37 @@
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">プレゼンしたいお題が表示されていない</span>
+            <span class="ts-q">プレゼンしたいテーマが表示されていない</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-            <div>そのお題に対応するAI先生との会話を完了させる必要があります。<br>「会話でテーマを掘り下げる」から対応するお題の会話を行ってください。</div>
+            <div>そのお題に対応するAI先生との会話を完了させ、キーワード確認まで行う必要があります。<br>「テーマについて話す」から対応するお題の会話を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「発話量が不足しています」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>プレゼンの発話量が50文字以下の場合に表示されます。再度プレゼンを実行して50文字以上の発話を行ってください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">プレゼンの評価が表示されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の点を確認してください：<br>
+              ・プレゼンが正常に終了したか（時間終了または終了ボタンで停止）<br>
+              ・発話量が50文字以上あったか<br>
+              ・ネットワーク接続が安定しているか<br>
+              ※評価の生成には数秒〜10秒程度かかる場合があります。しばらく待っても表示されない場合は、ページを再読み込みしてください。</div>
           </div>
         </details>
       </section>
@@ -761,7 +981,18 @@
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
             <div>
-              以下を確認してください・マイクボタンを押しているか（チャット画面の場合）／ マイクの接続は問題ないか ／ マイクが認識できる音量、話し方か
+              <b>まず「マイク環境チェック」機能で診断してください：</b><br>
+              1. 設定ボタン（歯車マーク）→「マイク環境チェック」をクリック<br>
+              2. 自動診断の結果を確認し、×がある項目は表示される「解決方法」に従って対応<br>
+              3. すべて✓になったら「音声認識をテスト」ボタンで動作確認<br><br>
+
+              <b>マイク環境チェックで問題がない場合：</b><br>
+              ・<b>チャット画面：</b> マイクボタン（画面下部）を押して、ボタンの色が変化していることを確認<br>
+              ・<b>プレゼントレーニング：</b> スタートボタンを押して録音が開始されていることを確認<br>
+              ・マイクの位置を口元に近づけ、はっきりと話す<br>
+              ・周囲の雑音が少ない環境で試す<br><br>
+
+              詳しくは「<b>2.11 マイク環境チェック</b>」の項目を参照してください。
             </div>
           </div>
         </details>
@@ -809,62 +1040,101 @@
             <div>端末のストレージ容量を確認してください。</div>
           </div>
         </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「セッションが切れました」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>認証の有効期限が切れています。自動的にログイン画面に戻りますので、再度ログインしてください。作業中のデータは自動保存されているため、再ログイン後に続きから再開できます。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「AIクレジットが不足しています」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>学校のAIクレジット残高が不足しています。管理画面で消費クレジット状況を確認してください。クレジットは学校単位で管理されているため。追加が必要な場合は、学校管理者またはサービス管理者にお問い合わせください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">通信エラーが頻繁に発生する</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の点を確認してください：<br>
+              ・WiFi/有線接続が安定しているか<br>
+              ・ブラウザを再読み込み（F5キー）してみる<br>
+              ・ブラウザのキャッシュをクリアする<br>
+              ・別のブラウザで試してみる<br>
+              ※学校内のネットワーク設定に問題がある場合は、ネットワーク管理者にお問い合わせください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アプリが応答しなくなった</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>以下の手順を順番に試してください：<br>
+              1. 画面を再読み込み（F5キー または Ctrl+R）<br>
+              2. ブラウザを再起動<br>
+              3. ブラウザのキャッシュとCookieをクリア<br>
+              4. 別のブラウザで試す<br>
+              5. 端末を再起動<br>
+              ※それでも解決しない場合は、サーバー側の問題の可能性があるため、サービス管理者に報告してください。</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 3.5 -->
+      <section class="ts-section" id="ts-data">
+        <h3 class="section-subtitle">3.5 データ管理に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">生徒の学習データをリセットしたい</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>学校管理者のみ管理画面から以下の手順でリセットできます：<br>
+              1. 「生徒管理」で該当生徒を検索<br>
+              2. 「データリセット」ボタンをクリック<br>
+              3. 確認ダイアログで「実行」をクリック<br>
+              ※リセットされる内容：チャット履歴、思考力ポイント、テーマの進捗状況、プレゼンテーション履歴<br>
+              ※リセット後は元に戻せません。実行前に必ず確認してください。</div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">生徒の学習進捗を確認したい</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div>管理画面から以下の方法で確認できます：<br>
+              ・リアルタイム状態：「生徒モニタリング」画面で接続状態・活動状態を確認<br>
+              ・学習履歴：「生徒管理」→ 生徒詳細の「対話情報」で各テーマの発言数、AIクレジット使用量、最終更新日時、クリア状況を確認<br>
+              ・プレゼン評価：生徒詳細の「プレゼンテーション評価」で5項目の評価を確認</div>
+          </div>
+        </details>
       </section>
     </section>
   </div>
 
-  <div class="category-container">
-    <!-- 4. 技術仕様・システム要件 -->
-    <section id="spec" class="content-section spec-wrap">
-      <h2 class="category-title">4. 技術仕様・システム要件</h2>
-
-      <h3 id="spec-system" class="section-subtitle">4.1 システム要件</h3>
-
-      <dl class="spec-block">
-        <dt>対応ブラウザ：</dt>
-        <dd>
-          <div>Chrome ○○以上</div>
-          <div>Safari ○○以上</div>
-          <div>Firefox ○○以上</div>
-          <div>Edge ○○以上</div>
-        </dd>
-
-        <dt>OS要件：</dt>
-        <dd>
-          <div>Windows ○○以上</div>
-          <div>macOS ○○以上</div>
-          <div>iOS ○○以上</div>
-          <div>Android ○○以上</div>
-        </dd>
-
-        <dt>ネットワーク要件：</dt>
-        <dd>
-          <div>安定したインターネット接続（推奨：○Mbps以上）</div>
-          <div>HTTPS接続が必要</div>
-        </dd>
-      </dl>
-
-      <h3 id="spec-security" class="section-subtitle">4.2 セキュリティ要件</h3>
-      <dl class="spec-block">
-        <dt>データ保護：</dt>
-        <dd>
-          <div>通信はHTTPSで暗号化</div>
-          <div>音声データの保管について</div>
-          <div>個人情報の扱いについて</div>
-        </dd>
-
-        <dt>アクセス制御：</dt>
-        <dd>
-          <div>セッションタイムアウト：○分</div>
-          <div>パスワードポリシー：○文字以上、英数字混合</div>
-          <div>個人情報の扱いについて</div>
-        </dd>
-      </dl>
-    </section>
-
-  </div>
-
-  <!--5. お問い合わせ-->
+  <!--お問い合わせ-->
   <!-- <section id="support">
     <h2>フィードバック・お問い合わせ</h2>
     <p>不明点やご要望は <a href="mailto:support@speakstar.com">support@speakstar.com</a> まで。</p>

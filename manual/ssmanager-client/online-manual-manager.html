@@ -39,6 +39,7 @@
             <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-first-login">初回ログイン</a></li>
             <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-normal-login">通常ログイン</a></li>
             <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-password-forgot">パスワードを忘れた場合</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-logout">ログアウト</a></li>
           </ul>
         </li>
         <li class="has-sub">
@@ -64,10 +65,10 @@
           <a href="#troubleshooting"  data-label-short="トラブル">トラブルシューティング</a>
           <ul class="submenu">
             <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-login">ログイン関連</a></li>
-            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-account">アカウント管理</a>
-            </li>
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-account">アカウント管理</a></li>
             <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-data">データ表示</a></li>
             <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-system">システムエラー</a></li>
+            <li><a href="#" class="submenu-link" data-section="troubleshooting" data-anchor="ts-print">印刷</a></li>
           </ul>
         </li>
 
@@ -266,7 +267,7 @@
             <li>メールアドレスの大文字・小文字は区別されます</li>
             <li>スペースが入力されていると認証が失敗します</li>
             <li>パスワードは他の人に教えないよう注意してください</li>
-            <li>共有端末の場合、使用後は必ずログアウトしてください</li>
+            <li>共有端末の場合、使用後は必ずログアウトしてください（→<a href="#ref-logout">2.4 ログアウト</a>）</li>
             <li>連続でパスワード認証に失敗すると、アカウントが一時的にロックされます（※回数に応じて最大約15分間）</li>
           </ul>
         </div>
@@ -335,6 +336,50 @@
             <div class="flow-body">
               <!-- <img src="img/manual_images/new_password_form.png" alt="新しいパスワード設定画面"> -->
               <p>パスワード要件を満たす新しいパスワードを設定して完了です。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 2.4 ログアウト -->
+      <section id="ref-logout" class="ref-section">
+        <h3 class="section-subtitle">2.4 ログアウト</h3>
+        <p>管理画面の使用を終了する際は、セキュリティのためログアウトしてください。</p>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">利用者名をクリック</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/logout_menu.png" alt="ヘッダーの権限名"> -->
+              <p>画面右上のヘッダーにある利用者名をクリックします。</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">ログアウトボタンをクリック</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/logout_dialog.png" alt="ログアウトダイアログ"> -->
+              <p>表示されたダイアログの「ログアウト」ボタンをクリックします。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">ログアウト完了</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/login.png" alt="ログイン画面"> -->
+              <p>ログアウトが完了し、ログイン画面に戻ります。</p>
             </div>
           </li>
         </ol>
@@ -454,7 +499,7 @@
                   <div class="note-header">TSVファイルの作成方法</div>
                   <ol class="note-list">
                     <li>ExcelまたはGoogleスプレッドシートを開く</li>
-                    <li>1行目に列名を入力: 学年, クラス, 出席番号, 生徒ID, 名前, 名前の読み, メールアドレス</li>
+                    <li>1行目に列名を入力: 学年, クラス, 出席番号, 生徒ID, 名前, 名前の読み, メールアドレス, 登録日, 最終ログイン</li>
                     <li>2行目以降にデータを入力</li>
                     <li>「名前を付けて保存」→「タブ区切り(.tsv)」形式で保存</li>
                   </ol>
@@ -747,182 +792,334 @@
     <!-- 4. 教師機能-->
     <section id="teacher-function" class="content-section teacher-function-wrap">
       <h2 class="category-title">4. 教師機能</h2>
-      <p class="what-is-content">
-        教師は、担当クラスの生徒管理と学習状況の確認を行います。
-      </p>
 
       <!-- 4.1 生徒モニタリング -->
       <section class="ts-section" id="teacher-student-monitoring">
         <h3 class="section-subtitle">4.1 生徒モニタリング</h3>
-        <p>授業中に生徒の状況をリアルタイムでモニタリングできます。</p>
         <div class="hero"><img src="/webpage/img/manual_images/student_monitoring.png" alt="生徒モニタリング画面"></div>
 
-        <h4 class="section-subtitle">主要機能</h4>
-        <ol class="steps">
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">リアルタイム状態表示</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>生徒の状態表示（アクティブ、アイドル、オフライン）</li>
-                <li>リアルタイムでの対話内容確認</li>
-                <li>並び順: 学年（昇順）→ クラス（昇順）→ 出席番号（昇順）</li>
-              </ul>
-            </div>
-          </li>
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">表示切替</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>カード表示/リスト表示の切り替え</li>
-                <li>表示サイズの変更（小・中・大）</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
+        <section class="intro-section">
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">この画面の目的</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>授業中に担当クラスの生徒の学習・活動状況をリアルタイムで確認できます</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報（生徒カード）</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>名前</strong>: 生徒の氏名</li>
+                  <li><strong>学年・クラス・出席番号</strong>: 所属情報</li>
+                  <li><strong>最終ログイン日</strong>: 未接続の生徒のみ表示</li>
+                  <li><strong>接続状態</strong>: 生徒のログイン状況
+                    <ul>
+                      <li>接続中: 生徒アイコンの右下に緑色の丸アイコンが表示</li>
+                      <li>非アクティブ: 生徒アイコンの右下にオレンジ色の丸アイコンが表示</li>
+                      <li>長時間非アクティブ: 生徒アイコンの右上にビックリマークアイコンが表示</li>
+                      <li>未ログイン: アプリにログインしていない</li>
+                    </ul>
+                  </li>
+                  <li><strong>活動状態</strong>: 現在どの学習活動を行っているか
+                    <ul>
+                      <li>未着手</li>
+                      <li>会話テーマ選択 / 会話パート / キーワード</li>
+                      <li>プレゼンテーマ選択 / データ選択 / プレゼントレーニング / プレゼン評価</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み・検索機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: 特定の学年で絞り込み</li>
+                  <li><strong>クラス</strong>: 特定のクラスで絞り込み</li>
+                  <li><strong>接続状態</strong>: 未ログインで絞り込み</li>
+                  <li><strong>活動状態</strong>: 未着手で絞り込み</li>
+                  <li><strong>生徒検索</strong>: 生徒名で検索</li>
+                </ul>
+              </div>
+            </li>
+            
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">表示設定</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>カードサイズ</strong>: 小・中・大から選択して表示サイズを変更できます</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">生徒詳細への遷移</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>生徒カードをクリックすると、その生徒の詳細画面が別ウィンドウで開きます</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
       </section>
 
       <!-- 4.2 クラス一覧 -->
       <section class="ts-section" id="teacher-class-list">
         <h3 class="section-subtitle">4.2 クラス一覧</h3>
-        <p>担当クラスの概要情報を確認できます。</p>
         <div class="hero"><img src="/webpage/img/manual_images/class_list.png" alt="クラス一覧画面"></div>
 
-        <h4 class="section-subtitle">主要機能</h4>
-        <ol class="steps">
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">クラス一覧表示</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>担当クラスの一覧を表示</li>
-                <li>クラス名、学年、生徒数を確認</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
+        <section class="intro-section">
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">この画面の目的</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>担当クラスの概要情報を一覧で確認できます</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: クラスの学年</li>
+                  <li><strong>クラス</strong>: クラス名</li>
+                  <li><strong>生徒数(有効)</strong>: クラスに所属する有効な生徒の数</li>
+                  <li><strong>AIクレジット使用量</strong>: クラス全体のAIクレジット使用量 / 上限</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">生徒管理画面への遷移</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>「操作」列のボタンをクリックすると、そのクラスの生徒管理画面に移動します</li>
+                  <li>移動先では、選択したクラスで絞り込まれた状態で生徒が表示されます</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
       </section>
 
       <!-- 4.3 生徒管理 -->
       <section class="ts-section" id="teacher-student-management">
         <h3 class="section-subtitle">4.3 生徒管理</h3>
-        <p>担当クラスの生徒情報を管理し、学習状況を確認できます。</p>
         <div class="hero"><img src="/webpage/img/manual_images/student_list.png" alt="生徒一覧画面"></div>
 
-        <h4 class="section-subtitle">主要機能</h4>
-        <ol class="steps">
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">生徒一覧表示</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>担当クラスの生徒一覧を表示</li>
-                <li>生徒名、出席番号、学習状況を確認</li>
-                <li>並び順: 学年（昇順）→ クラス（昇順）→ 出席番号（昇順）</li>
-                <li>生徒名をクリックすると、生徒詳細画面が別タブで開きます</li>
-                <li>複数の生徒を同時に確認可能で、一覧画面に簡単に戻れます</li>
-              </ul>
-            </div>
-          </li>
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">学習状況確認</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>各生徒の学習進捗を確認</li>
-                <li>チャット回数、プレゼンテーション回数を表示</li>
-              </ul>
-            </div>
-          </li>
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">パスワード管理</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>生徒のパスワードリセット機能</li>
-                <li>パスワード状態の確認（初期パスワード/変更済み）</li>
-              </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/student_password_reset.png" alt="生徒パスワードリセット画面"></div>
-            </div>
-          </li>
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">生徒詳細確認</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>個別の生徒の学習状況を詳細に確認</li>
-                <li>対話情報、プレゼン情報の表示</li>
-                <li>音声再生、フィードバックコメント等の詳細情報</li>
-                <li>生徒詳細画面は別タブで開くため、一覧画面に簡単に戻れます</li>
-              </ul>
-              <p><strong>対話内容の表示</strong>:</p>
-              <ul>
-                <li>最初のお題メッセージ（会話のきっかけ）は表示されません</li>
-                <li>生徒の実際の発言のみが表示・カウントされます</li>
-              </ul>
-              <div class="hero"><img src="/webpage/img/manual_images/student_detail.png" alt="生徒詳細画面"></div>
-            </div>
-          </li>
-        </ol>
+        <section class="intro-section">
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">この画面の目的</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>担当クラスの生徒情報を一覧で確認できます</li>
+                  <li>詳細ボタンを押下することで、各生徒の学習状況（対話・プレゼン）を確認できます</li>
+                  <li>生徒のパスワード管理やアカウント情報の確認・印刷ができます</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報（生徒一覧）</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年・クラス・出席番号</strong></li>
+                  <li><strong>名前・よみ</strong></li>
+                  <li><strong>対話回数（クリア）</strong>: 会話パートをクリアした回数</li>
+                  <li><strong>プレゼン</strong>: プレゼントレーニングの実施回数</li>
+                  <li><strong>AIクレジット</strong>: AIクレジットの使用量</li>
+                  <li><strong>パスワード</strong>: 初期パスワードか変更済みかを表示</li>
+                  <li><strong>最終ログイン日時</strong>: 最後にログインした日時</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み・検索機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: 特定の学年で絞り込み</li>
+                  <li><strong>クラス</strong>: 特定のクラスで絞り込み</li>
+                  <li><strong>テキスト検索</strong>: 出席番号、名前、よみなどで検索</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">生徒の選択</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>個別選択</strong>: 各行のチェックボックスで選択</li>
+                  <li><strong>全選択</strong>: ヘッダーのチェックボックスで表示中の全生徒を選択</li>
+                  <li><strong>初期パスワードのみ選択</strong>: パスワード未変更の生徒のみを選択対象に</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">操作</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>詳細</strong>: 生徒の詳細画面を別ウィンドウで開く</li>
+                  <li><strong>パスワードリセット</strong>: 生徒のパスワードを初期化</li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/student_password_reset.png" alt="生徒パスワードリセット画面"></div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">アカウント印刷</h4>
+              </div>
+              <div class="step-desc">
+                <p>生徒のアカウント情報を印刷できます。</p>
+                <ul>
+                  <li><strong>選択したアカウントを印刷</strong>: チェックを入れた生徒のみ印刷</li>
+                  <li><strong>表示中の全アカウントを印刷</strong>: 絞り込み結果の全生徒を印刷</li>
+                </ul>
+                <p><strong>印刷の流れ:</strong></p>
+                <ol>
+                  <li>印刷プレビューダイアログが表示される（初期パスワードは伏字）</li>
+                  <li>「印刷実行」をクリックすると別タブで印刷画面が開く</li>
+                  <li>PDFとして保存、または送信先のプリンターを設定して印刷</li>
+                </ol>
+                <p>※印刷画面では初期パスワードが表示されます</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">生徒詳細画面</h4>
+              </div>
+              <div class="step-desc">
+                <p>詳細ボタンをクリックすると、生徒の詳細画面が別ウィンドウで開きます。</p>
+                <ul>
+                  <li><strong>生徒基本情報</strong>: 学年、クラス、出席番号、名前、名前の読み</li>
+                  <li><strong>対話情報</strong>: テーマごとの発言数、AIクレジット、更新日時
+                    <ul>
+                      <li>「詳細」ボタン → 会話内容（チャット形式）と要約を確認</li>
+                    </ul>
+                  </li>
+                  <li><strong>プレゼン情報</strong>: テーマごとのスロット数、AIクレジット、更新日時
+                    <ul>
+                      <li>「詳細」ボタン → 音声再生とフィードバックを確認</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="hero"><img src="/webpage/img/manual_images/student_detail.png" alt="生徒詳細画面"></div>
+              </div>
+            </li>
+          </ol>
+
+          <div class="note">
+            <div class="note-header">【重要】初期パスワードの確認方法</div>
+            <p>生徒の初期パスワードを確認できるのは「印刷画面」のみです。<br>
+            パスワードリセット後に生徒へ初期パスワードを伝えるには、以下の手順で確認してください:</p>
+            <ol class="note-list">
+              <li>対象の生徒にチェックを入れて選択</li>
+              <li>「選択したアカウントを印刷」ボタンをクリック</li>
+              <li>印刷プレビューダイアログで「印刷実行」をクリック</li>
+              <li>別タブで開く印刷画面で初期パスワードを確認</li>
+            </ol>
+          </div>
+        </section>
       </section>
 
       <!-- 4.4 テーマ設定確認 -->
       <section class="ts-section" id="teacher-theme-settings">
         <h3 class="section-subtitle">4.4 テーマ設定確認</h3>
-        <p>担当クラスに割り当てられているテーマを確認できます。</p>
         <div class="hero"><img src="/webpage/img/manual_images/teacher_theme_list.png" alt="教師用テーマ一覧画面"></div>
 
-        <h4 class="section-subtitle">主要機能</h4>
-        <ol class="steps">
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">テーマ一覧表示</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>担当クラスに割り当てられているテーマコレクションとテーマの一覧確認</li>
-                <li>学年ごとのテーマ割り当て状況</li>
-                <li>1ページあたり50件のテーマを表示（ページネーション操作を減らし、一覧性を向上）</li>
-              </ul>
-            </div>
-          </li>
-          <li class="step">
-            <div class="step-category">
-              <span class="step-badge"></span>
-              <h4 class="step-title">閲覧専用</h4>
-            </div>
-            <div class="step-desc">
-              <ul>
-                <li>テーマの追加・編集・削除は不可</li>
-                <li>システム管理者による設定のみ</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
+        <section class="intro-section">
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">この画面の目的</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>学校に割り当てられているテーマを確認できます</li>
+                  <li>どの学年にどのテーマが設定されているかを一覧で把握できます</li>
+                  <li>※この画面は閲覧専用です。テーマの追加・編集・削除はできません</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: テーマが割り当てられている学年</li>
+                  <li><strong>コレクションID</strong>: テーマコレクションの識別ID</li>
+                  <li><strong>コレクション名</strong>: テーマコレクションの名前</li>
+                  <li><strong>テーマID</strong>: 個別テーマの識別ID</li>
+                  <li><strong>テーマ名</strong>: 個別テーマの名前</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み・検索機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: 特定の学年で絞り込み</li>
+                  <li><strong>テキスト検索</strong>: コレクション名やテーマ名などで検索</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
 
-        <div class="note">
-          <div class="note-header">注意！</div>
-          <ul class="note-list">
-            <li>パスワードリセット: リセット後は新しい初期パスワードでログインし、必ずパスワードを変更してください</li>
-            <li>印刷機能: 初期パスワードアカウントのみ選択可能なオプションがあります</li>
-          </ul>
-        </div>
+          <div class="note-supplement">
+            <div class="note-header">テーマの設定について</div>
+            <ul class="note-list">
+              <li>テーマの変更が必要な場合は、サービス管理者にお問い合わせください</li>
+            </ul>
+          </div>
+        </section>
       </section>
 
   </div>
@@ -933,7 +1130,7 @@
       <h2 class="category-title">5. トラブルシューティング</h2>
       <!-- 5.1 -->
       <section class="ts-section" id="ts-login">
-        <h3 class="section-subtitle">5.1 ログイン・認証に関する問題</h3>
+        <h3 class="section-subtitle">5.1 ログインに関する問題</h3>
 
         <details class="ts-item">
           <summary>
@@ -942,35 +1139,85 @@
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
-
             <div class="ts-a-body">
               <p class="ts-a-lead">以下の点を確認してください：</p>
-
               <ol>
                 <li>
                   <strong>ログイン情報の確認</strong>
                   <ul>
                     <li>メールアドレスとパスワードが正しく入力されているか</li>
-                    <li>大文字・小文字も区別されます</li>
+                    <li>大文字・小文字は区別されます</li>
+                    <li>余分なスペースが入力されていないか</li>
                   </ul>
                 </li>
-
                 <li>
                   <strong>パスワードの確認</strong>
                   <ul>
                     <li>パスワードを忘れた場合は「パスワードをお忘れですか？」からリセット</li>
-                    <li>リセットリンクがメールに送信されます</li>
+                    <li>初期パスワードがメールで送信されます</li>
                   </ul>
                 </li>
-
                 <li>
                   <strong>アカウントの状態確認</strong>
                   <ul>
-                    <li>アカウントが有効になっているか</li>
-                    <li>管理者に確認を依頼</li>
+                    <li>アカウントが有効になっているか管理者に確認</li>
                   </ul>
                 </li>
               </ol>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アカウントがロックされました</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">パスワードを連続で間違えるとアカウントが一時的にロックされます。</p>
+              <ul>
+                <li>最大約15分間ロックされます（回数に応じて時間が延長）</li>
+                <li>時間をおいてから再度ログインをお試しください</li>
+                <li>パスワードが不明な場合は「パスワードをお忘れですか？」からリセットしてください</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">パスワード有効期限が切れました</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">パスワードは90日間有効です。期限が切れると自動的にパスワード変更画面に遷移します。</p>
+              <ul>
+                <li>現在のパスワードと新しいパスワードを入力して変更してください</li>
+                <li>新しいパスワードはパスワード要件（8文字以上、大文字・小文字・数字・特殊文字を含む）を満たす必要があります</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">パスワードリセットのメールが届かない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+              <ul>
+                <li>迷惑メールフォルダに振り分けられていないか確認</li>
+                <li>登録されているメールアドレスが正しいか確認</li>
+                <li>メールが届くまで数分かかる場合があります</li>
+                <li>解決しない場合はサービス管理者にお問い合わせください</li>
+              </ul>
             </div>
           </div>
         </details>
@@ -989,32 +1236,85 @@
             <span class="ts-badge ts-badge--a">A</span>
             <div class="ts-a-body">
               <p class="ts-a-lead">以下の点を確認してください：</p>
-
               <ol>
                 <li>
                   <strong>ファイル形式</strong>
                   <ul>
-                    <li>正しい形式で保存されているか</li>
-                    <li>文字化けが発生していないか</li>
+                    <li>TSV形式（タブ区切り）で保存されているか</li>
+                    <li>文字コードがUTF-8になっているか</li>
                   </ul>
                 </li>
                 <li>
                   <strong>必須項目</strong>
                   <ul>
-                    <li>アカウント種別、名前、学年（生徒の場合）、クラス（生徒の場合）</li>
-                    <li>出席番号（生徒の場合）が入力されているか</li>
+                    <li>学年, クラス, 出席番号, 生徒ID, 名前, 名前の読み, メールアドレス, 登録日, 最終ログインが入力されているか</li>
+                    <li>教師の場合はメールアドレスが必須、学年は0を入力</li>
                   </ul>
                 </li>
                 <li>
                   <strong>データ形式</strong>
                   <ul>
-                    <li>メールアドレス：正しい形式か</li>
-                    <li>生徒ID：半角英数字で、既存IDと重複していないか</li>
-                    <li>学年：数値（1〜6）で入力されているか</li>
+                    <li>生徒ID：最大50文字、半角英数字と記号（-_.）のみ</li>
+                    <li>学年：数値（小学1年〜中学3年 = 1〜9）</li>
+                    <li>一度に登録できるのは最大300件まで</li>
                   </ul>
                 </li>
               </ol>
             </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「シート上限数を超えています」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">契約しているシート（アカウント）数の上限に達しています。</p>
+              <ul>
+                <li>不要なアカウントを削除してシートを空けてください</li>
+                <li>シートの追加が必要な場合は、サービス管理者にお問い合わせください</li>
+                <li>現在のシート使用状況はダッシュボードで確認できます</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">「生徒IDが重複しています」と表示される</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">同じ生徒IDが既に登録されています。</p>
+              <ul>
+                <li>生徒IDは学校内で一意である必要があります</li>
+                <li>別の生徒IDを設定するか、既存のアカウントを確認してください</li>
+                <li>TSVファイル内で同じ生徒IDが複数行に存在していないか確認してください</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">アカウントを削除できない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">AIクレジットを消費しているアカウントは削除できません。</p>
+              <ul>
+                <li>一括削除の場合、AIクレジット未消費のアカウントのみが選択対象になります</li>
+                <li>クレジット消費済みアカウントの削除が必要な場合は、サービス管理者にお問い合わせください</li>
+              </ul>
+            </div>
+          </div>
         </details>
       </section>
 
@@ -1025,36 +1325,36 @@
         <details class="ts-item">
           <summary>
             <span class="ts-badge ts-badge--q">Q</span>
-            <span class="ts-q">プレゼンしたいお題が表示されていない</span>
+            <span class="ts-q">生徒のアカウントデータが表示されない</span>
           </summary>
           <div class="ts-a">
             <span class="ts-badge ts-badge--a">A</span>
             <div class="ts-a-body">
               <p class="ts-a-lead">以下の点を確認してください：</p>
+              <ul>
+                <li>絞り込み条件（学年、クラス、接続状態など）を確認</li>
+                <li>アカウントが作成されているか確認</li>
+                <li>ブラウザの再読み込み（F5キー）を試してください</li>
+                <li>解決しない場合は学校管理者またはサービス管理者にお問い合わせください</li>
+              </ul>
+            </div>
+          </div>
+        </details>
 
-              <ol>
-                <li>
-                  <strong>ブラウザの確認</strong>
-                  <ul>
-                    <li>推奨・対応ブラウザを使用しているか</li>
-                    <li>キャッシュをクリアして再読み込みを行ったか</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>権限の確認</strong>
-                  <ul>
-                    <li>適切な権限（教師・管理者など）でログインしているか</li>
-                    <li>必要に応じて管理者に権限設定の確認を依頼する</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>システムエラーの可能性</strong>
-                  <ul>
-                    <li>一時的なシステム障害の可能性がある</li>
-                    <li>時間をおいて再度アクセスしても解消しない場合は、管理者へ問い合わせる</li>
-                  </ul>
-                </li>
-              </ol>
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">生徒モニタリングで生徒の学習状況が反映されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+              <ul>
+                <li>生徒がSPEAK STARアプリにログインしているか確認</li>
+                <li>ネットワーク接続が安定しているか確認</li>
+                <li>ブラウザの再読み込み（F5キー）を試してください</li>
+              </ul>
             </div>
           </div>
         </details>
@@ -1073,37 +1373,98 @@
             <span class="ts-badge ts-badge--a">A</span>
             <div class="ts-a-body">
               <p class="ts-a-lead">エラーの種類に応じて、次の点を確認してください：</p>
-
               <ol>
                 <li>
                   <strong>認証エラー</strong>
                   <ul>
-                    <li>メールアドレス・パスワードが正しく入力されているか</li>
-                    <li>セッションの有効期限が切れていないか（再ログインを試す）</li>
+                    <li>セッションの有効期限が切れている可能性があります</li>
+                    <li>一度ログアウトして再ログインをお試しください</li>
                   </ul>
                 </li>
                 <li>
                   <strong>権限エラー</strong>
                   <ul>
-                    <li>アクセス権限がない機能にアクセスしていないか</li>
-                    <li>必要な権限が付与されているか、管理者に確認を依頼する</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>システムエラー</strong>
-                  <ul>
-                    <li>一時的なシステム障害の可能性がある</li>
-                    <li>時間をおいて再試行し、それでも解決しない場合はサポート窓口に連絡する</li>
+                    <li>アクセス権限がない機能にアクセスしていないか確認</li>
+                    <li>必要な権限が付与されているか管理者に確認を依頼</li>
                   </ul>
                 </li>
                 <li>
                   <strong>ネットワークエラー</strong>
                   <ul>
-                    <li>インターネット接続が安定しているか</li>
-                    <li>学校内ネットワークやプロキシ設定などに問題がないか確認する</li>
+                    <li>インターネット接続が安定しているか確認</li>
+                    <li>学校内ネットワークやプロキシ設定に問題がないか確認</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>システムエラー</strong>
+                  <ul>
+                    <li>一時的なシステム障害の可能性があります</li>
+                    <li>時間をおいて再試行してください</li>
+                    <li>解決しない場合は管理者にお問い合わせください</li>
                   </ul>
                 </li>
               </ol>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">画面が真っ白になる / 動作しない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の対応をお試しください：</p>
+              <ul>
+                <li>ブラウザの再読み込み（F5キー または Ctrl+Shift+R）を行う</li>
+                <li>ブラウザのキャッシュをクリアする</li>
+                <li>別のブラウザ（Chrome、Edge、Firefox、Safari）で試す</li>
+                <li>ブラウザを最新バージョンに更新する</li>
+                <li>解決しない場合は管理者にお問い合わせください</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 5.5 -->
+      <section class="ts-section" id="ts-print">
+        <h3 class="section-subtitle">5.5 印刷に関する問題</h3>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">印刷画面が開かない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">以下の点を確認してください：</p>
+              <ul>
+                <li>ブラウザのポップアップブロックが有効になっていないか確認</li>
+                <li>ポップアップを許可する設定に変更してください</li>
+                <li>別のブラウザで試してください</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="ts-item">
+          <summary>
+            <span class="ts-badge ts-badge--q">Q</span>
+            <span class="ts-q">初期パスワードが表示されない</span>
+          </summary>
+          <div class="ts-a">
+            <span class="ts-badge ts-badge--a">A</span>
+            <div class="ts-a-body">
+              <p class="ts-a-lead">初期パスワードは印刷画面でのみ表示されます。</p>
+              <ul>
+                <li>印刷プレビューでは伏字（****）で表示されます</li>
+                <li>「印刷実行」をクリックして別タブで開く印刷画面で確認してください</li>
+                <li>パスワードが既に変更済みの生徒には初期パスワードは表示されません</li>
+              </ul>
             </div>
           </div>
         </details>

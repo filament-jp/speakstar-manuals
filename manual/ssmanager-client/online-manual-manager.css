@@ -2,7 +2,7 @@
 
 body {
     font-family: "M PLUS Rounded 1c", sans-serif;
-    background: #D5EBFF;
+    background: #E8F5F1;
     color: #333;
     margin: 0 auto;
     width: 100%;
@@ -17,7 +17,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #167cdd;
+    background-color: #38B088;
     width: 100%;
     height: 180px;
     z-index: 1000;
@@ -26,7 +26,7 @@ p {
 .banner-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
     height: 150px;
     align-items: center;
@@ -55,7 +55,7 @@ p {
 
 .section-menu ul {
     display: flex;
-    max-width: 1200px;
+    max-width: 960px;
     text-align: center;
     justify-content: space-around;
     margin: 0 auto;
@@ -111,14 +111,14 @@ p {
 
 .category-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
     background-color: #fbfbfb;
     padding: 10px 80px;
 }
 
 .category-title {
-    border-bottom: 6px solid #167cdd;
+    border-bottom: 6px solid #38B088;
     font-size: 32px;
     padding-bottom: 5px;
 }
@@ -168,7 +168,7 @@ p {
     width: 30px;
     height: 30px;
     border-radius: 6px;
-    background: #167cdd;
+    background: #38B088;
     color: #fff;
     font-weight: 800;
     font-size: 14px;
@@ -193,7 +193,7 @@ p {
 }
 
 .role-admin {
-    background-color: #6BBE72;
+    background-color: #38B088;
 }
 
 .role-teacher {
@@ -227,7 +227,7 @@ p {
     top: 0;
     bottom: 0;
     width: 10px;
-    background-color: #D3F0FF;
+    background-color: #C8EFE3;
     z-index: 0;
 }
 
@@ -251,7 +251,7 @@ p {
 }
 
 .flow-number {
-    background-color: #167cdd;
+    background-color: #38B088;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -416,7 +416,7 @@ p {
 }
 
 .faq-header {
-    background-color: #167cdd;
+    background-color: #38B088;
     color: #fbfbfb;
     font-weight: bold;
     text-align: center;
@@ -479,22 +479,22 @@ p {
     margin: 16px 0;
 }
 
-/* ===== 補足ボックス（青色） ===== */
+/* ===== 補足ボックス（緑色） ===== */
 .note-supplement {
-    background: #F4FAFF;
-    border: 2px solid #167cdd;
+    background: #F0FAF7;
+    border: 2px solid #38B088;
     border-radius: 10px;
     padding: 25px 60px 15px;
     margin: 16px 0;
 }
 
 .note-supplement .note-header {
-    color: #167cdd;
+    color: #38B088;
 }
 
 .note-supplement .note-header::before {
     content: "i";
-    background: #167cdd;
+    background: #38B088;
     clip-path: circle(50%);
 }
 
@@ -575,7 +575,7 @@ ol.note-list li::before {
 }
 
 .ts-h2 {
-    border-bottom: 6px solid #167cdd;
+    border-bottom: 6px solid #38B088;
     font-size: 28px;
     padding-bottom: 6px;
     margin: 0 0 18px;
@@ -583,7 +583,7 @@ ol.note-list li::before {
 }
 
 .ts-item {
-    border: 1px solid #167CDD;
+    border: 1px solid #38B088;
     background: #FBFBFB;
     border-radius: 10px;
     margin: 0 0 15px;
@@ -606,8 +606,8 @@ ol.note-list li::before {
     content: "";
     width: 10px;
     height: 10px;
-    border-right: 3px solid #167cdd;
-    border-bottom: 3px solid #167cdd;
+    border-right: 3px solid #38B088;
+    border-bottom: 3px solid #38B088;
     transform: rotate(-45deg);
     position: absolute;
     right: 16px;
@@ -634,7 +634,7 @@ ol.note-list li::before {
 }
 
 .ts-badge--q {
-    background: #77BDFF;
+    background: #7DD4B8;
 }
 
 /* 青（Q） */
@@ -739,7 +739,7 @@ ol.note-list li::before {
 /* メニューのアクティブ表示 */
 .section-menu a.is-active {
     background-color: #FBFBFB;
-    color: #167cdd;
+    color: #38B088;
     padding: 8px 20px;
     border-radius: 0.5em 0.5em 0 0;
 }
