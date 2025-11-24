@@ -26,7 +26,7 @@ p {
 .banner-container {
     display: flex;
     justify-content: space-between;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 150px;
     align-items: center;
@@ -55,7 +55,7 @@ p {
 
 .section-menu ul {
     display: flex;
-    max-width: 960px;
+    max-width: 1200px;
     text-align: center;
     justify-content: space-around;
     margin: 0 auto;
@@ -111,7 +111,7 @@ p {
 
 .category-container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #fbfbfb;
     padding: 10px 80px;

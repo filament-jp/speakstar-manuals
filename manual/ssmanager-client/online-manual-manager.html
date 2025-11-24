@@ -34,11 +34,11 @@
         </li>
 
         <li class="has-sub">
-          <a href="#login" data-label-short="ログイン">ログイン・認証</a>
+          <a href="#login" data-label-short="ログイン">ログイン</a>
           <ul class="submenu">
-            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-title">ログイン手順</a></li>
-            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-mainmenu">パスワード管理</a></li>
-            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-theme">初回ログイン時の設定</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-first-login">初回ログイン</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-normal-login">通常ログイン</a></li>
+            <li><a href="#" class="submenu-link" data-section="login" data-anchor="ref-password-forgot">パスワードを忘れた場合</a></li>
           </ul>
         </li>
         <li class="has-sub">
@@ -85,14 +85,14 @@
       <section class="intro-section" id="what-is">
         <h3 class="section-subtitle">1.1 管理画面とは？</h3>
         <p class="what-is-content">
-          SPEAK STAR管理画面は、SPEAK STARアプリケーションの運用・管理を行うためのインターネット上の管理システムです。
+          SPEAK STAR管理画面は、SPEAK STARアプリケーションの運用・管理を行うためのインターネット上の管理システムです。<br>
           生徒の学習状況を把握し、アカウント管理やテーマ設定などを行うことで、効果的な学習環境を提供することを支援します。
         </p>
       </section>
 
 
       <section class="intro-section" id="overview">
-        <h3 class="section-subtitle">1.2 権限について</h3>
+        <h3 class="section-subtitle">1.2 管理権限について</h3>
 
         <p class="section-lead">
           SPEAK STAR管理画面では、権限に応じて以下の2種類の機能にアクセスできます：
@@ -106,12 +106,12 @@
             </div>
             <div class="step-desc">
               <ul>
-                <li>自校の情報管理</li>
+                <li>自校の情報確認</li>
                 <li>教師・生徒アカウントの管理</li>
-                <li>クラス情報の管理</li>
-                <li>AIクレジット使用状況の確認</li>
-                <li>テーマ設定の確認</li>
                 <li>生徒の学習データリセット</li>
+                <li>各クラスの情報確認</li>
+                <li>テーマ設定の確認</li>
+                <li>システムの利用状況・操作ログの確認</li>
               </ul>
             </div>
           </li>
@@ -123,10 +123,11 @@
             </div>
             <div class="step-desc">
               <ul>
-                <li>担当クラスの生徒管理</li>
+                <li>生徒のモニタリング</li>
+                <li>各クラスの情報確認</li>
                 <li>生徒の学習状況確認</li>
-                <li>リアルタイムモニタリング</li>
-                <li>パスワードリセット</li>
+                <li>生徒のパスワード管理</li>
+                <li>テーマ設定の確認</li>
               </ul>
             </div>
           </li>
@@ -138,188 +139,25 @@
 
 
   <div class="category-container">
-    <!--2. 機能リファレンス-->
+    <!--2. ログイン-->
     <section id="login" class="content-section">
-      <h2 class="category-title">2. ログイン・認証</h2>
+      <h2 class="category-title">2. ログイン</h2>
 
-      <!-- 2.1 タイトル画面 -->
-      <section id="ref-title" class="ref-section">
-        <h3 class="section-subtitle">2.1 ログイン手順</h3>
+      <!-- 2.1 初回ログイン -->
+      <section id="ref-first-login" class="ref-section">
+        <h3 class="section-subtitle">2.1 初回ログイン</h3>
+        <p>アカウント発行後、初めてログインする際の手順です。</p>
         <ol class="flow-steps">
 
           <!-- 1 -->
           <li class="flow-step">
             <div class="flow-header">
               <div class="flow-number">1</div>
-              <div class="flow-title">管理画面にアクセス</div>
-            </div>
-            <div class="flow-body">
-              <img src="img/manual_images/title.png" alt="起動画面">
-              <p>ブラウザで管理画面のURLにアクセスします</p>
-            </div>
-          </li>
-
-          <!-- 2 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">2</div>
-              <div class="flow-title">ログイン情報の入力</div>
-            </div>
-            <div class="flow-body">
-              <img src="img/manual_images/login.png" alt="ログイン画面">
-              <p>メールアドレスとパスワードを入力します。権限に応じて適切なログイン画面が表示されます。</p>
-            </div>
-          </li>
-
-          <!-- 3 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">3</div>
-              <div class="flow-title">「ログイン」ボタンをクリックして認証を実行します。</div>
-            </div>
-            <div class="flow-body">
-              <img src="img/manual_images/main_menu.png" alt="メインメニュー">
-              <p>学習内容を選択する画面です。まずは「会話でテーマを掘り下げる」を選択します。</p>
-            </div>
-          </li>
-      </section>
-
-      <div class="note">
-        <div class="note-header">注意！</div>
-        <ul class="note-list">
-          <li>メールアドレスの正確性: 大文字・小文字は区別されます</li>
-          <li>パスワードの管理: 他の人に教えないよう注意してください</li>
-          <li>共有端末の利用: 使用後は必ずログアウトしてください</li>
-
-        </ul>
-      </div>
-
-
-    </section>
-
-    <!-- 2.2 メインメニュー -->
-    <section id="ref-mainmenu" class="ref-section">
-      <h3 class="section-subtitle">2.2 パスワード管理</h3>
-      <div class="flow-title">パスワード要件</div>
-
-      <div class="figure-legend">
-        <ol class="circle-num">
-          <li>8文字以上</li>
-          <li>大文字・小文字を含む</li>
-          <li>数字を含む</li>
-          <li>特殊文字を1つ以上含む</li>
-        </ol>
-      </div>
-
-      <div class="flow-title">パスワード有効期限</div>
-      <div class="figure-legend">
-        <ul>
-          <li><strong>管理者・教師アカウント</strong>: 90日間有効
-            <ul>
-              <li>期限切れ時は自動的にパスワード変更画面に遷移します</li>
-            </ul>
-          </li>
-          <li><strong>生徒アカウント</strong>: 期限なし</li>
-        </ul>
-      </div>
-
-      <div class="flow-title">アカウントロック</div>
-      <div class="figure-legend">
-        <ul>
-          <li><strong>ロック発生条件</strong>: 5回連続でパスワード認証に失敗</li>
-          <li><strong>ロックアウト時間</strong>: 間違えた回数に応じて、ロック時間が段階的に長くなります（最大約15分）</li>
-          <li><strong>解除条件</strong>:
-            <ul>
-              <li>ロックアウト期間経過後の成功ログイン</li>
-              <li>15分間連続でログイン試行なし</li>
-            </ul>
-          </li>
-          <li><strong>対処方法</strong>: エラーメッセージに従い、時間をおいて再度ログインを試みてください</li>
-        </ul>
-      </div>
-
-      <section id="ref-title" class="ref-section">
-        <h3 class="section-subtitle">パスワードリセット手順</h3>
-        <ol class="flow-steps">
-
-          <!-- 1 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">1</div>
-              <div class="flow-title">管理画面にアクセス</div>
-            </div>
-            <div class="flow-body">
-              <!-- <img src="img/manual_images/title.png" alt="パスワードリセットリンク"> -->
-              <p>ブラウザで管理画面のURLにアクセスします</p>
-            </div>
-          </li>
-
-          <!-- 2 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">2</div>
-              <div class="flow-title">ログイン情報の入力</div>
-            </div>
-            <div class="flow-body">
-              <img src="img/manual_images/login.png" alt="パスワードリセット画面">
-              <p>メールアドレスとパスワードを入力します。権限に応じて適切なログイン画面が表示されます。</p>
-            </div>
-          </li>
-
-          <!-- 3 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">3</div>
-              <div class="flow-title">「ログイン」ボタンをクリックして認証を実行します。</div>
-            </div>
-            <div class="flow-body">
-              <img src="img/manual_images/main_menu.png" alt="パスワード変更画面">
-              <p>学習内容を選択する画面です。まずは「会話でテーマを掘り下げる」を選択します。</p>
-            </div>
-          </li>
-      </section>
-
-
-      <div class="faq-header">FAQ</div>
-      <details class="ts-item">
-        <summary>
-          <span class="ts-badge ts-badge--q">Q</span>
-          <span class="ts-q"> パスワードを忘れました</span>
-        </summary>
-        <div class="ts-a">
-          <span class="ts-badge ts-badge--a">A</span>
-          <div>ログイン画面の「パスワードをお忘れですか？」からリセット手続きを行ってください。リセットリンクがメールに送信されます。</div>
-        </div>
-      </details>
-      <details class="ts-item">
-        <summary>
-          <span class="ts-badge ts-badge--q">Q</span>
-          <span class="ts-q">アカウントが作成されていません</span>
-        </summary>
-        <div class="ts-a">
-          <span class="ts-badge ts-badge--a">A</span>
-          <div>学校管理者に連絡して、アカウント作成を依頼してください。</div>
-        </div>
-      </details>
-    </section>
-
-    <!-- 2.3 初回ログイン時の設定 -->
-    <section id="ref-theme" class="ref-section">
-      <h3 class="section-subtitle">2.3 初回ログイン時の設定</h3>
-      <p class="section-lead-ref">初回ログイン時は、以下の手順でパスワードを設定します：</p>
-      <section id="ref-title" class="ref-section">
-        <h3 class="section-subtitle">ログイン手順</h3>
-        <ol class="flow-steps">
-
-          <!-- 1 -->
-          <li class="flow-step">
-            <div class="flow-header">
-              <div class="flow-number">1</div>
-              <div class="flow-title">初期パスワードでのログイン</div>
+              <div class="flow-title">初期パスワードでログイン</div>
             </div>
             <div class="flow-body">
               <!-- <img src="img/manual_images/title.png" alt="起動画面"> -->
-              <p>発行された初期パスワードでログインします</p>
+              <p>管理者から発行された初期パスワードでログインします。</p>
             </div>
           </li>
 
@@ -331,7 +169,7 @@
             </div>
             <div class="flow-body">
               <img src="img/manual_images/login.png" alt="初回ログイン時のパスワード変更画面">
-              <p>初回ログイン時は自動的にパスワード変更画面に遷移します</p>
+              <p>初回ログイン時は自動的にパスワード変更画面に遷移します。</p>
             </div>
           </li>
 
@@ -359,11 +197,148 @@
             </div>
             <div class="flow-body">
               <img src="img/manual_images/main_menu.png" alt="ログイン後のダッシュボード画面">
-              <p>パスワード変更が完了すると、ダッシュボード画面に自動遷移します</p>
+              <p>パスワード変更が完了すると、ダッシュボード画面に自動遷移します。</p>
             </div>
           </li>
+        </ol>
+
+        <div class="flow-title">パスワード要件</div>
+        <ol class="circle-num">
+          <li>8文字以上</li>
+          <li>大文字・小文字を含む</li>
+          <li>数字を含む</li>
+          <li>特殊文字を1つ以上含む</li>
+        </ol>
+
+        <div class="flow-title">パスワード有効期限</div>
+        <ul>
+          <li>セキュリティの都合上、作成したパスワードは90日間のみ有効です。<br>(期限切れ時は自動的にパスワード変更画面に遷移します)
+          </li>
+        </ul>
       </section>
 
+      <!-- 2.2 通常ログイン -->
+      <section id="ref-normal-login" class="ref-section">
+        <h3 class="section-subtitle">2.2 通常ログイン</h3>
+        <p>2回目以降のログイン手順です。</p>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">管理画面にアクセス</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/title.png" alt="起動画面">
+              <p>ブラウザで管理画面のURLにアクセスします。</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">ログイン情報の入力</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/login.png" alt="ログイン画面">
+              <p>メールアドレスとパスワードを入力します。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">ログイン完了</div>
+            </div>
+            <div class="flow-body">
+              <img src="img/manual_images/main_menu.png" alt="メインメニュー">
+              <p>認証が成功すると、ダッシュボード画面に自動遷移します。</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="note">
+          <div class="note-header">注意！</div>
+          <ul class="note-list">
+            <li>メールアドレスの大文字・小文字は区別されます</li>
+            <li>スペースが入力されていると認証が失敗します</li>
+            <li>パスワードは他の人に教えないよう注意してください</li>
+            <li>共有端末の場合、使用後は必ずログアウトしてください</li>
+            <li>連続でパスワード認証に失敗すると、アカウントが一時的にロックされます（※回数に応じて最大約15分間）</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2.3 パスワードを忘れた場合 -->
+      <section id="ref-password-forgot" class="ref-section">
+        <h3 class="section-subtitle">2.3 パスワードを忘れた場合</h3>
+        <p>パスワードを忘れた場合は、以下の手順でリセットできます。</p>
+        <ol class="flow-steps">
+
+          <!-- 1 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">1</div>
+              <div class="flow-title">「パスワードをお忘れですか？」をクリック</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/password_reset_link.png" alt="パスワードリセットリンク"> -->
+              <p>ログイン画面の「パスワードをお忘れですか？」リンクをクリックします。</p>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">2</div>
+              <div class="flow-title">メールアドレスの入力</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/password_reset_form.png" alt="パスワードリセット画面"> -->
+              <p>登録済みのメールアドレスを入力し、送信ボタンをクリックします。</p>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">3</div>
+              <div class="flow-title">初期パスワードの受信</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/password_reset_email.png" alt="パスワードリセットメール"> -->
+              <p>入力したメールアドレス宛に初期パスワードが送信されます（有効期限：24時間）。</p>
+            </div>
+          </li>
+
+          <!-- 4 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">4</div>
+              <div class="flow-title">初期パスワードでログイン</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/login_with_temp_password.png" alt="初期パスワードでログイン"> -->
+              <p>メールに記載された初期パスワードでログインします。自動的にパスワード変更画面に遷移します。</p>
+            </div>
+          </li>
+
+          <!-- 5 -->
+          <li class="flow-step">
+            <div class="flow-header">
+              <div class="flow-number">5</div>
+              <div class="flow-title">新しいパスワードの設定</div>
+            </div>
+            <div class="flow-body">
+              <!-- <img src="img/manual_images/new_password_form.png" alt="新しいパスワード設定画面"> -->
+              <p>パスワード要件を満たす新しいパスワードを設定して完了です。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
     </section>
   </div>
 
