@@ -44,11 +44,11 @@
         <li class="has-sub">
           <a href="#manager-function">学校管理者機能</a>
           <ul class="submenu">
-            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-login">ダッシュボード</a></li>
-            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-chat">クラス管理サマリー</a></li>
-            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-presentation">教師・生徒アカウント管理</a></li>
-            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="ts-app">テーマ管理</a></li>
-
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="manager-dashboard">ダッシュボード</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="manager-account">アカウント管理</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="manager-class-summary">クラス管理サマリー</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="manager-theme">テーマ一覧</a></li>
+            <li><a href="#" class="submenu-link" data-section="manager-function" data-anchor="manager-report">レポート・監査</a></li>
           </ul>
         </li>
         <li class="has-sub">
@@ -349,30 +349,37 @@
     <section id="manager-function" class="content-section ts-wrap">
       <h2 class="category-title">3. 学校管理者機能</h2>
 
-      <!-- 3.1 -->
-      <section class="intro-section" id="dashboard">
+      <!-- 3.1 ダッシュボード -->
+      <section class="intro-section" id="manager-dashboard">
         <h3 class="section-subtitle">3.1 ダッシュボード</h3>
-        <p class="what-is-content">
-          学校管理者ダッシュボードでは、自校の状況を確認できます。
-        </p>
-        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="学校管理者ダッシュボード"></div>
-        <section class="intro-section" id="overview">
-          <h3 class="section-subtitle">主要機能</h3>
-
-          <p class="section-lead">
-            SPEAK STARの学習は以下の4ステップで構成されています。
-          </p>
-
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="ダッシュボード画面"></div>
+        <section class="intro-section">
           <ol class="steps">
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title">学校情報表示</h4>
+                <h4 class="step-title">この画面の目的</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>学校名、学校コード、所在地、連絡先、説明を表示</li>
-                  <li>変更不可の読み取り専用表示</li>
+                  <li>自校の基本情報と利用状況を確認できます</li>
+                  <li><strong>学校情報</strong>: 学校名や連絡先など、登録されている基本情報を表示</li>
+                  <li><strong>学校全体サマリー</strong>: アカウント数やAIクレジットなど、現在の利用状況を表示</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">学校情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学校名</strong>: 登録されている学校名</li>
+                  <li><strong>学校コード</strong>: 学校を識別するコード</li>
+                  <li><strong>所在地</strong>: 学校の住所</li>
+                  <li><strong>メールアドレス</strong>: 連絡先メールアドレス</li>
+                  <li><strong>サービス期間</strong>: SpeakStarの利用可能期間</li>
                 </ul>
               </div>
             </li>
@@ -383,174 +390,102 @@
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>シート使用状況、AIクレジット使用量、サービス期間を表示</li>
-                  <li>使用量と上限の関係を視覚的に確認</li>
-                </ul>
-                <p><strong>AIクレジット表示</strong></p>
-                <p>AIクレジットは「使用量 / 上限」の形式で表示されます。</p>
-                <ul>
-                  <li>表示例: 30000 / 50000</li>
-                  <li>これは30,000クレジットを使用し、上限が50,000クレジットであることを示します</li>
-                </ul>
-              </div>
-              <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="AIクレジット使用状況"></div>
-            </li>
-
-            <li class="step">
-              <div class="step-category">
-                <span class="step-badge"></span>
-                <h4 class="step-title">統計情報</h4>
-              </div>
-              <div class="step-desc">
-                <ul>
-                  <li>クラス数、教師数、生徒数（有効）などの数値情報</li>
-                  <li>表示される生徒数は有効状態の生徒のみをカウント</li>
+                  <li><strong>シート使用状況</strong>: 作成数 / 上限　（シート = アカウント。1シートで1アカウント作成可能）</li>
+                  <li><strong>AIクレジット使用量</strong>: 使用量 / 上限</li>
+                  <li><strong>クラス数</strong>: 登録されているクラスの数</li>
+                  <li><strong>教師アカウント数</strong>: 有効な教師アカウントの数</li>
+                  <li><strong>生徒アカウント数</strong>: 有効な生徒アカウントの数</li>
                 </ul>
               </div>
             </li>
-
-            <li class="step">
-              <div class="step-category">
-                <span class="step-badge"></span>
-                <h4 class="step-title">グラフ表示エリア</h4>
-              </div>
-              <div class="step-desc">
-                <ul>
-                  <li>統計情報を視覚的に表示</li>
-                  <li>データの傾向を分かりやすく確認</li>
-                </ul>
-              </div>
-            </li>
-            <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="統計情報グラフ"></div>
           </ol>
 
           <div class="note">
-            <div class="note-header">注意！</div>
+            <div class="note-header">注意</div>
             <ul class="note-list">
-              <li>AIクレジット使用量: 上限に近づいている場合はシステム管理者に連絡してください</li>
-              </ul>
+              <li><strong>シート上限</strong>: 上限に達するとアカウントを新規作成できなくなります。追加が必要な場合はサービス管理者へ連絡してください</li>
+              <li><strong>AIクレジット上限</strong>: 上限に達するとサービスを利用できなくなります。上限に近づいている場合はサービス管理者へ連絡してください</li>
+            </ul>
           </div>
-
-          <div class="faq-header">FAQ</div>
-          <details class="ts-item">
-            <summary>
-              <span class="ts-badge ts-badge--q">Q</span>
-              <span class="ts-q">AIクレジット使用量が上限に近づいています</span>
-            </summary>
-            <div class="ts-a">
-              <span class="ts-badge ts-badge--a">A</span>
-              <div>システム管理者に連絡して、追加クレジットの配布を依頼してください。</div>
-            </div>
-          </details>
-          <details class="ts-item">
-            <summary>
-              <span class="ts-badge ts-badge--q">Q</span>
-              <span class="ts-q">統計情報が更新されません</span>
-            </summary>
-            <div class="ts-a">
-              <span class="ts-badge ts-badge--a">A</span>
-              <div>ページを再読み込みしてください。それでも更新されない場合は、システム管理者に連絡してください。</div>
-            </div>
-          </details>
-
         </section>
       </section>
 
 
-      <!-- 3.2 -->
-      <section class="ts-section" id="ts-chat">
-        <h3 class="section-subtitle">3.2 クラス管理サマリー</h3>
-        <p class="what-is-content">
-          各学年・クラスごとの生徒数とAIクレジット使用量などの概要情報を確認できます。
-        </p>
-        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クラス管理サマリー画面"></div>
-        <section class="intro-section" id="overview">
-          <h3 class="section-subtitle">主要機能</h3>
-
-          <ol class="steps">
-            <li class="step">
-              <div class="step-category">
-                <span class="step-badge"></span>
-                <h4 class="step-title">クラス一覧表示</h4>
-              </div>
-              <div class="step-desc">
-                <ul>
-                  <li>学年別、クラス別の一覧表示</li>
-                  <li>各クラスの生徒数、AIクレジット使用量を表示</li>
-                </ul>
-              </div>
-            </li>
-            <li class="step">
-              <div class="step-category">
-                <span class="step-badge"></span>
-                <h4 class="step-title">統計情報</h4>
-              </div>
-              <div class="step-desc">
-                <ul>
-                  <li>学年ごとの生徒数合計</li>
-                  <li>クラスごとのAIクレジット使用状況</li>
-                  <li>使用率の視覚的表示</li>
-
-                </ul>
-                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt=""></div>
-              </div>
-            </li>
-
-          </ol>
-
-        </section>
-      </section>
-
-      <!-- 3.3 -->
-      <section class="ts-section" id="ts-presentation">
-        <h3 class="section-subtitle">3.3 教師・生徒アカウント管理</h3>
-        <p>
-          自校の教師・生徒アカウントの管理を行います。
-        </p>
+      <!-- 3.2 アカウント管理 -->
+      <section class="ts-section" id="manager-account">
+        <h3 class="section-subtitle">3.2 アカウント管理</h3>
         <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="アカウント管理画面"></div>
-        <section class="intro-section" id="overview">
-          <h3 class="section-subtitle">主要機能</h3>
-
+        <section class="intro-section">
           <ol class="steps">
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title">アカウント一覧表示</h4>
+                <h4 class="step-title">この画面の目的</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>教師・生徒のアカウント一覧を表示</li>
-                  <li>アカウント種別、名前、メール、クラス、学年、状態を表示</li>
+                  <li>自校の教師・生徒アカウントを管理できます</li>
+                  <li>アカウントの作成・編集・削除、パスワードリセットなどの操作が可能です</li>
+                  <li>一覧から目的のアカウントを検索・絞り込みできます</li>
                 </ul>
               </div>
             </li>
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title"> アカウント操作</h4>
+                <h4 class="step-title">新規アカウント登録</h4>
               </div>
               <div class="step-desc">
+                <p>新規アカウントの登録方法は2種類あります：</p>
                 <ul>
-                  <li>新規登録、編集、削除機能</li>
-                  <li>パスワードリセット機能</li>
-                  <li>アカウント状態の変更（有効/無効）</li>
+                  <li><strong>手動登録</strong>（1件ずつ登録）
+                    <ul>
+                      <li>教師: 名前、名前の読み、メールアドレス</li>
+                      <li>生徒: 学年、クラス、出席番号、生徒ID、名前、名前の読み</li>
+                    </ul>
+                  </li>
+                  <li><strong>TSV一括登録</strong>（最大300件まで）
+                    <ul>
+                      <li>既存の生徒IDとの重複チェックを実施</li>
+                    </ul>
+                  </li>
                 </ul>
-                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="新規アカウント作成画面"></div>
+                <div class="note-supplement">
+                  <div class="note-header">TSVファイルの作成方法</div>
+                  <ol class="note-list">
+                    <li>ExcelまたはGoogleスプレッドシートを開く</li>
+                    <li>1行目に列名を入力: 学年, クラス, 出席番号, 生徒ID, 名前, 名前の読み, メールアドレス</li>
+                    <li>2行目以降にデータを入力</li>
+                    <li>「名前を付けて保存」→「タブ区切り(.tsv)」形式で保存</li>
+                  </ol>
+                  <p><strong>入力時の注意:</strong></p>
+                  <ul class="note-list">
+                    <li>教師の場合: 学年は「0」、メールアドレスは必須</li>
+                    <li>生徒の場合: メールアドレスは空欄</li>
+                    <li>生徒ID: 最大50文字、半角英数字と記号（-_.）のみ使用可</li>
+                  </ul>
+                </div>
               </div>
             </li>
-
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title">一括登録機能</h4>
+                <h4 class="step-title">アカウント一覧で確認できる情報</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>一括登録用ポップアップ画面</li>
-                  <li>指定フォーマットのファイルで複数アカウントを一括登録</li>
-                  <li>既存の生徒IDとの重複チェックを実施</li>
+                  <li><strong>アカウント種別</strong>: 教師または生徒</li>
+                  <li><strong>学年</strong>: 小学1年〜中学3年（教師は「設定なし」）</li>
+                  <li><strong>クラス</strong>: 所属クラス（教師は空欄）</li>
+                  <li><strong>出席番号</strong>: クラス内の出席番号（教師は空欄）</li>
+                  <li><strong>生徒ID</strong>: 生徒を識別するためのID（教師は空欄）</li>
+                  <li><strong>名前・読み</strong>: アカウントの名前と読み仮名</li>
+                  <li><strong>AIクレジット使用量</strong>: 使用したAIクレジット数</li>
+                  <li><strong>登録日</strong>: アカウント作成日</li>
+                  <li><strong>最終ログイン</strong>: 最後にログインした日時</li>
+                  <li><strong>状態</strong>: 有効（ログイン可能）または無効（ログイン不可、データは保持）</li>
                 </ul>
-                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="一括登録ポップアップ画面"></div>
+                <p>※ デフォルトの並び順: 学年（昇順）→ クラス（昇順）→ 出席番号（昇順）</p>
               </div>
             </li>
             <li class="step">
@@ -560,20 +495,57 @@
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>アカウント種別、クラス、学年、状態での絞り込み</li>
-                  <li>名前、メール、生徒IDでの検索</li>
+                  <li><strong>絞り込み</strong>: アカウント種別、学年でフィルタリング</li>
+                  <li><strong>検索</strong>: 名前、メールアドレス、生徒IDで検索</li>
                 </ul>
-                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="パスワードリセット確認ダイアログ"></div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">アカウント操作</h4>
+              </div>
+              <div class="step-desc">
+                <p>各アカウントに対して以下の操作が可能です：</p>
+                <ul>
+                  <li><strong>基本情報の変更</strong>
+                    <ul>
+                      <li>教師: 名前・読み、状態（有効/無効）の変更</li>
+                      <li>生徒: 上記に加えて、学年、クラス、出席番号、生徒IDの変更</li>
+                    </ul>
+                  </li>
+                  <br>
+                  <li><strong>パスワードリセット</strong><br>　　　現在のパスワードをリセットし、初期パスワードを再発行</li>
+                  <br>
+                  <li><strong>学習データリセット</strong>（生徒のみ）
+                    <ul>
+                      <li>チャット履歴、思考力ポイント、テーマの進捗状況、プレゼンテーション履歴を削除</li>
+                      <li>※削除したデータは元に戻せません</li>
+                    </ul>
+                  </li>
+                  <br>
+                  <li><strong>アカウント削除</strong>
+                    <ul>
+                      <li>AIクレジットを消費していないアカウントのみ、最大300件まで一括で削除可能</li>
+                      <li>アカウントの選択方法:
+                        <ul>
+                          <li>「すべて選択」チェックボックス: クレジット未消費のアカウントに一括でチェック</li>
+                          <li>各アカウントのチェックボックス: 個別に選択</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </li>
           </ol>
 
           <div class="note">
-            <div class="note-header">注意！</div>
+            <div class="note-header">注意</div>
             <ul class="note-list">
-              <li>生徒ID: 同一学校内で重複しないよう注意してください</li>
-              <li>アカウント削除: 削除されたアカウントは復元できません</li>
-              <li>状態変更: 無効にしたアカウントはログインできなくなります</li>
+              <li><strong>生徒ID</strong>: 同一学校内で重複しないよう注意してください</li>
+              <li><strong>アカウント削除</strong>: 削除されたアカウントは復元できません</li>
+              <li><strong>状態の無効化</strong>: 無効にしたアカウントはログインできなくなります</li>
             </ul>
           </div>
 
@@ -595,60 +567,102 @@
             </summary>
             <div class="ts-a">
               <span class="ts-badge ts-badge--a">A</span>
-              <div>アカウント一覧の状態列で「有効」「無効」を切り替えることができます。</div>
+              <div>アカウント一覧の操作列にある編集ボタンを押下し、開かれたダイアログ内の状態項目から「有効」「無効」を切り替えることができます。</div>
             </div>
           </details>
-
 
         </section>
       </section>
 
-      <!-- 3.4 -->
-      <section class="ts-section" id="ts-app">
-        <h3 class="section-subtitle">3.4 テーマ設定確認</h3>
-        <p>学習テーマの確認を行います</p>
-        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ一覧画面"></div>
-        <section class="intro-section" id="overview">
-          <h3 class="section-subtitle">主要機能</h3>
-
+      <!-- 3.3 クラス管理サマリー -->
+      <section class="ts-section" id="manager-class-summary">
+        <h3 class="section-subtitle">3.3 クラス管理サマリー</h3>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="クラス管理サマリー画面"></div>
+        <section class="intro-section">
           <ol class="steps">
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title"> テーマ一覧表示</h4>
+                <h4 class="step-title">この画面の目的</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>学年別のテーマ一覧を表示</li>
-                  <li>テーマ名、説明、学年を確認</li>
-                  <li>1ページあたり50件のテーマを表示</li>
-                  <li>ページネーション機能あり</li>
+                  <li>学年・クラスごとの生徒数とAIクレジット使用状況を一覧で確認できます</li>
+                  <li>どのクラスがどれくらいAIを活用しているかを把握できます</li>
                 </ul>
               </div>
             </li>
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title"> テーマ詳細確認</h4>
+                <h4 class="step-title">確認できる情報</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>各テーマの詳細情報を確認</li>
-                  <li>テーマの内容と学習目標を把握</li>
+                  <li><strong>クラス名</strong>: クラスの名称</li>
+                  <li><strong>学年</strong>: 小学1年〜中学3年</li>
+                  <li><strong>生徒数</strong>: 有効な生徒アカウントの数</li>
+                  <li><strong>AIクレジット使用量</strong>: クラス全体で使用したAIクレジット数</li>
                 </ul>
-                <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ詳細画面"></div>
               </div>
             </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み・並び替え機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>絞り込み</strong>: 学年</li>
+                  <li><strong>並び替え</strong>: 各列での並び替え</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </section>
 
+      <!-- 3.4 テーマ一覧 -->
+      <section class="ts-section" id="manager-theme">
+        <h3 class="section-subtitle">3.4 テーマ一覧</h3>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="テーマ一覧画面"></div>
+        <section class="intro-section">
+          <ol class="steps">
             <li class="step">
               <div class="step-category">
                 <span class="step-badge"></span>
-                <h4 class="step-title">閲覧専用</h4>
+                <h4 class="step-title">この画面の目的</h4>
               </div>
               <div class="step-desc">
                 <ul>
-                  <li>テーマの追加・編集・削除は不可</li>
-                  <li>システム管理者による設定のみ</li>
+                  <li>自校に割り当てられているテーマを確認できます</li>
+                  <li>学年ごとにどのテーマが利用可能かを把握できます</li>
+                  <li>※この画面は閲覧専用です（テーマの追加・編集・削除はできません）</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>テーマコレクション</strong>: テーマコレクションID、テーマコレクション名</li>
+                  <li><strong>テーマ</strong>: テーマID、テーマ名、表示順</li>
+                  <li><strong>学年割り当て</strong>: 小学1年〜中学3年ごとの割り当て状況</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>学年</strong>: 小学1年〜中学3年で絞り込み</li>
+                  <li><strong>テーマ名</strong>: テーマ名で検索</li>
                 </ul>
               </div>
             </li>
@@ -662,22 +676,71 @@
             </summary>
             <div class="ts-a">
               <span class="ts-badge ts-badge--a">A</span>
-              <div>テーマの追加・変更はシステム管理者に依頼してください。学校管理者では変更できません。</div>
+              <div>テーマの追加・変更はサービス管理者に連絡してください。</div>
             </div>
           </details>
-          <details class="ts-item">
-            <summary>
-              <span class="ts-badge ts-badge--q">Q</span>
-              <span class="ts-q">学年ごとに異なるテーマが表示されません</span>
-            </summary>
-            <div class="ts-a">
-              <span class="ts-badge ts-badge--a">A</span>
-              <div>システム管理者に連絡して、学年別のテーマ設定を確認してください。</div>
-            </div>
-          </details>
-
 
         </section>
+      </section>
+
+      <!-- 3.5 レポート・監査 -->
+      <section class="ts-section" id="manager-report">
+        <h3 class="section-subtitle">3.5 レポート・監査</h3>
+        <div class="hero"><img src="/webpage/img/manual_images/chat.png" alt="レポート・監査画面"></div>
+        <section class="intro-section">
+          <ol class="steps">
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">この画面の目的</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li>管理画面で行われた操作履歴を確認できます</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">確認できる情報</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>日時</strong>: 操作が行われた日時</li>
+                  <li><strong>操作内容</strong>: 実行された操作の詳細</li>
+                  <li><strong>担当者</strong>: 操作を行った管理者名</li>
+                  <li><strong>結果</strong>: 成功または失敗</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-category">
+                <span class="step-badge"></span>
+                <h4 class="step-title">絞り込み機能</h4>
+              </div>
+              <div class="step-desc">
+                <ul>
+                  <li><strong>期間</strong>: 開始日〜終了日で絞り込み</li>
+                  <li><strong>操作種別</strong>: アカウントで絞り込み</li>
+                  <li><strong>結果</strong>: 成功で絞り込み</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <div class="note">
+            <div class="note-header">記録される操作</div>
+            <ul class="note-list">
+              <li>アカウント管理: 作成、編集、削除、一括登録・削除</li>
+              <li>パスワードリセット</li>
+              <li>生徒データリセット</li>
+            </ul>
+          </div>
+
+        </section>
+      </section>
+    </section>
   </div>
 
   <div class="category-container">

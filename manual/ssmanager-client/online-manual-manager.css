@@ -479,6 +479,25 @@ p {
     margin: 16px 0;
 }
 
+/* ===== 補足ボックス（青色） ===== */
+.note-supplement {
+    background: #F4FAFF;
+    border: 2px solid #167cdd;
+    border-radius: 10px;
+    padding: 25px 60px 15px;
+    margin: 16px 0;
+}
+
+.note-supplement .note-header {
+    color: #167cdd;
+}
+
+.note-supplement .note-header::before {
+    content: "i";
+    background: #167cdd;
+    clip-path: circle(50%);
+}
+
 /* 見出し（注意！） */
 .note-header {
     display: flex;
@@ -514,6 +533,20 @@ p {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/* 番号付きリスト用（補足ボックス内など） */
+ol.note-list {
+    list-style: decimal;
+    padding-left: 1.5em;
+}
+
+ol.note-list li {
+    padding-left: 0.3em;
+}
+
+ol.note-list li::before {
+    content: none;
 }
 
 .note-list li {
