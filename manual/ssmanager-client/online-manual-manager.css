@@ -785,7 +785,6 @@ ol.note-list li::before {
     .section-menu ul {
         gap: 16px;
         padding: 0 8px;
-        max-width: 80%;
     }
 
     .section-menu a {
@@ -801,7 +800,8 @@ ol.note-list li::before {
 
     /* ドロップダウンが画面からはみ出さないように */
     .section-menu .submenu {
-        width: 100px;
+        max-width: 200px;
+        min-width: 100px;
         left: 0;
         right: auto;
         transform: none;
@@ -1047,6 +1047,7 @@ ol.note-list li::before {
     .section-menu>ul>li>a[data-label-short] {
         font-size: 0;
         position: relative;
+        padding: 21px 5px 12px;
     }
 
     .section-menu>ul>li>a[data-label-short]::before {
@@ -1080,7 +1081,8 @@ ol.note-list li::before {
     }
 
     .section-menu .submenu {
-        min-width: 170px;
+        max-width: 170px;
+        min-width: 110px;
         top: calc(100% + 6px);
         left: 0;
         right: auto;
